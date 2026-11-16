@@ -1,0 +1,47 @@
+{
+  "name": {
+    "tr": "Şubeler",
+    "en": "Branches",
+    "ar": "الفروع"
+  },
+  "status": "play",
+  "category": "",
+  "id": "iletisim",
+  "url": "",
+  "path": "iletisim",
+  "index": 5,
+  "icon": "call",
+  "desing": {
+    "header": [],
+    "body": [
+      "af6ihe",
+      "k8mp01"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Üç şubenin adresi, saatleri ve iletişimi.",
+    "en": "Addresses, hours and contact for the three branches.",
+    "ar": "عناوين الفروع الثلاثة وساعاتها ووسائل التواصل."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Şubeler",
+    "en": "Branches",
+    "ar": "الفروع"
+  },
+  "keyword": {
+    "tr": "iletişim",
+    "en": "contact",
+    "ar": "اتصال"
+  },
+  "text": {},
+  "update": "2026-11-16T16:21:06.404Z",
+  "date": "2026-10-30"
+}

@@ -1,0 +1,3790 @@
+{
+  "data": [
+    {
+      "name": "Demo Bandı",
+      "path": "demo-bandi",
+      "local": "header",
+      "category": "demo",
+      "id": "k8db01",
+      "desing": {
+        "tone": "info",
+        "bandBg": "",
+        "bandFg": "",
+        "ctaHref": "https://webyapar.com/temalar",
+        "ariaLabel": {
+          "tr": "Demo site uyarısı",
+          "en": "Demo site notice",
+          "ar": "تنبيه الموقع التجريبي"
+        },
+        "text": {
+          "tr": "Bu bir demo sitedir — içerik kurgusaldır, ödeme alınmaz",
+          "en": "This is a demo site — the content is fictional and no payment is taken",
+          "ar": "هذا موقع تجريبي — المحتوى افتراضي ولا يتم تحصيل أي مدفوعات"
+        },
+        "ctaText": {
+          "tr": "Bu temayı iste",
+          "en": "Get this theme",
+          "ar": "اطلب هذا القالب"
+        },
+        "newTabText": {
+          "tr": "(yeni sekmede açılır)",
+          "en": "(opens in a new tab)",
+          "ar": "(يفتح في علامة تبويب جديدة)"
+        },
+        "girisHref": "",
+        "girisText": {
+          "tr": "Üye Girişi",
+          "en": "Login",
+          "ar": "تسجيل الدخول"
+        },
+        "hataBildir": "https://webyapar.com/api/portal/tema-hata.js"
+      },
+      "version": "1.0.0",
+      "icon": "info",
+      "index": 0
+    },
+    {
+      "name": "Menü 4",
+      "path": "menu-4",
+      "local": "header",
+      "category": "menu",
+      "id": "k8mn01",
+      "desing": {
+        "logo": "logo.png",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "height": "84px",
+        "background-color": "var(--mx-site-bg, #ffffff)",
+        "menubg": "",
+        "menutext": "#fff",
+        "menuhoverbg": "rgba(255,255,255,.18)"
+      },
+      "version": "1.0.0",
+      "icon": "menu",
+      "index": 1
+    },
+    {
+      "name": "Hero 2 (Ortalanmış)",
+      "path": "hero-2",
+      "local": "body",
+      "category": "hero",
+      "id": "k8hr01",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, color-mix(in srgb, var(--mx-site-primary, #2563eb) 42%, #000), color-mix(in srgb, var(--mx-site-primary, #2563eb) 24%, #000))",
+        "glow1": "rgba(255,255,255,.16)",
+        "glow2": "rgba(255,255,255,.1)",
+        "btnbg": "var(--mx-site-surface, #ffffff)",
+        "btncolor": "var(--mx-site-text, #1b1b1b)",
+        "badge": {
+          "tr": "Emlak",
+          "en": "Real estate",
+          "ar": "عقارات"
+        },
+        "title": {
+          "tr": "Hayalinizdeki yeri birlikte bulalım",
+          "en": "Let's find your dream home together",
+          "ar": "لنجد معًا المكان الذي تحلم به"
+        },
+        "description": {
+          "tr": "Satılık ve kiralık seçkin portföy, şeffaf süreç, her ilanda yetki belgesi numarası.",
+          "en": "A curated sale and rental portfolio, a transparent process, a permit number on every listing.",
+          "ar": "محفظة مختارة للبيع والإيجار وعملية شفافة ورقم ترخيص في كل إعلان."
+        },
+        "btn1Text": {
+          "tr": "İlanları gör",
+          "en": "Browse listings",
+          "ar": "تصفح الإعلانات"
+        },
+        "btn1Url": "ilanlar",
+        "btn2Text": {
+          "tr": "Değerleme",
+          "en": "Valuation",
+          "ar": "التقييم"
+        },
+        "btn2Url": "iletisim"
+      },
+      "version": "1.0.0",
+      "icon": "hero",
+      "index": 2
+    },
+    {
+      "name": "İlan Filtre (Emlak İlan Listesi)",
+      "path": "ilan-filtre",
+      "local": "body",
+      "category": "page-list",
+      "id": "k8il01",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #ffffff)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "pageSize": 6,
+        "sort": "date",
+        "urlState": true,
+        "title": {
+          "tr": "Emlak İlanları",
+          "en": "Property Listings",
+          "ar": "إعلانات العقارات"
+        },
+        "subtitle": {
+          "tr": "Satılık ve kiralık ilanları süzün, sıralayın ve karşılaştırın.",
+          "en": "Filter, sort and compare properties for sale and for rent.",
+          "ar": "صفِّ العقارات المعروضة للبيع والإيجار ورتّبها وقارن بينها."
+        },
+        "searchLabel": {
+          "tr": "İlan ara",
+          "en": "Search listings",
+          "ar": "ابحث في الإعلانات"
+        },
+        "searchPlaceholder": {
+          "tr": "Semt veya ilan başlığı…",
+          "en": "District or listing title…",
+          "ar": "الحي أو عنوان الإعلان…"
+        },
+        "dealGroupLabel": {
+          "tr": "İşlem türü",
+          "en": "Deal type",
+          "ar": "نوع الصفقة"
+        },
+        "dealAll": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "dealSale": {
+          "tr": "Satılık",
+          "en": "For sale",
+          "ar": "للبيع"
+        },
+        "dealRent": {
+          "tr": "Kiralık",
+          "en": "For rent",
+          "ar": "للإيجار"
+        },
+        "filtersTitle": {
+          "tr": "Filtreler",
+          "en": "Filters",
+          "ar": "التصفية"
+        },
+        "typeTitle": {
+          "tr": "Emlak türü",
+          "en": "Property type",
+          "ar": "نوع العقار"
+        },
+        "roomsTitle": {
+          "tr": "Oda sayısı",
+          "en": "Rooms",
+          "ar": "عدد الغرف"
+        },
+        "m2Title": {
+          "tr": "Alan (m²)",
+          "en": "Area (m²)",
+          "ar": "المساحة (م²)"
+        },
+        "priceTitle": {
+          "tr": "Fiyat",
+          "en": "Price",
+          "ar": "السعر"
+        },
+        "districtTitle": {
+          "tr": "Semt",
+          "en": "District",
+          "ar": "الحي"
+        },
+        "districtAll": {
+          "tr": "Tüm semtler",
+          "en": "All districts",
+          "ar": "كل الأحياء"
+        },
+        "minLabel": {
+          "tr": "En az",
+          "en": "Min",
+          "ar": "الحد الأدنى"
+        },
+        "maxLabel": {
+          "tr": "En çok",
+          "en": "Max",
+          "ar": "الحد الأقصى"
+        },
+        "m2Unit": {
+          "tr": "m²",
+          "en": "m²",
+          "ar": "م²"
+        },
+        "sortLabel": {
+          "tr": "Sırala",
+          "en": "Sort by",
+          "ar": "ترتيب حسب"
+        },
+        "sortDate": {
+          "tr": "En yeni",
+          "en": "Newest",
+          "ar": "الأحدث"
+        },
+        "sortPrice": {
+          "tr": "Fiyat: düşükten yükseğe",
+          "en": "Price: low to high",
+          "ar": "السعر: من الأقل إلى الأعلى"
+        },
+        "sortPriceDesc": {
+          "tr": "Fiyat: yüksekten düşüğe",
+          "en": "Price: high to low",
+          "ar": "السعر: من الأعلى إلى الأقل"
+        },
+        "sortM2": {
+          "tr": "Alan: büyükten küçüğe",
+          "en": "Area: large to small",
+          "ar": "المساحة: من الأكبر إلى الأصغر"
+        },
+        "sortM2Asc": {
+          "tr": "Alan: küçükten büyüğe",
+          "en": "Area: small to large",
+          "ar": "المساحة: من الأصغر إلى الأكبر"
+        },
+        "resetFilters": {
+          "tr": "Filtreleri temizle",
+          "en": "Clear filters",
+          "ar": "مسح عوامل التصفية"
+        },
+        "resultCount": {
+          "tr": {
+            "one": "{n} ilan bulundu",
+            "other": "{n} ilan bulundu"
+          },
+          "en": {
+            "one": "{n} listing found",
+            "other": "{n} listings found"
+          },
+          "ar": {
+            "zero": "لم يتم العثور على إعلانات",
+            "one": "تم العثور على إعلان واحد",
+            "two": "تم العثور على إعلانين",
+            "few": "تم العثور على {n} إعلانات",
+            "many": "تم العثور على {n} إعلانًا",
+            "other": "تم العثور على {n} إعلان"
+          }
+        },
+        "photoCount": {
+          "tr": {
+            "one": "{n} fotoğraf",
+            "other": "{n} fotoğraf"
+          },
+          "en": {
+            "one": "{n} photo",
+            "other": "{n} photos"
+          },
+          "ar": {
+            "one": "صورة واحدة",
+            "two": "صورتان",
+            "few": "{n} صور",
+            "many": "{n} صورة",
+            "other": "{n} صورة"
+          }
+        },
+        "noResultTitle": {
+          "tr": "Sonuç bulunamadı",
+          "en": "No results found",
+          "ar": "لم يتم العثور على نتائج"
+        },
+        "noResultText": {
+          "tr": "Filtreleri gevşetmeyi veya temizlemeyi deneyin.",
+          "en": "Try loosening or clearing your filters.",
+          "ar": "جرّب تخفيف عوامل التصفية أو مسحها."
+        },
+        "pagesLabel": {
+          "tr": "Sayfalama",
+          "en": "Pagination",
+          "ar": "التنقل بين الصفحات"
+        },
+        "prevPage": {
+          "tr": "Önceki sayfa",
+          "en": "Previous page",
+          "ar": "الصفحة السابقة"
+        },
+        "nextPage": {
+          "tr": "Sonraki sayfa",
+          "en": "Next page",
+          "ar": "الصفحة التالية"
+        },
+        "pageN": {
+          "tr": "Sayfa {n}",
+          "en": "Page {n}",
+          "ar": "الصفحة {n}"
+        },
+        "permitLabel": {
+          "tr": "Yetki belgesi no",
+          "en": "Authorization certificate no.",
+          "ar": "رقم شهادة التفويض"
+        },
+        "permitDemo": {
+          "tr": "Yetki belgesi no: örnek ilan (DEMO)",
+          "en": "Authorization no.: sample listing (DEMO)",
+          "ar": "رقم شهادة التفويض: إعلان تجريبي (عرض توضيحي)"
+        },
+        "perMonth": {
+          "tr": "/ ay",
+          "en": "/ month",
+          "ar": "/ شهريًا"
+        },
+        "details": {
+          "tr": "İlan detayı",
+          "en": "View listing",
+          "ar": "تفاصيل الإعلان"
+        },
+        "dateLabel": {
+          "tr": "İlan tarihi",
+          "en": "Listed on",
+          "ar": "تاريخ الإعلان"
+        },
+        "demoNote": {
+          "tr": "Bu sayfadaki ilanlar kurgusaldır; yetki belgesi numaraları örnektir (DEMO).",
+          "en": "Listings on this page are fictional; authorization numbers are samples (DEMO).",
+          "ar": "الإعلانات في هذه الصفحة وهمية، وأرقام شهادات التفويض أمثلة فقط (عرض توضيحي)."
+        }
+      },
+      "version": "1.0.0",
+      "icon": "real_estate_agent",
+      "data": {
+        "facets": [
+          "type",
+          "rooms",
+          "m2",
+          "price",
+          "district"
+        ],
+        "typeLabels": {
+          "daire": {
+            "tr": "Daire",
+            "en": "Apartment",
+            "ar": "شقة"
+          },
+          "villa": {
+            "tr": "Villa",
+            "en": "Villa",
+            "ar": "فيلا"
+          },
+          "rezidans": {
+            "tr": "Rezidans",
+            "en": "Residence",
+            "ar": "مجمّع سكني"
+          },
+          "arsa": {
+            "tr": "Arsa",
+            "en": "Land",
+            "ar": "أرض"
+          },
+          "isyeri": {
+            "tr": "İşyeri",
+            "en": "Commercial",
+            "ar": "محل تجاري"
+          }
+        },
+        "listings": [
+          {
+            "id": "ilan-001",
+            "title": {
+              "tr": "Deniz manzaralı 3+1 daire",
+              "en": "3+1 apartment with sea view",
+              "ar": "شقة 3+1 بإطلالة بحرية"
+            },
+            "deal": "sale",
+            "type": "daire",
+            "rooms": "3+1",
+            "m2": 142,
+            "price": 6850000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İstanbul",
+              "en": "Istanbul",
+              "ar": "إسطنبول"
+            },
+            "district": {
+              "tr": "Kadıköy",
+              "en": "Kadikoy",
+              "ar": "قاضي كوي"
+            },
+            "img": [],
+            "permitNo": "DEMO-34-0001",
+            "url": "",
+            "date": "2026-10-24",
+            "badge": {
+              "tr": "Yeni",
+              "en": "New",
+              "ar": "جديد"
+            }
+          },
+          {
+            "id": "ilan-002",
+            "title": {
+              "tr": "Bahçe katı 2+1 kiralık daire",
+              "en": "2+1 garden-floor apartment for rent",
+              "ar": "شقة 2+1 في الطابق الأرضي مع حديقة للإيجار"
+            },
+            "deal": "rent",
+            "type": "daire",
+            "rooms": "2+1",
+            "m2": 95,
+            "price": 38000,
+            "currency": "TRY",
+            "city": {
+              "tr": "Ankara",
+              "en": "Ankara",
+              "ar": "أنقرة"
+            },
+            "district": {
+              "tr": "Çankaya",
+              "en": "Cankaya",
+              "ar": "تشانكايا"
+            },
+            "img": [],
+            "permitNo": "DEMO-06-0002",
+            "url": "",
+            "date": "2026-10-22"
+          },
+          {
+            "id": "ilan-003",
+            "title": {
+              "tr": "Havuzlu müstakil villa",
+              "en": "Detached villa with pool",
+              "ar": "فيلا مستقلة مع مسبح"
+            },
+            "deal": "sale",
+            "type": "villa",
+            "rooms": "5+2",
+            "m2": 320,
+            "price": 18900000,
+            "currency": "TRY",
+            "city": {
+              "tr": "Muğla",
+              "en": "Mugla",
+              "ar": "موغلا"
+            },
+            "district": {
+              "tr": "Bodrum",
+              "en": "Bodrum",
+              "ar": "بودروم"
+            },
+            "img": [],
+            "permitNo": "DEMO-48-0003",
+            "url": "",
+            "date": "2026-10-18"
+          },
+          {
+            "id": "ilan-004",
+            "title": {
+              "tr": "Eşyalı 1+1 kiralık daire",
+              "en": "Furnished 1+1 apartment for rent",
+              "ar": "شقة 1+1 مفروشة للإيجار"
+            },
+            "deal": "rent",
+            "type": "daire",
+            "rooms": "1+1",
+            "m2": 55,
+            "price": 22500,
+            "currency": "TRY",
+            "city": {
+              "tr": "İzmir",
+              "en": "Izmir",
+              "ar": "إزمير"
+            },
+            "district": {
+              "tr": "Karşıyaka",
+              "en": "Karsiyaka",
+              "ar": "قارشيياكا"
+            },
+            "img": [],
+            "permitNo": "DEMO-35-0004",
+            "url": "",
+            "date": "2026-10-15"
+          },
+          {
+            "id": "ilan-005",
+            "title": {
+              "tr": "İmarlı satılık arsa",
+              "en": "Zoned plot for sale",
+              "ar": "أرض مخططة للبيع"
+            },
+            "deal": "sale",
+            "type": "arsa",
+            "rooms": "",
+            "m2": 600,
+            "price": 3200000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İzmir",
+              "en": "Izmir",
+              "ar": "إزمير"
+            },
+            "district": {
+              "tr": "Urla",
+              "en": "Urla",
+              "ar": "أورلا"
+            },
+            "img": [],
+            "permitNo": "DEMO-35-0005",
+            "url": "",
+            "date": "2026-10-11"
+          },
+          {
+            "id": "ilan-006",
+            "title": {
+              "tr": "Cadde üstü kiralık dükkân",
+              "en": "Street-front shop for rent",
+              "ar": "محل على الشارع الرئيسي للإيجار"
+            },
+            "deal": "rent",
+            "type": "isyeri",
+            "rooms": "",
+            "m2": 120,
+            "price": 65000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İstanbul",
+              "en": "Istanbul",
+              "ar": "إسطنبول"
+            },
+            "district": {
+              "tr": "Şişli",
+              "en": "Sisli",
+              "ar": "شيشلي"
+            },
+            "img": [],
+            "permitNo": "DEMO-34-0006",
+            "url": "",
+            "date": "2026-10-08"
+          },
+          {
+            "id": "ilan-007",
+            "title": {
+              "tr": "Site içinde 2+1 daire",
+              "en": "2+1 apartment in a gated complex",
+              "ar": "شقة 2+1 داخل مجمع سكني مسوّر"
+            },
+            "deal": "sale",
+            "type": "daire",
+            "rooms": "2+1",
+            "m2": 100,
+            "price": 4150000,
+            "currency": "TRY",
+            "city": {
+              "tr": "Bursa",
+              "en": "Bursa",
+              "ar": "بورصة"
+            },
+            "district": {
+              "tr": "Nilüfer",
+              "en": "Nilufer",
+              "ar": "نيلوفر"
+            },
+            "img": [],
+            "permitNo": "DEMO-16-0007",
+            "url": "",
+            "date": "2026-10-05"
+          },
+          {
+            "id": "ilan-008",
+            "title": {
+              "tr": "Merkezi konumda 1+1 rezidans",
+              "en": "1+1 residence in a central location",
+              "ar": "وحدة 1+1 في مجمّع سكني بموقع مركزي"
+            },
+            "deal": "sale",
+            "type": "rezidans",
+            "rooms": "1+1",
+            "m2": 70,
+            "price": 5300000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İstanbul",
+              "en": "Istanbul",
+              "ar": "إسطنبول"
+            },
+            "district": {
+              "tr": "Beşiktaş",
+              "en": "Besiktas",
+              "ar": "بشيكتاش"
+            },
+            "img": [],
+            "permitNo": "DEMO-34-0008",
+            "url": "",
+            "date": "2026-10-02"
+          }
+        ]
+      },
+      "index": 3
+    },
+    {
+      "name": "İstatistik Bandı 1",
+      "path": "stats-1",
+      "local": "body",
+      "category": "stats",
+      "id": "k8st01",
+      "desing": {
+        "max": "1200px",
+        "gradient": "linear-gradient(135deg, color-mix(in srgb, var(--mx-site-primary, #2563eb) 42%, #000), color-mix(in srgb, var(--mx-site-primary, #2563eb) 24%, #000))",
+        "numbercolor": "#ffffff",
+        "labelcolor": "rgba(255,255,255,.88)",
+        "iconsize": "56px",
+        "iconbox": "88px",
+        "stil": ""
+      },
+      "version": "1.0.0",
+      "icon": "monitoring",
+      "data": [
+        {
+          "number": 150,
+          "suffix": "+",
+          "label": {
+            "tr": "Tamamlanan Proje",
+            "en": "Completed Projects",
+            "ar": "مشروع منجز"
+          },
+          "icon": "task_alt"
+        },
+        {
+          "number": 50,
+          "suffix": "+",
+          "label": {
+            "tr": "Mutlu Müşteri",
+            "en": "Happy Customers",
+            "ar": "عميل سعيد"
+          },
+          "icon": "sentiment_satisfied"
+        },
+        {
+          "number": 10,
+          "suffix": "+",
+          "label": {
+            "tr": "Yıllık Deneyim",
+            "en": "Years of Experience",
+            "ar": "سنوات من الخبرة"
+          },
+          "icon": "workspace_premium"
+        },
+        {
+          "number": 24,
+          "suffix": "/7",
+          "label": {
+            "tr": "Destek",
+            "en": "Support",
+            "ar": "الدعم"
+          },
+          "icon": "support_agent"
+        }
+      ],
+      "index": 4
+    },
+    {
+      "name": "Ekip 1",
+      "path": "team-1",
+      "local": "body",
+      "category": "team",
+      "id": "k8tm01",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "cardbg": "var(--mx-site-surface, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "titlecolor": "var(--mx-site-text, #1b1b1b)",
+        "textcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #ffffff))",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "badge": {
+          "tr": "Ekip",
+          "en": "Team",
+          "ar": "الفريق"
+        },
+        "title": {
+          "tr": "Danışmanlarımız",
+          "en": "Our advisors",
+          "ar": "مستشارونا"
+        },
+        "description": {
+          "tr": "Alanında deneyimli ekibimiz projelerinize değer katmak için burada.",
+          "en": "Our experienced team is here to add value to your projects.",
+          "ar": "فريقنا ذو الخبرة هنا ليضيف قيمة إلى مشاريعك."
+        },
+        "accentText": "#ffffff"
+      },
+      "version": "1.0.0",
+      "icon": "groups",
+      "data": [
+        {
+          "name": "Ad Soyad",
+          "role": {
+            "tr": "Kurucu / CEO",
+            "en": "Founder / CEO",
+            "ar": "المؤسس / الرئيس التنفيذي"
+          },
+          "bio": {
+            "tr": "10+ yıllık sektör deneyimi ile strateji ve yönetim.",
+            "en": "Strategy and management with 10+ years of industry experience.",
+            "ar": "الاستراتيجية والإدارة بخبرة تتجاوز 10 سنوات في القطاع."
+          },
+          "img": ""
+        },
+        {
+          "name": "Ad Soyad",
+          "role": {
+            "tr": "Tasarım Direktörü",
+            "en": "Design Director",
+            "ar": "مدير التصميم"
+          },
+          "bio": {
+            "tr": "Marka kimliği ve kullanıcı deneyimi tasarımı.",
+            "en": "Brand identity and user experience design.",
+            "ar": "تصميم هوية العلامة التجارية وتجربة المستخدم."
+          },
+          "img": ""
+        },
+        {
+          "name": "Ad Soyad",
+          "role": {
+            "tr": "Yazılım Geliştirici",
+            "en": "Software Developer",
+            "ar": "مطوّر برمجيات"
+          },
+          "bio": {
+            "tr": "Modern web teknolojileri ile ölçeklenebilir çözümler.",
+            "en": "Scalable solutions with modern web technologies.",
+            "ar": "حلول قابلة للتوسّع بتقنيات الويب الحديثة."
+          },
+          "img": ""
+        }
+      ],
+      "index": 5
+    },
+    {
+      "name": "Footer 3",
+      "path": "footer-3",
+      "local": "footer",
+      "category": "footer",
+      "id": "k8ft01",
+      "desing": {
+        "showlang": true,
+        "bgcolor": "var(--mx-site-surface-2, #f1f1ee)",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "minimal_design": true,
+        "social_media": false,
+        "logo_maxh": "60px",
+        "logo_plate": false,
+        "contact_line": "auto",
+        "logoDark": "",
+        "duzen": "",
+        "slogan": "",
+        "ikinciSutun": "",
+        "iletisimNot": ""
+      },
+      "version": "1.0.0",
+      "icon": "widgets",
+      "data": [],
+      "index": 6
+    },
+    {
+      "name": "İletişim",
+      "path": "contact-3",
+      "local": "body",
+      "category": "contact",
+      "id": "k8ct01",
+      "desing": {
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "name": {
+          "tr": "Bize Ulaşın",
+          "en": "Contact Us",
+          "ar": "تواصل معنا"
+        },
+        "margin": "30px 0px 30px 0px",
+        "linkcolor": "var(--mx-site-primary, #2563eb)",
+        "stil": ""
+      },
+      "version": "1.0.0",
+      "icon": "contact_mail",
+      "data": [
+        {
+          "icon": "phone",
+          "text": "+90",
+          "url": ""
+        },
+        {
+          "icon": "email",
+          "text": ""
+        },
+        {
+          "icon": "map",
+          "text": ""
+        }
+      ],
+      "index": 7
+    },
+    {
+      "name": "Maps",
+      "path": "map-2",
+      "local": "body",
+      "category": "map",
+      "id": "k8mp01",
+      "desing": {
+        "height": "200px",
+        "opacity": "0.5",
+        "backgroundcolor": "#ffffff",
+        "color": "var(--mx-site-text, #1b1b1b)",
+        "img": "map.png",
+        "externalUrl": "",
+        "margin": "0px 0px 0px 0px"
+      },
+      "version": "1.0.0",
+      "icon": "widgets",
+      "index": 8
+    },
+    {
+      "name": "Tanıtım Modülü",
+      "path": "module-1",
+      "local": "body",
+      "category": "module",
+      "id": "k8in01",
+      "desing": {
+        "name": {
+          "tr": "Hakkımızda",
+          "en": "About us",
+          "ar": "من نحن"
+        },
+        "description": {
+          "tr": "Bu sayfa bir tema örneğidir; içerik demo üretiminde doldurulur.",
+          "en": "This page is a theme sample; its content is filled in during demo production.",
+          "ar": "هذه الصفحة نموذج للقالب؛ يُملأ محتواها عند إنتاج العرض التجريبي."
+        },
+        "name2": {
+          "tr": "Vizyonumuz",
+          "en": "Our Vision",
+          "ar": "رؤيتنا"
+        },
+        "spot2": {
+          "tr": "Sektörümüzde yenilikçi yaklaşımlarla öncü olmak.",
+          "en": "To lead our industry with innovative approaches.",
+          "ar": "أن نكون روّادًا في قطاعنا بأساليب مبتكرة."
+        },
+        "icon2": "visibility",
+        "name3": {
+          "tr": "Misyonumuz",
+          "en": "Our Mission",
+          "ar": "مهمتنا"
+        },
+        "spot3": {
+          "tr": "İhtiyaç duyulan çözümleri hızlı ve şeffaf sunmak.",
+          "en": "Deliver needed solutions quickly and transparently.",
+          "ar": "تقديم الحلول المطلوبة بسرعة وشفافية."
+        },
+        "icon3": "flag",
+        "img": "index.jpg",
+        "bgcolor": "var(--mx-site-surface, #ffffff)",
+        "fontcolor": "var(--mx-site-text, #1b1b1b)",
+        "margintop": "20",
+        "marginbotton": "20",
+        "title": {
+          "tr": "Kurumsal",
+          "en": "Corporate",
+          "ar": "المؤسسة"
+        },
+        "stil": ""
+      },
+      "version": "1.1.0",
+      "icon": "business",
+      "index": 9
+    },
+    {
+      "name": "İlan Filtre (Emlak İlan Listesi)",
+      "path": "ilan-filtre",
+      "local": "body",
+      "category": "page-list",
+      "id": "k8il02",
+      "desing": {
+        "max": "1200px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "textcolor": "var(--mx-site-text, #1b1b1b)",
+        "mutedcolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 72%, var(--mx-site-bg, #fff))",
+        "surface": "var(--mx-site-surface, #ffffff)",
+        "surface2": "var(--mx-site-surface-2, #ececea)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bordercolor": "color-mix(in srgb, var(--mx-site-text, #1b1b1b) 18%, transparent)",
+        "pageSize": 6,
+        "sort": "date",
+        "urlState": true,
+        "title": {
+          "tr": "Emlak İlanları",
+          "en": "Property Listings",
+          "ar": "إعلانات العقارات"
+        },
+        "subtitle": {
+          "tr": "Satılık ve kiralık ilanları süzün, sıralayın ve karşılaştırın.",
+          "en": "Filter, sort and compare properties for sale and for rent.",
+          "ar": "صفِّ العقارات المعروضة للبيع والإيجار ورتّبها وقارن بينها."
+        },
+        "searchLabel": {
+          "tr": "İlan ara",
+          "en": "Search listings",
+          "ar": "ابحث في الإعلانات"
+        },
+        "searchPlaceholder": {
+          "tr": "Semt veya ilan başlığı…",
+          "en": "District or listing title…",
+          "ar": "الحي أو عنوان الإعلان…"
+        },
+        "dealGroupLabel": {
+          "tr": "İşlem türü",
+          "en": "Deal type",
+          "ar": "نوع الصفقة"
+        },
+        "dealAll": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "dealSale": {
+          "tr": "Satılık",
+          "en": "For sale",
+          "ar": "للبيع"
+        },
+        "dealRent": {
+          "tr": "Kiralık",
+          "en": "For rent",
+          "ar": "للإيجار"
+        },
+        "filtersTitle": {
+          "tr": "Filtreler",
+          "en": "Filters",
+          "ar": "التصفية"
+        },
+        "typeTitle": {
+          "tr": "Emlak türü",
+          "en": "Property type",
+          "ar": "نوع العقار"
+        },
+        "roomsTitle": {
+          "tr": "Oda sayısı",
+          "en": "Rooms",
+          "ar": "عدد الغرف"
+        },
+        "m2Title": {
+          "tr": "Alan (m²)",
+          "en": "Area (m²)",
+          "ar": "المساحة (م²)"
+        },
+        "priceTitle": {
+          "tr": "Fiyat",
+          "en": "Price",
+          "ar": "السعر"
+        },
+        "districtTitle": {
+          "tr": "Semt",
+          "en": "District",
+          "ar": "الحي"
+        },
+        "districtAll": {
+          "tr": "Tüm semtler",
+          "en": "All districts",
+          "ar": "كل الأحياء"
+        },
+        "minLabel": {
+          "tr": "En az",
+          "en": "Min",
+          "ar": "الحد الأدنى"
+        },
+        "maxLabel": {
+          "tr": "En çok",
+          "en": "Max",
+          "ar": "الحد الأقصى"
+        },
+        "m2Unit": {
+          "tr": "m²",
+          "en": "m²",
+          "ar": "م²"
+        },
+        "sortLabel": {
+          "tr": "Sırala",
+          "en": "Sort by",
+          "ar": "ترتيب حسب"
+        },
+        "sortDate": {
+          "tr": "En yeni",
+          "en": "Newest",
+          "ar": "الأحدث"
+        },
+        "sortPrice": {
+          "tr": "Fiyat: düşükten yükseğe",
+          "en": "Price: low to high",
+          "ar": "السعر: من الأقل إلى الأعلى"
+        },
+        "sortPriceDesc": {
+          "tr": "Fiyat: yüksekten düşüğe",
+          "en": "Price: high to low",
+          "ar": "السعر: من الأعلى إلى الأقل"
+        },
+        "sortM2": {
+          "tr": "Alan: büyükten küçüğe",
+          "en": "Area: large to small",
+          "ar": "المساحة: من الأكبر إلى الأصغر"
+        },
+        "sortM2Asc": {
+          "tr": "Alan: küçükten büyüğe",
+          "en": "Area: small to large",
+          "ar": "المساحة: من الأصغر إلى الأكبر"
+        },
+        "resetFilters": {
+          "tr": "Filtreleri temizle",
+          "en": "Clear filters",
+          "ar": "مسح عوامل التصفية"
+        },
+        "resultCount": {
+          "tr": {
+            "one": "{n} ilan bulundu",
+            "other": "{n} ilan bulundu"
+          },
+          "en": {
+            "one": "{n} listing found",
+            "other": "{n} listings found"
+          },
+          "ar": {
+            "zero": "لم يتم العثور على إعلانات",
+            "one": "تم العثور على إعلان واحد",
+            "two": "تم العثور على إعلانين",
+            "few": "تم العثور على {n} إعلانات",
+            "many": "تم العثور على {n} إعلانًا",
+            "other": "تم العثور على {n} إعلان"
+          }
+        },
+        "photoCount": {
+          "tr": {
+            "one": "{n} fotoğraf",
+            "other": "{n} fotoğraf"
+          },
+          "en": {
+            "one": "{n} photo",
+            "other": "{n} photos"
+          },
+          "ar": {
+            "one": "صورة واحدة",
+            "two": "صورتان",
+            "few": "{n} صور",
+            "many": "{n} صورة",
+            "other": "{n} صورة"
+          }
+        },
+        "noResultTitle": {
+          "tr": "Sonuç bulunamadı",
+          "en": "No results found",
+          "ar": "لم يتم العثور على نتائج"
+        },
+        "noResultText": {
+          "tr": "Filtreleri gevşetmeyi veya temizlemeyi deneyin.",
+          "en": "Try loosening or clearing your filters.",
+          "ar": "جرّب تخفيف عوامل التصفية أو مسحها."
+        },
+        "pagesLabel": {
+          "tr": "Sayfalama",
+          "en": "Pagination",
+          "ar": "التنقل بين الصفحات"
+        },
+        "prevPage": {
+          "tr": "Önceki sayfa",
+          "en": "Previous page",
+          "ar": "الصفحة السابقة"
+        },
+        "nextPage": {
+          "tr": "Sonraki sayfa",
+          "en": "Next page",
+          "ar": "الصفحة التالية"
+        },
+        "pageN": {
+          "tr": "Sayfa {n}",
+          "en": "Page {n}",
+          "ar": "الصفحة {n}"
+        },
+        "permitLabel": {
+          "tr": "Yetki belgesi no",
+          "en": "Authorization certificate no.",
+          "ar": "رقم شهادة التفويض"
+        },
+        "permitDemo": {
+          "tr": "Yetki belgesi no: örnek ilan (DEMO)",
+          "en": "Authorization no.: sample listing (DEMO)",
+          "ar": "رقم شهادة التفويض: إعلان تجريبي (عرض توضيحي)"
+        },
+        "perMonth": {
+          "tr": "/ ay",
+          "en": "/ month",
+          "ar": "/ شهريًا"
+        },
+        "details": {
+          "tr": "İlan detayı",
+          "en": "View listing",
+          "ar": "تفاصيل الإعلان"
+        },
+        "dateLabel": {
+          "tr": "İlan tarihi",
+          "en": "Listed on",
+          "ar": "تاريخ الإعلان"
+        },
+        "demoNote": {
+          "tr": "Bu sayfadaki ilanlar kurgusaldır; yetki belgesi numaraları örnektir (DEMO).",
+          "en": "Listings on this page are fictional; authorization numbers are samples (DEMO).",
+          "ar": "الإعلانات في هذه الصفحة وهمية، وأرقام شهادات التفويض أمثلة فقط (عرض توضيحي)."
+        }
+      },
+      "version": "1.0.0",
+      "icon": "real_estate_agent",
+      "data": {
+        "facets": [
+          "type",
+          "rooms",
+          "m2",
+          "price",
+          "district"
+        ],
+        "typeLabels": {
+          "daire": {
+            "tr": "Daire",
+            "en": "Apartment",
+            "ar": "شقة"
+          },
+          "villa": {
+            "tr": "Villa",
+            "en": "Villa",
+            "ar": "فيلا"
+          },
+          "rezidans": {
+            "tr": "Rezidans",
+            "en": "Residence",
+            "ar": "مجمّع سكني"
+          },
+          "arsa": {
+            "tr": "Arsa",
+            "en": "Land",
+            "ar": "أرض"
+          },
+          "isyeri": {
+            "tr": "İşyeri",
+            "en": "Commercial",
+            "ar": "محل تجاري"
+          }
+        },
+        "listings": [
+          {
+            "id": "ilan-001",
+            "title": {
+              "tr": "Deniz manzaralı 3+1 daire",
+              "en": "3+1 apartment with sea view",
+              "ar": "شقة 3+1 بإطلالة بحرية"
+            },
+            "deal": "sale",
+            "type": "daire",
+            "rooms": "3+1",
+            "m2": 142,
+            "price": 6850000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İstanbul",
+              "en": "Istanbul",
+              "ar": "إسطنبول"
+            },
+            "district": {
+              "tr": "Kadıköy",
+              "en": "Kadikoy",
+              "ar": "قاضي كوي"
+            },
+            "img": [],
+            "permitNo": "DEMO-34-0001",
+            "url": "",
+            "date": "2026-10-24",
+            "badge": {
+              "tr": "Yeni",
+              "en": "New",
+              "ar": "جديد"
+            }
+          },
+          {
+            "id": "ilan-002",
+            "title": {
+              "tr": "Bahçe katı 2+1 kiralık daire",
+              "en": "2+1 garden-floor apartment for rent",
+              "ar": "شقة 2+1 في الطابق الأرضي مع حديقة للإيجار"
+            },
+            "deal": "rent",
+            "type": "daire",
+            "rooms": "2+1",
+            "m2": 95,
+            "price": 38000,
+            "currency": "TRY",
+            "city": {
+              "tr": "Ankara",
+              "en": "Ankara",
+              "ar": "أنقرة"
+            },
+            "district": {
+              "tr": "Çankaya",
+              "en": "Cankaya",
+              "ar": "تشانكايا"
+            },
+            "img": [],
+            "permitNo": "DEMO-06-0002",
+            "url": "",
+            "date": "2026-10-22"
+          },
+          {
+            "id": "ilan-003",
+            "title": {
+              "tr": "Havuzlu müstakil villa",
+              "en": "Detached villa with pool",
+              "ar": "فيلا مستقلة مع مسبح"
+            },
+            "deal": "sale",
+            "type": "villa",
+            "rooms": "5+2",
+            "m2": 320,
+            "price": 18900000,
+            "currency": "TRY",
+            "city": {
+              "tr": "Muğla",
+              "en": "Mugla",
+              "ar": "موغلا"
+            },
+            "district": {
+              "tr": "Bodrum",
+              "en": "Bodrum",
+              "ar": "بودروم"
+            },
+            "img": [],
+            "permitNo": "DEMO-48-0003",
+            "url": "",
+            "date": "2026-10-18"
+          },
+          {
+            "id": "ilan-004",
+            "title": {
+              "tr": "Eşyalı 1+1 kiralık daire",
+              "en": "Furnished 1+1 apartment for rent",
+              "ar": "شقة 1+1 مفروشة للإيجار"
+            },
+            "deal": "rent",
+            "type": "daire",
+            "rooms": "1+1",
+            "m2": 55,
+            "price": 22500,
+            "currency": "TRY",
+            "city": {
+              "tr": "İzmir",
+              "en": "Izmir",
+              "ar": "إزمير"
+            },
+            "district": {
+              "tr": "Karşıyaka",
+              "en": "Karsiyaka",
+              "ar": "قارشيياكا"
+            },
+            "img": [],
+            "permitNo": "DEMO-35-0004",
+            "url": "",
+            "date": "2026-10-15"
+          },
+          {
+            "id": "ilan-005",
+            "title": {
+              "tr": "İmarlı satılık arsa",
+              "en": "Zoned plot for sale",
+              "ar": "أرض مخططة للبيع"
+            },
+            "deal": "sale",
+            "type": "arsa",
+            "rooms": "",
+            "m2": 600,
+            "price": 3200000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İzmir",
+              "en": "Izmir",
+              "ar": "إزمير"
+            },
+            "district": {
+              "tr": "Urla",
+              "en": "Urla",
+              "ar": "أورلا"
+            },
+            "img": [],
+            "permitNo": "DEMO-35-0005",
+            "url": "",
+            "date": "2026-10-11"
+          },
+          {
+            "id": "ilan-006",
+            "title": {
+              "tr": "Cadde üstü kiralık dükkân",
+              "en": "Street-front shop for rent",
+              "ar": "محل على الشارع الرئيسي للإيجار"
+            },
+            "deal": "rent",
+            "type": "isyeri",
+            "rooms": "",
+            "m2": 120,
+            "price": 65000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İstanbul",
+              "en": "Istanbul",
+              "ar": "إسطنبول"
+            },
+            "district": {
+              "tr": "Şişli",
+              "en": "Sisli",
+              "ar": "شيشلي"
+            },
+            "img": [],
+            "permitNo": "DEMO-34-0006",
+            "url": "",
+            "date": "2026-10-08"
+          },
+          {
+            "id": "ilan-007",
+            "title": {
+              "tr": "Site içinde 2+1 daire",
+              "en": "2+1 apartment in a gated complex",
+              "ar": "شقة 2+1 داخل مجمع سكني مسوّر"
+            },
+            "deal": "sale",
+            "type": "daire",
+            "rooms": "2+1",
+            "m2": 100,
+            "price": 4150000,
+            "currency": "TRY",
+            "city": {
+              "tr": "Bursa",
+              "en": "Bursa",
+              "ar": "بورصة"
+            },
+            "district": {
+              "tr": "Nilüfer",
+              "en": "Nilufer",
+              "ar": "نيلوفر"
+            },
+            "img": [],
+            "permitNo": "DEMO-16-0007",
+            "url": "",
+            "date": "2026-10-05"
+          },
+          {
+            "id": "ilan-008",
+            "title": {
+              "tr": "Merkezi konumda 1+1 rezidans",
+              "en": "1+1 residence in a central location",
+              "ar": "وحدة 1+1 في مجمّع سكني بموقع مركزي"
+            },
+            "deal": "sale",
+            "type": "rezidans",
+            "rooms": "1+1",
+            "m2": 70,
+            "price": 5300000,
+            "currency": "TRY",
+            "city": {
+              "tr": "İstanbul",
+              "en": "Istanbul",
+              "ar": "إسطنبول"
+            },
+            "district": {
+              "tr": "Beşiktaş",
+              "en": "Besiktas",
+              "ar": "بشيكتاش"
+            },
+            "img": [],
+            "permitNo": "DEMO-34-0008",
+            "url": "",
+            "date": "2026-10-02"
+          }
+        ]
+      },
+      "index": 10
+    },
+    {
+      "name": "Demo Kredi Şeridi",
+      "description": "Demo sitelerin alt bilgisinde duran kredi şeridi: «Bu demo Webyapar tarafından hazırlanmıştır — Bu temayı iste». Marka adı çevrilmez (Latin, dir=ltr izole), bağlantı demo adına göre webyapar.com/temalar#<slug>. Üç dil (TR/EN/AR), mantıksal CSS (RTL), mobilde sarar, reduced-motion'a saygılı.",
+      "version": "1.0.0",
+      "icon": "campaign",
+      "category": "demo",
+      "tags": [
+        "demo",
+        "footer",
+        "kredi",
+        "rtl"
+      ],
+      "desing": {
+        "href": "https://webyapar.com/temalar#veteriner-3",
+        "brand": "Webyapar",
+        "text": {
+          "tr": "Bu demo {brand} tarafından hazırlanmıştır —",
+          "en": "This demo was prepared by {brand} —",
+          "ar": "تم إعداد هذا العرض التجريبي بواسطة {brand} —"
+        },
+        "ctaText": {
+          "tr": "Bu temayı iste",
+          "en": "Get this theme",
+          "ar": "اطلب هذا القالب"
+        },
+        "newTabText": {
+          "tr": "(yeni sekmede açılır)",
+          "en": "(opens in a new tab)",
+          "ar": "(يفتح في علامة تبويب جديدة)"
+        },
+        "ariaLabel": {
+          "tr": "Demo bilgisi",
+          "en": "Demo credit",
+          "ar": "معلومات العرض التجريبي"
+        }
+      },
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "desing/data"
+      },
+      "id": "ozmnyl",
+      "path": "demo-kredi",
+      "local": "footer",
+      "data": [],
+      "index": 11
+    },
+    {
+      "name": "Üst Alt Çubuk — mobilde ekranın altında sabit sekme çubuğu",
+      "description": "Geniş ekranda logo, menü, dil ve düğme tek satır. Telefonda menü başparmak bölgesine iner: ekranın altında sabit, ikonlu ilk dört sayfa + «Menü» sekmesi; Menü alttan kayan bir sayfa (sheet) açar: iki sütun sayfa kutuları, telefon, e-posta, dil. JS yoksa üstte sarılan liste. Hamburger üstte değil, uygulamalardaki gibi altta sekme çubuğu: tek elle kullanım, sayfalar her an görünür; menü alttan açılan sayfa. Sayfalar site sayfalarından, dil seçici {{langbar}}, logo {{logo}}. Mobil menü erişilebilir (aria-expanded, Esc, odak). Renkler desing + var(--mx-site-*); mantıksal CSS → RTL.",
+      "version": "1.0.0",
+      "icon": "bottom_navigation",
+      "category": "menu",
+      "subCategory": "bottom-tab-bar",
+      "tags": [
+        "menu",
+        "bottom-nav",
+        "tab-bar",
+        "bottom-sheet",
+        "mobile-first",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "0px",
+        "yuvarlak": "18px",
+        "ust": "",
+        "baslik": "",
+        "metin": "",
+        "cta_ad": {
+          "tr": "Randevu",
+          "en": "Book",
+          "ar": "موعد"
+        },
+        "cta_url": "teklif-al",
+        "tel": "+90 342 084 27 27",
+        "logoimg": "",
+        "bg": "var(--mx-site-bg, #ffffff)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+        "kartBg": "var(--mx-site-surface, #f6f7f9)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "logoH": "44px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "color": "var(--mx-site-text, #111318)",
+        "logo_acik": "logo-acik.svg",
+        "logo_h": "44px",
+        "cta": {
+          "tr": "Teklif al",
+          "en": "Get a quote",
+          "ar": "اطلب عرض سعر"
+        }
+      },
+      "data": [],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "data",
+        "alanlar": {
+          "name": "ek bağlantı adı (dil sözlüğü)",
+          "url": "iç yol ya da dış adres (dış adres yeni sekmede)"
+        }
+      },
+      "id": "zx69eu",
+      "path": "ust-alt-cubuk",
+      "local": "header",
+      "index": 12
+    },
+    {
+      "name": "Açılış Şube Yakın — en yakın şube kartı, harita bağlantısı, konum izniyle sıralama",
+      "description": "Bir yanda etiket, h1, metin, düğmeler, maddeler (ve varsa geniş vitrin görseli); diğer yanda harita desenli şube kartı: zıplayan konum iğnesi, «Konumumu kullan» düğmesi, öne çıkan şube (ad, adres, çalışma saati, telefon, Yol tarifi al) ve altında diğer şubelerin kompakt satırları. Satırdaki ok düğmesi o şubeyi öne çıkarır; konum izni verilirse her şubeye mesafe (sayfa dilinde km) yazılır, liste yakından uzağa sıralanır ve en yakın şube «Size en yakın şube» etiketiyle öne geçer. JS yokken tüm şubeler bilgileriyle görünür. acilis-hizmet-secici bağlantı satırıdır, kargo-takip-hero numara sorgular; bu modül şube listesini açılışa taşır: harita desenli kart, öne çıkan şube + kompakt satırlar, konum izniyle mesafe ve yakınlık sıralaması. sube-harita-liste (ayrı bölüm, gömülü harita) ve sayac-sube-harita (sayaç) modüllerinden farkı h1'li açılış iskeleti ve tek öne çıkan şube kartı. Başlık h1, ilk görsel eager. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "near_me",
+      "category": "hero",
+      "subCategory": "nearest-branch",
+      "tags": [
+        "hero",
+        "branches",
+        "location",
+        "geolocation",
+        "map",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Veteriner kliniği · 3 şube · Gaziantep",
+          "en": "Veterinary clinic · 3 branches · Gaziantep",
+          "ar": "عيادة بيطرية · 3 فروع · غازي عنتاب"
+        },
+        "baslik": {
+          "tr": "Evcil dostunuza en yakın şube",
+          "en": "The branch closest to your pet",
+          "ar": "الفرع الأقرب إلى حيوانك الأليف"
+        },
+        "metin": {
+          "tr": "İbrahimli, Karataş ve Nizip’te aynı özen listesi. Konumunuzu paylaşın, en yakın şube öne gelsin; ya da listeden seçin. Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "The same care checklist in Ibrahimli, Karatas and Nizip. Share your location to bring the nearest branch forward, or pick one from the list. In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "قائمة العناية نفسها في إبراهيملي وكاراتاش ونيزيب. شارك موقعك ليظهر الفرع الأقرب أولًا، أو اختر من القائمة. في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        },
+        "img": "/img/klinik-tedavi-3.webp",
+        "img2": "",
+        "video": "",
+        "poster": "",
+        "alt": {
+          "tr": "Okaliptüs dalıyla katlanmış beyaz havlular",
+          "en": "Folded white towels with a eucalyptus sprig",
+          "ar": "مناشف بيضاء مطوية مع غصن أوكالبتوس"
+        },
+        "cta_ad": {
+          "tr": "Randevu al",
+          "en": "Book a visit",
+          "ar": "احجز موعدًا"
+        },
+        "cta_url": "teklif-al",
+        "cta2_ad": {
+          "tr": "Tüm şubeler",
+          "en": "All branches",
+          "ar": "كل الفروع"
+        },
+        "cta2_url": "iletisim",
+        "rozet_ikon": "",
+        "rozet_deger": "",
+        "rozet_metin": "",
+        "bg": "var(--mx-site-surface, #f6f7f9)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+        "kartBg": "var(--mx-site-bg, #ffffff)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "subeler": [
+          {
+            "ad": {
+              "tr": "İbrahimli şubesi",
+              "en": "Ibrahimli branch",
+              "ar": "فرع إبراهيملي"
+            },
+            "adres": {
+              "tr": "Mehmet Akif Ersoy Bulvarı No: 27, İbrahimli, Şehitkamil, Gaziantep (kurgusal adres)",
+              "en": "27 Mehmet Akif Ersoy Boulevard, Ibrahimli, Sehitkamil, Gaziantep (fictional address)",
+              "ar": "جادة محمد عاكف أرصوي رقم 27، إبراهيملي، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+            },
+            "saat": {
+              "tr": "Pzt–Cmt 09:00 – 19:00 · Paz 10:00 – 14:00",
+              "en": "Mon–Sat 09:00 – 19:00 · Sun 10:00 – 14:00",
+              "ar": "الاثنين–السبت 09:00 – 19:00 · الأحد 10:00 – 14:00"
+            },
+            "tel": "+90 342 084 27 27",
+            "enlem": 37.0905,
+            "boylam": 37.3591
+          },
+          {
+            "ad": {
+              "tr": "Karataş şubesi",
+              "en": "Karatas branch",
+              "ar": "فرع كاراتاش"
+            },
+            "adres": {
+              "tr": "Karataş Caddesi No: 9, Şahinbey, Gaziantep (kurgusal adres)",
+              "en": "9 Karatas Street, Sahinbey, Gaziantep (fictional address)",
+              "ar": "شارع كاراتاش رقم 9، شاهين بيه، غازي عنتاب (عنوان افتراضي)"
+            },
+            "saat": {
+              "tr": "Pzt–Cmt 09:00 – 18:00",
+              "en": "Mon–Sat 09:00 – 18:00",
+              "ar": "الاثنين–السبت 09:00 – 18:00"
+            },
+            "tel": "+90 342 084 27 28",
+            "enlem": 37.0329,
+            "boylam": 37.3412
+          },
+          {
+            "ad": {
+              "tr": "Nizip şubesi",
+              "en": "Nizip branch",
+              "ar": "فرع نيزيب"
+            },
+            "adres": {
+              "tr": "İstasyon Caddesi No: 41, Nizip, Gaziantep (kurgusal adres)",
+              "en": "41 Istasyon Street, Nizip, Gaziantep (fictional address)",
+              "ar": "شارع المحطة رقم 41، نيزيب، غازي عنتاب (عنوان افتراضي)"
+            },
+            "saat": {
+              "tr": "Pzt–Cuma 10:00 – 18:00",
+              "en": "Mon–Fri 10:00 – 18:00",
+              "ar": "الاثنين–الجمعة 10:00 – 18:00"
+            },
+            "tel": "+90 342 084 27 29",
+            "enlem": 37.0096,
+            "boylam": 37.7942
+          }
+        ],
+        "konum_ad": {
+          "tr": "Konumumu kullan",
+          "en": "Use my location",
+          "ar": "استخدم موقعي"
+        },
+        "yakin_ad": {
+          "tr": "Size en yakın şube",
+          "en": "Your nearest branch",
+          "ar": "أقرب فرع إليك"
+        },
+        "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+        "color": "var(--mx-site-text, #111318)",
+        "yukseklik": 82,
+        "eyebrow": {
+          "tr": "Veteriner · 3 şube",
+          "en": "Vet · 3 branches",
+          "ar": "بيطري · 3 فروع"
+        },
+        "title": {
+          "tr": "Patiyol Veteriner",
+          "en": "Patiyol Veterinary",
+          "ar": "باتي يول البيطرية"
+        },
+        "cta1": {
+          "tr": "Randevu al",
+          "en": "Book a visit",
+          "ar": "احجز موعدًا"
+        },
+        "cta1_url": "teklif-al",
+        "cta2": {
+          "tr": "Şubeler",
+          "en": "Branches",
+          "ar": "الفروع"
+        },
+        "scroll_label": {
+          "tr": "Aşağı kaydır",
+          "en": "Scroll down",
+          "ar": "انزل للأسفل"
+        }
+      },
+      "data": [
+        {
+          "ikon": "storefront",
+          "metin": {
+            "tr": "3 şube, aynı özen listesi",
+            "en": "3 branches, one care checklist",
+            "ar": "3 فروع وقائمة عناية واحدة"
+          }
+        },
+        {
+          "ikon": "pets",
+          "metin": {
+            "tr": "Kedi ve köpeğe ayrı bekleme",
+            "en": "Separate waiting for cats and dogs",
+            "ar": "انتظار منفصل للقطط والكلاب"
+          }
+        },
+        {
+          "ikon": "event_available",
+          "metin": {
+            "tr": "Pazar günü İbrahimli açık",
+            "en": "Ibrahimli open on Sundays",
+            "ar": "إبراهيملي مفتوح يوم الأحد"
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "desing/data",
+        "alanlar": {
+          "ikon": "madde ikonu (Material Symbols)",
+          "deger": "sayı/değer (ör. 1.200+, dil sözlüğü olabilir)",
+          "metin": "madde metni (dil sözlüğü)",
+          "img": "madde görseli (mozaik yerleşimlerde)",
+          "url": "madde bağlantısı"
+        }
+      },
+      "id": "hqba9e",
+      "path": "acilis-sube-yakin",
+      "local": "body",
+      "index": 13
+    },
+    {
+      "name": "Değer Özen Kontrol — kaydırdıkça işaretlenen liste + ilerleme halkası",
+      "description": "Tek sütun, dikey raylı kontrol listesi: her değer ikonlu bir madde; okur kaydırdıkça maddelerin kutusu tek tek işaretlenir, yandaki yapışkan özet kartında halka dolar ve «n / toplam» sayacı artar. JS yoksa / hareket azaltılmışsa tüm maddeler işaretli son hâl. deger-onay-liste sabit, iki sütun tik listesidir; bu modülde işaretler kaydırmayla tek tek atılır ve ilerleme bir halka + sayaçla izlenir (ilerleme anlatısı). Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "task_alt",
+      "category": "values",
+      "subCategory": "progress-checklist",
+      "tags": [
+        "values",
+        "checklist",
+        "progress",
+        "scroll",
+        "ring",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Özen listesi",
+          "en": "Care checklist",
+          "ar": "قائمة العناية"
+        },
+        "baslik": {
+          "tr": "Her ziyarette altı adım",
+          "en": "Six steps at every visit",
+          "ar": "ست خطوات في كل زيارة"
+        },
+        "metin": {
+          "tr": "Kaydırdıkça adımlar işaretlenir; üç şubede aynı liste uygulanır. İçerik kurgusaldır; veteriner hekim muayenesinin yerine geçmez.",
+          "en": "Steps are ticked as you scroll; the same list is used at all three branches. Content is fictional and does not replace a veterinary examination.",
+          "ar": "تُعلَّم الخطوات أثناء التمرير؛ وتُطبَّق القائمة نفسها في الفروع الثلاثة. المحتوى افتراضي ولا يغني عن فحص الطبيب البيطري."
+        },
+        "bg": "var(--mx-site-surface, #f6f7f9)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+        "kartBg": "var(--mx-site-bg, #ffffff)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+        "color": "var(--mx-site-text, #111318)",
+        "badge": {
+          "tr": "Özen listesi",
+          "en": "Care checklist",
+          "ar": "قائمة العناية"
+        },
+        "title": {
+          "tr": "Her ziyarette altı adım",
+          "en": "Six steps at every visit",
+          "ar": "ست خطوات في كل زيارة"
+        },
+        "description": {
+          "tr": "İçerik kurgusaldır; veteriner hekim muayenesinin yerine geçmez.",
+          "en": "Content is fictional and does not replace a veterinary examination.",
+          "ar": "المحتوى افتراضي ولا يغني عن فحص الطبيب البيطري."
+        }
+      },
+      "data": [
+        {
+          "etiket": "01",
+          "ikon": "pets",
+          "baslik": {
+            "tr": "Sakin karşılama",
+            "en": "A calm welcome",
+            "ar": "استقبال هادئ"
+          },
+          "metin": {
+            "tr": "Kediler ve köpekler ayrı alanda bekler; taşıma çantası açılmadan sıra beklenir.",
+            "en": "Cats and dogs wait in separate areas; carriers stay closed while you wait.",
+            "ar": "تنتظر القطط والكلاب في منطقتين منفصلتين، وتبقى حقائب النقل مغلقة أثناء الانتظار."
+          }
+        },
+        {
+          "etiket": "02",
+          "ikon": "scale",
+          "baslik": {
+            "tr": "Tartım",
+            "en": "Weighing",
+            "ar": "الوزن"
+          },
+          "metin": {
+            "tr": "Her ziyarette kilo kaydedilir; ilaç dozu kiloya göre belirlenir.",
+            "en": "Weight is recorded at every visit; medicine doses depend on it.",
+            "ar": "يُسجَّل الوزن في كل زيارة، وتُحدَّد جرعات الدواء بناءً عليه."
+          }
+        },
+        {
+          "etiket": "03",
+          "ikon": "stethoscope",
+          "baslik": {
+            "tr": "Genel muayene",
+            "en": "General examination",
+            "ar": "الفحص العام"
+          },
+          "metin": {
+            "tr": "Göz, kulak, ağız, deri ve kalp sesi kontrol edilir.",
+            "en": "Eyes, ears, mouth, skin and heart sounds are checked.",
+            "ar": "تُفحص العينان والأذنان والفم والجلد وأصوات القلب."
+          }
+        },
+        {
+          "etiket": "04",
+          "ikon": "vaccines",
+          "baslik": {
+            "tr": "Aşı karnesi",
+            "en": "Vaccination card",
+            "ar": "بطاقة اللقاحات"
+          },
+          "metin": {
+            "tr": "Eksik aşı ve parazit uygulaması karneye işlenir.",
+            "en": "Missing vaccines and parasite treatments are noted on the card.",
+            "ar": "تُدوَّن اللقاحات الناقصة وعلاجات الطفيليات في البطاقة."
+          }
+        },
+        {
+          "etiket": "05",
+          "ikon": "edit_note",
+          "baslik": {
+            "tr": "Yazılı bakım notu",
+            "en": "Written care note",
+            "ar": "ملاحظة رعاية مكتوبة"
+          },
+          "metin": {
+            "tr": "Beslenme ve ilaç kullanımı kısa bir notla anlatılır.",
+            "en": "Feeding and medicine use are explained in a short note.",
+            "ar": "تُشرح التغذية وطريقة استخدام الدواء في ملاحظة قصيرة."
+          }
+        },
+        {
+          "etiket": "06",
+          "ikon": "notifications",
+          "baslik": {
+            "tr": "Hatırlatma",
+            "en": "Reminder",
+            "ar": "تذكير"
+          },
+          "metin": {
+            "tr": "Sonraki aşı günü için bir hafta önce mesaj gönderilir.",
+            "en": "A message is sent a week before the next vaccine is due.",
+            "ar": "تُرسل رسالة قبل أسبوع من موعد اللقاح التالي."
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "data",
+        "alanlar": {
+          "ikon": "Material Symbols adı",
+          "baslik": "dil sözlüğü (zorunlu)",
+          "metin": "dil sözlüğü",
+          "etiket": "dil sözlüğü (küçük üst etiket)",
+          "img": "görsel yolu (destekleyen yerleşimde)",
+          "url": "iç/dış bağlantı (kartın tamamı tıklanır)"
+        }
+      },
+      "id": "gkz7uk",
+      "path": "deger-ozen-kontrol",
+      "local": "body",
+      "index": 14
+    },
+    {
+      "name": "Ekip Çalışma Günü — gün çipleriyle «bugün kim var?»",
+      "description": "Üstte takvim yaprağı biçiminde gün çipleri (Tümü + kadrodan en az birinin çalıştığı günler, kişi sayısıyla; bugün noktayla işaretli), altta hekim kartları: portre, ad, unvan, bölüm, yedi harfli hafta şeridi ve mesai saati. Gün seçilince yalnız o gün çalışanlar kalır. Gün adları sayfa dilinde (Intl). Kişiler takvime göre süzülür: ekip-bolum-sekme bölüme, team-2 departmana göre süzerken burada ölçüt haftanın günü; her kartta yedi günlük mini hafta şeridi ve saat — randevu öncesi «kim ne zaman burada» sorusunu yanıtlar. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "calendar_view_week",
+      "category": "team",
+      "subCategory": "weekday-filter",
+      "tags": [
+        "team",
+        "weekday",
+        "schedule",
+        "filter",
+        "doctor",
+        "interactive",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Hekimler",
+          "en": "Vets",
+          "ar": "الأطباء"
+        },
+        "baslik": {
+          "tr": "Bugün hangi şubede kim var?",
+          "en": "Who is at which branch today?",
+          "ar": "من يعمل في أي فرع اليوم؟"
+        },
+        "metin": {
+          "tr": "Gün seçin; o gün çalışan hekim ve teknisyenler şubeleriyle listelenir. Kurgusal profiller; portre kullanılmaz.",
+          "en": "Pick a day to see the vets and technicians working that day, with their branch. Fictional profiles; no portraits are used.",
+          "ar": "اختر يومًا لعرض الأطباء والفنيين العاملين فيه مع فروعهم. ملفات افتراضية؛ لا تُستخدم صور شخصية."
+        },
+        "bg": "var(--mx-site-surface, #f6f7f9)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+        "kartBg": "var(--mx-site-bg, #ffffff)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+        "color": "var(--mx-site-text, #111318)",
+        "badge": {
+          "tr": "Hekimler",
+          "en": "Vets",
+          "ar": "الأطباء"
+        },
+        "title": {
+          "tr": "Bugün hangi şubede kim var?",
+          "en": "Who is at which branch today?",
+          "ar": "من يعمل في أي فرع اليوم؟"
+        },
+        "description": {
+          "tr": "İçerik kurgusaldır; veteriner hekim muayenesinin yerine geçmez.",
+          "en": "Content is fictional and does not replace a veterinary examination.",
+          "ar": "المحتوى افتراضي ولا يغني عن فحص الطبيب البيطري."
+        }
+      },
+      "data": [
+        {
+          "ad": "Deniz A.",
+          "unvan": {
+            "tr": "Veteriner hekim (Vet. Hek.)",
+            "en": "Veterinarian (DVM)",
+            "ar": "طبيبة بيطرية"
+          },
+          "bolum": {
+            "tr": "İbrahimli şubesi",
+            "en": "Ibrahimli branch",
+            "ar": "فرع إبراهيملي"
+          },
+          "metin": {
+            "tr": "Kedi hastalıkları ve diş bakımı (kurgusal profil).",
+            "en": "Feline medicine and dental care (fictional profile).",
+            "ar": "أمراض القطط ورعاية الأسنان (ملف افتراضي)."
+          },
+          "gunler": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "saat": "09:00–17:00"
+        },
+        {
+          "ad": "Barış K.",
+          "unvan": {
+            "tr": "Veteriner hekim (Vet. Hek.)",
+            "en": "Veterinarian (DVM)",
+            "ar": "طبيب بيطري"
+          },
+          "bolum": {
+            "tr": "İbrahimli şubesi",
+            "en": "Ibrahimli branch",
+            "ar": "فرع إبراهيملي"
+          },
+          "metin": {
+            "tr": "Görüntüleme ve küçük cerrahi (kurgusal profil).",
+            "en": "Imaging and minor surgery (fictional profile).",
+            "ar": "التصوير والجراحة الصغرى (ملف افتراضي)."
+          },
+          "gunler": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "saat": "11:00–19:00"
+        },
+        {
+          "ad": "Nil S.",
+          "unvan": {
+            "tr": "Veteriner hekim (Vet. Hek.)",
+            "en": "Veterinarian (DVM)",
+            "ar": "طبيبة بيطرية"
+          },
+          "bolum": {
+            "tr": "Karataş şubesi",
+            "en": "Karatas branch",
+            "ar": "فرع كاراتاش"
+          },
+          "metin": {
+            "tr": "Aşı takvimi ve yavru bakımı (kurgusal profil).",
+            "en": "Vaccination schedules and puppy and kitten care (fictional profile).",
+            "ar": "جداول اللقاحات ورعاية الصغار (ملف افتراضي)."
+          },
+          "gunler": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "saat": "09:00–18:00"
+        },
+        {
+          "ad": "Ömer T.",
+          "unvan": {
+            "tr": "Veteriner hekim (Vet. Hek.)",
+            "en": "Veterinarian (DVM)",
+            "ar": "طبيب بيطري"
+          },
+          "bolum": {
+            "tr": "Nizip şubesi",
+            "en": "Nizip branch",
+            "ar": "فرع نيزيب"
+          },
+          "metin": {
+            "tr": "Köpek davranışı ve yaşlı hayvan takibi (kurgusal profil).",
+            "en": "Dog behaviour and senior pet follow-up (fictional profile).",
+            "ar": "سلوك الكلاب ومتابعة الحيوانات المسنّة (ملف افتراضي)."
+          },
+          "gunler": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "saat": "10:00–18:00"
+        },
+        {
+          "ad": "Ece Y.",
+          "unvan": {
+            "tr": "Veteriner teknisyeni",
+            "en": "Veterinary technician",
+            "ar": "فنية بيطرية"
+          },
+          "bolum": {
+            "tr": "Karataş şubesi",
+            "en": "Karatas branch",
+            "ar": "فرع كاراتاش"
+          },
+          "metin": {
+            "tr": "Tartım, numune alma ve hatırlatmalar (kurgusal profil).",
+            "en": "Weighing, samples and reminders (fictional profile).",
+            "ar": "الوزن وسحب العينات والتذكيرات (ملف افتراضي)."
+          },
+          "gunler": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "saat": "09:00–18:00"
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "data",
+        "alanlar": {
+          "ad": "ad soyad (zorunlu; düz metin ya da dil sözlüğü)",
+          "unvan": "görev / unvan (dil sözlüğü)",
+          "metin": "kısa tanıtım (dil sözlüğü)",
+          "img": "portre görseli (yoksa baş harfler)",
+          "bolum": "bölüm (dil sözlüğü ya da desing.departments id'si)",
+          "eposta": "e-posta (mailto)",
+          "telefon": "telefon (tel:)",
+          "url": "profil sayfası bağlantısı",
+          "social": "[{ ad, url (http(s)/mailto/tel), ikon (Material Symbols) }]"
+        }
+      },
+      "id": "d2ppxq",
+      "path": "ekip-calisma-gunu",
+      "local": "body",
+      "index": 15
+    },
+    {
+      "name": "Özellik Olanak Izgarası — kategori sekmeli ikon karoları",
+      "description": "Oda/tesis olanakları küçük ikon karolarından yoğun bir ızgara (masaüstünde 6 sütuna dek): kare ikon zemini, kısa ad, tek satır not. Üstte segment biçimli kategori düğmeleri (Tümü + satırın `kategori` alanı, adetleriyle) karoları süzer. Kategori yoksa yalnız ızgara. ozellik-ikon-serit tek satır yatay şerit, ozellik-cizgi-izgara büyük çizgili hücreler, ozellik-sekme-gorsel tek özelliği görselle gösterir; bu modül çok sayıda (8–24) küçük olanak karosunun kategoriyle süzüldüğü yoğun envanter ızgarası. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "hotel",
+      "category": "ozellik",
+      "subCategory": "amenity-grid",
+      "tags": [
+        "ozellik",
+        "amenities",
+        "icons",
+        "filter",
+        "grid",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Olanaklar",
+          "en": "Facilities",
+          "ar": "المرافق"
+        },
+        "baslik": {
+          "tr": "Şubelerde neler var?",
+          "en": "What is at each branch?",
+          "ar": "ماذا يوجد في كل فرع؟"
+        },
+        "metin": {
+          "tr": "Kategoriye dokunun; karonun altındaki not hangi şubede olduğunu söyler. Bilgiler kurgusaldır.",
+          "en": "Tap a category; the note under each tile says which branch has it. Information is fictional.",
+          "ar": "المس الفئة؛ تذكر الملاحظة أسفل كل بطاقة أي فرع يضمّها. المعلومات افتراضية."
+        },
+        "img": "",
+        "bg": "var(--mx-site-bg, #ffffff)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+        "kartBg": "var(--mx-site-surface, #f6f7f9)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "tumuAd": {
+          "tr": "Tümü",
+          "en": "All",
+          "ar": "الكل"
+        },
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "color": "var(--mx-site-text, #111318)",
+        "eyebrow": {
+          "tr": "Olanaklar",
+          "en": "Facilities",
+          "ar": "المرافق"
+        },
+        "title": {
+          "tr": "Şubelerde neler var?",
+          "en": "What is at each branch?",
+          "ar": "ماذا يوجد في كل فرع؟"
+        },
+        "description": {
+          "tr": "İçerik kurgusaldır; veteriner hekim muayenesinin yerine geçmez.",
+          "en": "Content is fictional and does not replace a veterinary examination.",
+          "ar": "المحتوى افتراضي ولا يغني عن فحص الطبيب البيطري."
+        },
+        "ctaLabel": {
+          "tr": "Ayrıntı",
+          "en": "Details",
+          "ar": "التفاصيل"
+        }
+      },
+      "data": [
+        {
+          "kategori": {
+            "tr": "Muayene",
+            "en": "Clinic",
+            "ar": "الفحص"
+          },
+          "ikon": "radiology",
+          "baslik": {
+            "tr": "Dijital röntgen",
+            "en": "Digital X-ray",
+            "ar": "أشعة رقمية"
+          },
+          "metin": {
+            "tr": "İbrahimli ve Karataş.",
+            "en": "Ibrahimli and Karatas.",
+            "ar": "إبراهيملي وكاراتاش."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Muayene",
+            "en": "Clinic",
+            "ar": "الفحص"
+          },
+          "ikon": "ecg_heart",
+          "baslik": {
+            "tr": "Ultrason",
+            "en": "Ultrasound",
+            "ar": "الموجات فوق الصوتية"
+          },
+          "metin": {
+            "tr": "İbrahimli.",
+            "en": "Ibrahimli.",
+            "ar": "إبراهيملي."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Muayene",
+            "en": "Clinic",
+            "ar": "الفحص"
+          },
+          "ikon": "biotech",
+          "baslik": {
+            "tr": "Kan tahlili",
+            "en": "Blood tests",
+            "ar": "تحاليل الدم"
+          },
+          "metin": {
+            "tr": "Üç şubede numune alımı.",
+            "en": "Samples taken at all three branches.",
+            "ar": "سحب العينات في الفروع الثلاثة."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Muayene",
+            "en": "Clinic",
+            "ar": "الفحص"
+          },
+          "ikon": "dentistry",
+          "baslik": {
+            "tr": "Diş taşı temizliği",
+            "en": "Dental scaling",
+            "ar": "تنظيف الجير"
+          },
+          "metin": {
+            "tr": "Randevuyla, İbrahimli.",
+            "en": "By appointment, Ibrahimli.",
+            "ar": "بموعد، إبراهيملي."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Konfor",
+            "en": "Comfort",
+            "ar": "الراحة"
+          },
+          "ikon": "pets",
+          "baslik": {
+            "tr": "Kedi bekleme odası",
+            "en": "Cat waiting room",
+            "ar": "غرفة انتظار القطط"
+          },
+          "metin": {
+            "tr": "Sessiz, köpeksiz alan.",
+            "en": "A quiet, dog-free area.",
+            "ar": "منطقة هادئة بلا كلاب."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Konfor",
+            "en": "Comfort",
+            "ar": "الراحة"
+          },
+          "ikon": "water_drop",
+          "baslik": {
+            "tr": "Su ve mama köşesi",
+            "en": "Water and food corner",
+            "ar": "ركن الماء والطعام"
+          },
+          "metin": {
+            "tr": "Her şubede.",
+            "en": "At every branch.",
+            "ar": "في كل فرع."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Konfor",
+            "en": "Comfort",
+            "ar": "الراحة"
+          },
+          "ikon": "scale",
+          "baslik": {
+            "tr": "Kilo istasyonu",
+            "en": "Weighing station",
+            "ar": "محطة الوزن"
+          },
+          "metin": {
+            "tr": "Randevusuz tartım.",
+            "en": "Weigh-ins without an appointment.",
+            "ar": "وزن بدون موعد."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Erişim",
+            "en": "Access",
+            "ar": "الوصول"
+          },
+          "ikon": "local_parking",
+          "baslik": {
+            "tr": "Otopark",
+            "en": "Parking",
+            "ar": "موقف سيارات"
+          },
+          "metin": {
+            "tr": "İbrahimli ve Nizip.",
+            "en": "Ibrahimli and Nizip.",
+            "ar": "إبراهيملي ونيزيب."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Erişim",
+            "en": "Access",
+            "ar": "الوصول"
+          },
+          "ikon": "accessible",
+          "baslik": {
+            "tr": "Rampalı giriş",
+            "en": "Step-free entrance",
+            "ar": "مدخل بمنحدر"
+          },
+          "metin": {
+            "tr": "Üç şubede.",
+            "en": "At all three branches.",
+            "ar": "في الفروع الثلاثة."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Hizmet",
+            "en": "Services",
+            "ar": "الخدمات"
+          },
+          "ikon": "home_health",
+          "baslik": {
+            "tr": "Ev ziyareti",
+            "en": "Home visits",
+            "ar": "زيارات منزلية"
+          },
+          "metin": {
+            "tr": "Yaşlı hayvanlar için, randevuyla.",
+            "en": "For older pets, by appointment.",
+            "ar": "للحيوانات المسنّة، بموعد."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Hizmet",
+            "en": "Services",
+            "ar": "الخدمات"
+          },
+          "ikon": "memory",
+          "baslik": {
+            "tr": "Mikroçip ve kayıt",
+            "en": "Microchip and registration",
+            "ar": "الشريحة والتسجيل"
+          },
+          "metin": {
+            "tr": "Kimlik kaydı aynı gün.",
+            "en": "ID registration the same day.",
+            "ar": "تسجيل الهوية في اليوم نفسه."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Hizmet",
+            "en": "Services",
+            "ar": "الخدمات"
+          },
+          "ikon": "flight",
+          "baslik": {
+            "tr": "Seyahat belgesi",
+            "en": "Travel papers",
+            "ar": "وثائق السفر"
+          },
+          "metin": {
+            "tr": "Pasaport ve sağlık belgesi.",
+            "en": "Pet passport and health certificate.",
+            "ar": "جواز سفر وشهادة صحية."
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "data",
+        "alanlar": {
+          "baslik": "özellik adı — dil sözlüğü (zorunlu)",
+          "metin": "açıklama — dil sözlüğü",
+          "ikon": "Material Symbols adı",
+          "img": "görsel yolu (destekleyen yerleşimde; ana görsel yoksa ilk görsel)",
+          "alt": "görsel alt metni — dil sözlüğü",
+          "url": "bağlantı",
+          "linkMetin": "bağlantı yazısı (yoksa eski `ctaLabel`, o da yoksa «Devamını oku»)"
+        }
+      },
+      "id": "7g34g0",
+      "path": "ozellik-olanak-izgara",
+      "local": "body",
+      "index": 16
+    },
+    {
+      "name": "Referans İlçe Süzgeç — ilçe çipleriyle süzülen tamamlanan işler",
+      "description": "Üstte «Tümü» + ilçe çipleri (iş adedi rozetli, çoklu seçim) ve canlı sonuç satırı; altta iş fişi kartları: fiş no, konum rozeti, yıl, iş/müşteri adı, kısa açıklama ve iş türü. Seçilen ilçelerin işleri kalır, diğerleri gizlenir. JS yoksa ya da tek ilçe varsa çip şeridi yok, tüm işler görünür. referans-sekme-sektor sektöre göre tek seçimli sekme panelleri kopyalar; bu modül yerinde, çoklu seçimli konum süzgeci uygular (ilçe verisi, sonuç sayacı) ve logo yerine iş fişi iskeleti (no · konum · yıl · iş türü) kullanır. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "location_on",
+      "category": "referans",
+      "subCategory": "district-filter",
+      "tags": [
+        "referans",
+        "filter",
+        "district",
+        "projects",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Saha çalışmaları",
+          "en": "Field work",
+          "ar": "العمل الميداني"
+        },
+        "baslik": {
+          "tr": "İlçe ilçe gönüllü günler",
+          "en": "Volunteer days, district by district",
+          "ar": "أيام تطوعية حسب الحي"
+        },
+        "metin": {
+          "tr": "Kurgusal iş fişleri; kurum ve etkinlik adları örnektir, gerçek bir kuruma ait değildir.",
+          "en": "Fictional job tickets; organisation and event names are examples and do not belong to a real organisation.",
+          "ar": "بطاقات عمل افتراضية؛ أسماء الجهات والفعاليات أمثلة ولا تعود إلى جهة حقيقية."
+        },
+        "sayi": "",
+        "sayiEtiket": "",
+        "bg": "var(--mx-site-surface, #f6f7f9)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+        "kartBg": "var(--mx-site-bg, #ffffff)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "sonucEtiket": {
+          "tr": "{n} saha çalışması",
+          "en": "{n} field activities",
+          "ar": "{n} نشاط ميداني"
+        },
+        "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+        "color": "var(--mx-site-text, #111318)",
+        "grayscale": true,
+        "title": {
+          "tr": "İlçe ilçe gönüllü günler",
+          "en": "Volunteer days, district by district",
+          "ar": "أيام تطوعية حسب الحي"
+        },
+        "description": {
+          "tr": "İçerik kurgusaldır; veteriner hekim muayenesinin yerine geçmez.",
+          "en": "Content is fictional and does not replace a veterinary examination.",
+          "ar": "المحتوى افتراضي ولا يغني عن فحص الطبيب البيطري."
+        }
+      },
+      "data": [
+        {
+          "ad": {
+            "tr": "Mahalle aşı günü",
+            "en": "Neighbourhood vaccine day",
+            "ar": "يوم اللقاح في الحي"
+          },
+          "ilce": {
+            "tr": "İbrahimli",
+            "en": "Ibrahimli",
+            "ar": "إبراهيملي"
+          },
+          "yil": "2026",
+          "sektor": {
+            "tr": "Kuduz aşısı",
+            "en": "Rabies vaccine",
+            "ar": "لقاح داء الكلب"
+          },
+          "metin": {
+            "tr": "Parkta bir günlük bilgilendirme ve aşı masası.",
+            "en": "A one-day information and vaccine desk in the park.",
+            "ar": "طاولة توعية ولقاحات ليوم واحد في الحديقة."
+          }
+        },
+        {
+          "ad": {
+            "tr": "Kedi evi gönüllüleri",
+            "en": "Cat house volunteers",
+            "ar": "متطوعو بيت القطط"
+          },
+          "ilce": {
+            "tr": "İbrahimli",
+            "en": "Ibrahimli",
+            "ar": "إبراهيملي"
+          },
+          "yil": "2025",
+          "sektor": {
+            "tr": "Sağlık taraması",
+            "en": "Health screening",
+            "ar": "فحص صحي"
+          },
+          "metin": {
+            "tr": "Sokak kedileri için ücretsiz genel kontrol (kurgusal).",
+            "en": "Free general check-ups for street cats (fictional).",
+            "ar": "فحوص عامة مجانية لقطط الشوارع (افتراضي)."
+          }
+        },
+        {
+          "ad": {
+            "tr": "Barınak sağlık günü",
+            "en": "Shelter health day",
+            "ar": "يوم الصحة في الملجأ"
+          },
+          "ilce": {
+            "tr": "Karataş",
+            "en": "Karatas",
+            "ar": "كاراتاش"
+          },
+          "yil": "2026",
+          "sektor": {
+            "tr": "Gönüllü muayene",
+            "en": "Volunteer exams",
+            "ar": "فحوص تطوعية"
+          },
+          "metin": {
+            "tr": "Barınaktaki köpeklerin kilo ve aşı kaydı güncellendi.",
+            "en": "Weight and vaccine records of shelter dogs were updated.",
+            "ar": "حُدّثت سجلات الوزن واللقاحات لكلاب الملجأ."
+          }
+        },
+        {
+          "ad": {
+            "tr": "Okul sunumu",
+            "en": "School talk",
+            "ar": "عرض مدرسي"
+          },
+          "ilce": {
+            "tr": "Karataş",
+            "en": "Karatas",
+            "ar": "كاراتاش"
+          },
+          "yil": "2025",
+          "sektor": {
+            "tr": "Bilgilendirme",
+            "en": "Information",
+            "ar": "توعية"
+          },
+          "metin": {
+            "tr": "«Sorumlu sahiplik» üzerine ilkokul sunumu.",
+            "en": "A primary-school talk on responsible ownership.",
+            "ar": "عرض في مدرسة ابتدائية حول الملكية المسؤولة."
+          }
+        },
+        {
+          "ad": {
+            "tr": "Çarşı esnafı buluşması",
+            "en": "Market traders meet-up",
+            "ar": "لقاء تجار السوق"
+          },
+          "ilce": {
+            "tr": "Nizip",
+            "en": "Nizip",
+            "ar": "نيزيب"
+          },
+          "yil": "2026",
+          "sektor": {
+            "tr": "Bilgilendirme",
+            "en": "Information",
+            "ar": "توعية"
+          },
+          "metin": {
+            "tr": "Dükkân kedileri için parazit ve beslenme notları.",
+            "en": "Parasite and feeding notes for shop cats.",
+            "ar": "ملاحظات عن الطفيليات والتغذية لقطط المحلات."
+          }
+        },
+        {
+          "ad": {
+            "tr": "Kısırlaştırma desteği",
+            "en": "Neutering support",
+            "ar": "دعم التعقيم"
+          },
+          "ilce": {
+            "tr": "Nizip",
+            "en": "Nizip",
+            "ar": "نيزيب"
+          },
+          "yil": "2025",
+          "sektor": {
+            "tr": "Kısırlaştırma",
+            "en": "Neutering",
+            "ar": "التعقيم"
+          },
+          "metin": {
+            "tr": "Gönüllü ağla planlanan randevulu operasyon günleri (kurgusal).",
+            "en": "Scheduled operation days planned with a volunteer network (fictional).",
+            "ar": "أيام عمليات بمواعيد خُطّط لها مع شبكة متطوعين (افتراضي)."
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "data",
+        "alanlar": {
+          "ad": "marka / kurum adı (dil sözlüğü ya da düz metin; logo alt yazısı)",
+          "img": "logo görseli yolu (boşsa yazı logosu)",
+          "url": "iç/dış bağlantı (dış → yeni sekme)",
+          "sektor": "dil sözlüğü (sektör / iş alanı)",
+          "metin": "dil sözlüğü (kısa görüş / iş özeti)",
+          "kisi": "dil sözlüğü (görüş sahibi)",
+          "yil": "birlikte çalışma yılı (düz metin)"
+        }
+      },
+      "id": "xj63gw",
+      "path": "referans-ilce-suzgec",
+      "local": "body",
+      "index": 17
+    },
+    {
+      "name": "SSS Canlı Arama — yazdıkça süzülen soru listesi",
+      "description": "Koyu zeminde büyük hap arama kutusu, altında konu süzgeç çipleri (kategori) ve canlı sonuç sayısı; yazdıkça sorular süzülür (soru + cevap + konu içinde, aksan duyarsız), eşleşen kısım işaretlenir, hiçbir soru kalmazsa «sonuç yok» kutusu ve iletişim düğmesi çıkar. JS yokken tüm sorular açılır liste. sss-bolunmus aramayı yapışkan yan sütunda küçük bir girdiyle, sss-cip-filtre yalnız çip seçimiyle yapar; bu modülde arama sahnenin merkezi (dev hap kutu + canlı sayaç + eşleşme işareti + sonuç yok kartı), liste konu rozetli tek sütun. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Açılırlar yerel <details> (JS'siz). Veri yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "manage_search",
+      "category": "faq",
+      "subCategory": "live-search",
+      "tags": [
+        "faq",
+        "search",
+        "live-filter",
+        "details",
+        "dark",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1000px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Sorular",
+          "en": "Questions",
+          "ar": "الأسئلة"
+        },
+        "baslik": {
+          "tr": "Ziyaretten önce sorulanlar",
+          "en": "What owners ask before a visit",
+          "ar": "ما يسأله المالكون قبل الزيارة"
+        },
+        "metin": {
+          "tr": "Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        },
+        "tekAcik": "",
+        "ilkAcik": "",
+        "cta_ad": {
+          "tr": "Şubeyi ara",
+          "en": "Call a branch",
+          "ar": "اتصل بالفرع"
+        },
+        "cta_url": "iletisim",
+        "bg": "var(--mx-site-text, #111318)",
+        "text": "var(--mx-site-bg, #ffffff)",
+        "muted": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 78%, var(--mx-site-text, #111318))",
+        "kartBg": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 7%, transparent)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 18%, transparent)",
+        "accent": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 45%, var(--mx-site-bg, #ffffff))",
+        "accentText": "var(--mx-site-text, #111318)",
+        "vurguBg": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+        "vurguText": "var(--mx-site-text, #111318)",
+        "aramaYer": {
+          "tr": "Sorularda ara: aşı, kısırlaştırma, şube…",
+          "en": "Search questions: vaccines, neutering, branches…",
+          "ar": "ابحث في الأسئلة: اللقاحات، التعقيم، الفروع…"
+        },
+        "sonucYok": {
+          "tr": "Eşleşen soru yok; şubenizi arayın.",
+          "en": "No matching question; call your branch.",
+          "ar": "لا يوجد سؤال مطابق؛ اتصل بفرعك."
+        },
+        "sonucEk": {
+          "tr": "soru",
+          "en": "questions",
+          "ar": "سؤال"
+        },
+        "bgcolor": "var(--mx-site-text, #111318)",
+        "color": "var(--mx-site-bg, #ffffff)",
+        "badge": {
+          "tr": "Sorular",
+          "en": "Questions",
+          "ar": "الأسئلة"
+        },
+        "title": {
+          "tr": "Ziyaretten önce sorulanlar",
+          "en": "What owners ask before a visit",
+          "ar": "ما يسأله المالكون قبل الزيارة"
+        },
+        "description": {
+          "tr": "Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        }
+      },
+      "data": [
+        {
+          "kategori": {
+            "tr": "Randevu",
+            "en": "Appointments",
+            "ar": "المواعيد"
+          },
+          "soru": {
+            "tr": "Hangi şubeye gitmeliyim?",
+            "en": "Which branch should I go to?",
+            "ar": "إلى أي فرع أذهب؟"
+          },
+          "cevap": {
+            "tr": "Size en yakın şubeyi seçin; görüntüleme (röntgen, ultrason) gerekiyorsa İbrahimli şubesine yönlendirilirsiniz.",
+            "en": "Choose the branch nearest to you; if imaging (X-ray, ultrasound) is needed you will be referred to the Ibrahimli branch.",
+            "ar": "اختر الفرع الأقرب إليك؛ وإذا لزم التصوير (الأشعة أو الموجات فوق الصوتية) فستُحال إلى فرع إبراهيملي."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Randevu",
+            "en": "Appointments",
+            "ar": "المواعيد"
+          },
+          "soru": {
+            "tr": "Randevusuz gelebilir miyim?",
+            "en": "Can I come without an appointment?",
+            "ar": "هل يمكنني الحضور دون موعد؟"
+          },
+          "cevap": {
+            "tr": "Tartım için evet; muayene ve aşı için randevu bekleme süresini kısaltır.",
+            "en": "For weighing, yes; for examinations and vaccines an appointment shortens the wait.",
+            "ar": "للوزن نعم؛ أما للفحص واللقاح فالموعد يقلّل وقت الانتظار."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Aşı",
+            "en": "Vaccines",
+            "ar": "اللقاحات"
+          },
+          "soru": {
+            "tr": "Yavru kedi ya da köpeğe ilk aşı ne zaman yapılır?",
+            "en": "When does a kitten or puppy get its first vaccine?",
+            "ar": "متى يأخذ القط أو الجرو الصغير لقاحه الأول؟"
+          },
+          "cevap": {
+            "tr": "Genellikle 6–8. haftada başlar; takvim muayeneden sonra hekim tarafından belirlenir.",
+            "en": "Usually from the 6th–8th week; the schedule is set by the vet after an examination.",
+            "ar": "يبدأ عادةً بين الأسبوع السادس والثامن، ويحدّد الطبيب الجدول بعد الفحص."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Aşı",
+            "en": "Vaccines",
+            "ar": "اللقاحات"
+          },
+          "soru": {
+            "tr": "Aşı karnemi kaybettim, ne yapmalıyım?",
+            "en": "I lost the vaccination card, what should I do?",
+            "ar": "فقدت بطاقة اللقاحات، ماذا أفعل؟"
+          },
+          "cevap": {
+            "tr": "Patiyol’da yapılan aşılar kayıtlıdır; şubeden yeni karne çıkarılır.",
+            "en": "Vaccines given at Patiyol are on record; the branch issues a new card.",
+            "ar": "اللقاحات التي أُعطيت في باتي يول مسجّلة، ويصدر الفرع بطاقة جديدة."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Kısırlaştırma",
+            "en": "Neutering",
+            "ar": "التعقيم"
+          },
+          "soru": {
+            "tr": "Operasyon öncesi aç mı gelmeliyiz?",
+            "en": "Should my pet fast before surgery?",
+            "ar": "هل يجب أن يصوم حيواني قبل العملية؟"
+          },
+          "cevap": {
+            "tr": "Hekimin verdiği süre kadar mama verilmez; su genellikle serbesttir. Ayrıntı randevuda yazılı verilir.",
+            "en": "No food for the time the vet gives you; water is usually allowed. Details are given in writing at booking.",
+            "ar": "لا يُعطى الطعام طوال المدة التي يحددها الطبيب، والماء مسموح عادةً. تُعطى التفاصيل كتابيًا عند الحجز."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Kısırlaştırma",
+            "en": "Neutering",
+            "ar": "التعقيم"
+          },
+          "soru": {
+            "tr": "Aynı gün eve dönebilir mi?",
+            "en": "Can my pet go home the same day?",
+            "ar": "هل يعود حيواني إلى المنزل في اليوم نفسه؟"
+          },
+          "cevap": {
+            "tr": "Çoğu durumda evet; uyanma süresi ve bakım notu hekimle konuşulur.",
+            "en": "In most cases, yes; recovery time and the care note are discussed with the vet.",
+            "ar": "في معظم الحالات نعم؛ ويُناقش وقت الإفاقة وملاحظة الرعاية مع الطبيب."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Acil",
+            "en": "Emergency",
+            "ar": "الطوارئ"
+          },
+          "soru": {
+            "tr": "Gece acil bir durum olursa?",
+            "en": "What if there is an emergency at night?",
+            "ar": "ماذا لو حدثت حالة طارئة ليلًا؟"
+          },
+          "cevap": {
+            "tr": "Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+            "en": "In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+            "ar": "في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+          }
+        },
+        {
+          "kategori": {
+            "tr": "Acil",
+            "en": "Emergency",
+            "ar": "الطوارئ"
+          },
+          "soru": {
+            "tr": "Zehirlenme şüphesinde ne yapmalıyım?",
+            "en": "What should I do if I suspect poisoning?",
+            "ar": "ماذا أفعل إذا اشتبهت بتسمم؟"
+          },
+          "cevap": {
+            "tr": "Kusturmaya çalışmayın; ürünün ambalajını alıp hemen en yakın 7/24 acil veteriner kliniğine gidin.",
+            "en": "Do not try to make your pet vomit; take the product packaging and go straight to the nearest 24/7 emergency vet.",
+            "ar": "لا تحاول دفع حيوانك إلى التقيؤ؛ خذ عبوة المنتج واذهب فورًا إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة."
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "data",
+        "alanlar": {
+          "soru": "dil sözlüğü (zorunlu; eski `question`)",
+          "cevap": "dil sözlüğü (eski `answer`)",
+          "kategori": "grup adı, dil sözlüğü (gruplayan yerleşimde)",
+          "ikon": "Material Symbols adı (destekleyen yerleşimde)",
+          "url": "«Devamı» bağlantısı (iç slug ya da tam URL)"
+        }
+      },
+      "id": "uklktp",
+      "path": "sss-canli-arama",
+      "local": "body",
+      "index": 18
+    },
+    {
+      "name": "İletişim İnterkom — kapı zili paneli: kamera, hoparlör ızgarası, isim plakalı zil tuşları",
+      "description": "Yanda başlık ve metin; öbür yanda fırçalanmış metal görünümlü kapı zili paneli: üstte kamera merceği, nokta hoparlör ızgarası ve yanıp sönen LED; altında kazınmış plakalar (adres · saat) ve her bağlantılı kanal için isim plakalı, basınca içe gömülen yuvarlak zil tuşu (telefon · WhatsApp · e-posta). iletisim-buyuk-dugmeler düz dev düğmeler dizer; bu modül bir NESNE arayüzü: interkom paneli (kamera/ızgara/LED süsleri gradient'le), plaka (bilgi) ve zil (eylem) ayrımı, :active'de içe basılan tuş gölgesi. Kanallar desing'den (adres · telefon · WhatsApp · e-posta · saat) + data satırları; etiketler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Kanal yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "doorbell",
+      "category": "contact",
+      "subCategory": "intercom-panel",
+      "tags": [
+        "contact",
+        "intercom",
+        "object",
+        "buttons",
+        "residential",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Şubeler",
+          "en": "Branches",
+          "ar": "الفروع"
+        },
+        "baslik": {
+          "tr": "Zile basın, şube açsın",
+          "en": "Ring the bell, the branch answers",
+          "ar": "اضغط الجرس فيجيب الفرع"
+        },
+        "metin": {
+          "tr": "Merkez şube İbrahimli; diğer şubelerin adres ve saatleri plakalarda. Mesajınızda hayvanınızın türünü ve uygun gününüzü yazın. Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "The main branch is Ibrahimli; the plates list the other branches’ addresses and hours. In your message write your pet’s species and a suitable day. In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "الفرع الرئيسي في إبراهيملي؛ وتعرض اللوحات عناوين الفروع الأخرى وساعاتها. اكتب في رسالتك نوع حيوانك واليوم المناسب. في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        },
+        "adres": {
+          "tr": "Mehmet Akif Ersoy Bulvarı No: 27, İbrahimli, Şehitkamil, Gaziantep (kurgusal adres)",
+          "en": "27 Mehmet Akif Ersoy Boulevard, Ibrahimli, Sehitkamil, Gaziantep (fictional address)",
+          "ar": "جادة محمد عاكف أرصوي رقم 27، إبراهيملي، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+        },
+        "telefon": "+90 342 084 27 27",
+        "eposta": "randevu@patiyolvet.example",
+        "whatsapp": "903420842727",
+        "saat": {
+          "tr": "Pzt–Cmt 09:00 – 19:00 · Paz 10:00 – 14:00",
+          "en": "Mon–Sat 09:00 – 19:00 · Sun 10:00 – 14:00",
+          "ar": "الاثنين–السبت 09:00 – 19:00 · الأحد 10:00 – 14:00"
+        },
+        "haritaUrl": "",
+        "haritaGomme": "",
+        "waMesaj": {
+          "tr": "Merhaba Patiyol, bir sorum var.",
+          "en": "Hello Patiyol, I have a question.",
+          "ar": "مرحبًا باتي يول، لدي سؤال."
+        },
+        "bg": "var(--mx-site-bg, #ffffff)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+        "kartBg": "var(--mx-site-surface, #f6f7f9)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "color": "var(--mx-site-text, #111318)",
+        "gonderim": "mailto",
+        "address": {
+          "tr": "Mehmet Akif Ersoy Bulvarı No: 27, İbrahimli, Şehitkamil, Gaziantep (kurgusal adres)",
+          "en": "27 Mehmet Akif Ersoy Boulevard, Ibrahimli, Sehitkamil, Gaziantep (fictional address)",
+          "ar": "جادة محمد عاكف أرصوي رقم 27، إبراهيملي، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+        },
+        "phone": "+90 342 084 27 27",
+        "email": "randevu@patiyolvet.example",
+        "hours": {
+          "tr": "Pzt–Cmt 09:00 – 19:00 · Pazar 10:00 – 14:00 (yalnız İbrahimli)",
+          "en": "Mon–Sat 09:00 – 19:00 · Sun 10:00 – 14:00 (Ibrahimli only)",
+          "ar": "الاثنين–السبت 09:00 – 19:00 · الأحد 10:00 – 14:00 (إبراهيملي فقط)"
+        },
+        "social": [],
+        "title": {
+          "tr": "Zile basın, şube açsın",
+          "en": "Ring the bell, the branch answers",
+          "ar": "اضغط الجرس فيجيب الفرع"
+        },
+        "description": {
+          "tr": "Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        },
+        "panelTitle": {
+          "tr": "Patiyol Veteriner",
+          "en": "Patiyol Veteriner",
+          "ar": "Patiyol Veteriner"
+        },
+        "panelText": {
+          "tr": "Görseller temsilidir; bu bir kurulum demosudur.",
+          "en": "Images are representative; this is a setup demo.",
+          "ar": "الصور تمثيلية وهذا عرض تجريبي."
+        },
+        "formTitle": {
+          "tr": "Teklif formu",
+          "en": "Quote form",
+          "ar": "نموذج الطلب"
+        },
+        "subjects": [
+          {
+            "id": "a",
+            "name": {
+              "tr": "Yeni talep",
+              "en": "New request",
+              "ar": "طلب جديد"
+            }
+          },
+          {
+            "id": "b",
+            "name": {
+              "tr": "Ölçü ve keşif",
+              "en": "Measure and survey",
+              "ar": "قياس واستقصاء"
+            }
+          },
+          {
+            "id": "c",
+            "name": {
+              "tr": "Teknik soru",
+              "en": "Technical question",
+              "ar": "سؤال فني"
+            }
+          },
+          {
+            "id": "d",
+            "name": {
+              "tr": "Diğer",
+              "en": "Other",
+              "ar": "أخرى"
+            }
+          }
+        ],
+        "kvkkText": {
+          "tr": "Kişisel verilerimin bu talebin yanıtlanması amacıyla işlenmesine ilişkin aydınlatma metnini okudum.",
+          "en": "I have read the privacy notice on how my personal data is processed to answer this request.",
+          "ar": "لقد قرأت إشعار الخصوصية المتعلق بمعالجة بياناتي الشخصية للرد على هذا الطلب."
+        },
+        "kvkkLinkText": {
+          "tr": "Aydınlatma metni",
+          "en": "Privacy notice",
+          "ar": "إشعار الخصوصية"
+        },
+        "kvkkHref": "kisiselveriler"
+      },
+      "data": [
+        {
+          "ikon": "storefront",
+          "baslik": {
+            "tr": "Karataş şubesi",
+            "en": "Karatas branch",
+            "ar": "فرع كاراتاش"
+          },
+          "deger": {
+            "tr": "Karataş Caddesi No: 9, Şahinbey, Gaziantep (kurgusal adres)",
+            "en": "9 Karatas Street, Sahinbey, Gaziantep (fictional address)",
+            "ar": "شارع كاراتاش رقم 9، شاهين بيه، غازي عنتاب (عنوان افتراضي)"
+          },
+          "url": "https://www.google.com/maps/dir/?api=1&destination=37.0329,37.3412"
+        },
+        {
+          "ikon": "schedule",
+          "baslik": {
+            "tr": "Karataş saatleri",
+            "en": "Karatas hours",
+            "ar": "ساعات كاراتاش"
+          },
+          "deger": {
+            "tr": "Pzt–Cmt 09:00 – 18:00",
+            "en": "Mon–Sat 09:00 – 18:00",
+            "ar": "الاثنين–السبت 09:00 – 18:00"
+          }
+        },
+        {
+          "ikon": "storefront",
+          "baslik": {
+            "tr": "Nizip şubesi",
+            "en": "Nizip branch",
+            "ar": "فرع نيزيب"
+          },
+          "deger": {
+            "tr": "İstasyon Caddesi No: 41, Nizip, Gaziantep (kurgusal adres)",
+            "en": "41 Istasyon Street, Nizip, Gaziantep (fictional address)",
+            "ar": "شارع المحطة رقم 41، نيزيب، غازي عنتاب (عنوان افتراضي)"
+          },
+          "url": "https://www.google.com/maps/dir/?api=1&destination=37.0096,37.7942"
+        },
+        {
+          "ikon": "schedule",
+          "baslik": {
+            "tr": "Nizip saatleri",
+            "en": "Nizip hours",
+            "ar": "ساعات نيزيب"
+          },
+          "deger": {
+            "tr": "Pzt–Cuma 10:00 – 18:00",
+            "en": "Mon–Fri 10:00 – 18:00",
+            "ar": "الاثنين–الجمعة 10:00 – 18:00"
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "desing",
+        "alanlar": {
+          "ikon": "Material Symbols adı (kanal türü ikondan da anlaşılır: mail · call · location_on · schedule)",
+          "deger": "dil sözlüğü (görünen değer, zorunlu; eski `text`)",
+          "url": "bağlantı (boşsa e-posta/telefon/haritadan türetilir)",
+          "baslik": "dil sözlüğü (kanal etiketi)"
+        }
+      },
+      "id": "af6ihe",
+      "path": "iletisim-interkom",
+      "local": "body",
+      "index": 19
+    },
+    {
+      "name": "Çağrı Alt Çubuk — tebeşir tahtası + ekran altına yapışan sipariş çubuğu",
+      "description": "Bölümde çerçeveli tebeşir tahtası: üst etiket, başlık, metin, çalışma saati ve düğmeler. JS ile ayrıca ekran altına yapışan kapsül çubuk: ikon, kısa yazı, telefon ve birincil düğme — ana tahta ekrandayken gizlenir, oturum boyu kapatılabilir (desing.kapatAd). Ailedeki tüm çağrılar yalnız kendi yerinde durur; bu modülün eylemi sayfa boyunca ziyaretçiyle gelir (sabit alt çubuk) — cagri-hap'ın tek satır kapsülü yerinde kalır, bu çubuk ekrana sabitlenir. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık da düğme de yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "local_cafe",
+      "category": "cta",
+      "subCategory": "sticky-bottom-bar",
+      "tags": [
+        "cta",
+        "sticky",
+        "bottom-bar",
+        "order",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Hatırlatma",
+          "en": "Reminder",
+          "ar": "تذكير"
+        },
+        "baslik": {
+          "tr": "Aşı günü mü geldi?",
+          "en": "Is a vaccine due?",
+          "ar": "هل حان موعد اللقاح؟"
+        },
+        "metin": {
+          "tr": "En yakın şubeden randevu alın; aşı karnesini yanınızda getirin.",
+          "en": "Book at your nearest branch and bring the vaccination card.",
+          "ar": "احجز في أقرب فرع وأحضر بطاقة اللقاحات معك."
+        },
+        "btn1Text": {
+          "tr": "Randevu al",
+          "en": "Book a visit",
+          "ar": "احجز موعدًا"
+        },
+        "btn1Url": "teklif-al",
+        "btn2Text": {
+          "tr": "Şubeler",
+          "en": "Branches",
+          "ar": "الفروع"
+        },
+        "btn2Url": "iletisim",
+        "img": "",
+        "alt": "",
+        "ikon": "pets",
+        "not": {
+          "tr": "Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        },
+        "number": "903420842727",
+        "numberText": "+90 342 084 27 27",
+        "waLabel": {
+          "tr": "Mesaj gönder",
+          "en": "Send a message",
+          "ar": "أرسل رسالة"
+        },
+        "waTitle": {
+          "tr": "WhatsApp ile yazın",
+          "en": "Write on WhatsApp",
+          "ar": "راسلنا عبر واتساب"
+        },
+        "waMessage": {
+          "tr": "Merhaba Patiyol, evcil dostum için randevu almak istiyorum.",
+          "en": "Hello Patiyol, I would like to book a visit for my pet.",
+          "ar": "مرحبًا باتي يول، أودّ حجز موعد لحيواني الأليف."
+        },
+        "hours": {
+          "tr": "Pzt–Cmt 09:00 – 19:00 · Pazar 10:00 – 14:00 (yalnız İbrahimli)",
+          "en": "Mon–Sat 09:00 – 19:00 · Sun 10:00 – 14:00 (Ibrahimli only)",
+          "ar": "الاثنين–السبت 09:00 – 19:00 · الأحد 10:00 – 14:00 (إبراهيملي فقط)"
+        },
+        "hoursLabel": {
+          "tr": "Şube saatleri",
+          "en": "Branch hours",
+          "ar": "ساعات الفروع"
+        },
+        "bg": "var(--mx-site-text, #111318)",
+        "yaziRenk": "var(--mx-site-bg, #ffffff)",
+        "muted": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 78%, var(--mx-site-text, #111318))",
+        "kartBg": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 7%, transparent)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 18%, transparent)",
+        "accent": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 45%, var(--mx-site-bg, #ffffff))",
+        "accentText": "var(--mx-site-text, #111318)",
+        "vurguBg": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+        "vurguText": "var(--mx-site-text, #111318)",
+        "kapatAd": {
+          "tr": "Çubuğu kapat",
+          "en": "Close bar",
+          "ar": "إغلاق الشريط"
+        },
+        "bgcolor": "var(--mx-site-text, #111318)",
+        "color": "var(--mx-site-bg, #ffffff)",
+        "sag": "whatsapp",
+        "title": {
+          "tr": "Aşı günü mü geldi?",
+          "en": "Is a vaccine due?",
+          "ar": "هل حان موعد اللقاح؟"
+        },
+        "btn1Label": {
+          "tr": "Randevu al",
+          "en": "Book a visit",
+          "ar": "احجز موعدًا"
+        },
+        "btn2Label": {
+          "tr": "Şubeler",
+          "en": "Branches",
+          "ar": "الفروع"
+        },
+        "description": {
+          "tr": "En yakın şubeden randevu alın; aşı karnesini yanınızda getirin. Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "Book at your nearest branch and bring the vaccination card. In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "احجز في أقرب فرع وأحضر بطاقة اللقاحات معك. في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        }
+      },
+      "data": [
+        {
+          "ikon": "storefront",
+          "baslik": {
+            "tr": "3 şube",
+            "en": "3 branches",
+            "ar": "3 فروع"
+          },
+          "aciklama": {
+            "tr": "İbrahimli · Karataş · Nizip",
+            "en": "Ibrahimli · Karatas · Nizip",
+            "ar": "إبراهيملي · كاراتاش · نيزيب"
+          }
+        },
+        {
+          "ikon": "vaccines",
+          "baslik": {
+            "tr": "Aşı karnesini getirin",
+            "en": "Bring the vaccination card",
+            "ar": "أحضر بطاقة اللقاحات"
+          }
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "desing",
+        "alanlar": {
+          "ikon": "Material Symbols adı (madde)",
+          "baslik": "dil sözlüğü (madde yazısı, zorunlu)",
+          "aciklama": "dil sözlüğü (madde alt yazısı)"
+        }
+      },
+      "id": "alhhq4",
+      "path": "cagri-alt-cubuk",
+      "local": "body",
+      "index": 20
+    },
+    {
+      "name": "Alt Yukarı Dön — kaydırma ilerleme halkalı başa dön mührü + üç bölge",
+      "description": "Footer çizgisinin ortasında büyük dairesel başa dön düğmesi: çevresindeki halka sayfanın ne kadarının okunduğunu gösterir; altında marka · gezinme (sayfalar + bağlantılar) · etiketli iletişim, en altta ortalı telif, yasal ve dil. Başa dön küçük bir köşe ikonu değil, footer'ın merkez nesnesi: halka sayfa kaydırma oranıyla dolar (uzun okumalı sitelerde ilerleme göstergesi), tıklayınca yumuşak dönüş. Sayfalar site sayfalarından, iletişim desing → site ayarı, sosyal wmSocialBar, dil seçici {{langbar}}. Metinler dil sözlüğü / lang.json; renkler desing + var(--mx-site-*); mantıksal CSS → RTL.",
+      "version": "1.0.0",
+      "icon": "vertical_align_top",
+      "category": "footer",
+      "subCategory": "back-to-top-ring",
+      "tags": [
+        "footer",
+        "back-to-top",
+        "progress",
+        "ring",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(48px, 6vw, 80px)",
+        "yuvarlak": "18px",
+        "ust": "",
+        "baslik": "",
+        "metin": "",
+        "hakkinda": {
+          "tr": "İbrahimli, Karataş ve Nizip’te üç şubeli kurgusal demo veteriner kliniği. Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez.",
+          "en": "A fictional demo veterinary clinic with three branches in Ibrahimli, Karatas and Nizip. In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care.",
+          "ar": "عيادة بيطرية تجريبية افتراضية بثلاثة فروع في إبراهيملي وكاراتاش ونيزيب. في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية."
+        },
+        "tel": "+90 342 084 27 27",
+        "eposta": "randevu@patiyolvet.example",
+        "adres": {
+          "tr": "Mehmet Akif Ersoy Bulvarı No: 27, İbrahimli, Şehitkamil, Gaziantep (kurgusal adres)",
+          "en": "27 Mehmet Akif Ersoy Boulevard, Ibrahimli, Sehitkamil, Gaziantep (fictional address)",
+          "ar": "جادة محمد عاكف أرصوي رقم 27، إبراهيملي، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+        },
+        "cta_ad": "",
+        "cta_url": "",
+        "rightsText": "",
+        "bg": "var(--mx-site-bg, #ffffff)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+        "kartBg": "var(--mx-site-surface, #f6f7f9)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "logoH": "48px",
+        "bgcolor": "var(--mx-site-bg, #ffffff)",
+        "color": "var(--mx-site-text, #111318)",
+        "showlang": true,
+        "maxpages": 8,
+        "nlShow": true,
+        "nlGonderim": "mailto",
+        "about": {
+          "tr": "Patiyol Veteriner demo temadır; içerik kurgusaldır ve veteriner hekim muayenesinin yerine geçmez.",
+          "en": "Patiyol Veterinary is a demo theme; content is fictional and does not replace a veterinary examination.",
+          "ar": "باتي يول البيطرية قالب تجريبي؛ المحتوى افتراضي ولا يغني عن فحص الطبيب البيطري."
+        },
+        "address": {
+          "tr": "Mehmet Akif Ersoy Bulvarı No: 27, İbrahimli, Şehitkamil, Gaziantep (kurgusal adres)",
+          "en": "27 Mehmet Akif Ersoy Boulevard, Ibrahimli, Sehitkamil, Gaziantep (fictional address)",
+          "ar": "جادة محمد عاكف أرصوي رقم 27، إبراهيملي، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+        },
+        "phone": "+90 342 084 27 27",
+        "email": "randevu@patiyolvet.example",
+        "social": [],
+        "legal": [
+          {
+            "name": {
+              "tr": "KVKK",
+              "en": "Privacy (KVKK)",
+              "ar": "حماية البيانات"
+            },
+            "href": "kisiselveriler"
+          },
+          {
+            "name": {
+              "tr": "Gizlilik",
+              "en": "Privacy policy",
+              "ar": "سياسة الخصوصية"
+            },
+            "href": "gizlilikpolitikasi"
+          },
+          {
+            "name": {
+              "tr": "Yasal uyarı",
+              "en": "Legal notice",
+              "ar": "إشعار قانوني"
+            },
+            "href": "yasaluyari"
+          }
+        ],
+        "nlTitle": {
+          "tr": "Haberdar olun",
+          "en": "Stay informed",
+          "ar": "ابقَ على اطلاع"
+        },
+        "nlText": {
+          "tr": "Yeni duyurular için e-posta bırakın. Bu demo sitede veri saklanmaz.",
+          "en": "Leave your e-mail for new announcements. No data is stored on this demo site.",
+          "ar": "اترك بريدك الإلكتروني للإعلانات الجديدة. لا تُحفظ أي بيانات في هذا الموقع التجريبي."
+        },
+        "nlKvkk": {
+          "tr": "E-postanız yalnızca duyuru göndermek için kullanılır; dilediğiniz an listeden çıkabilirsiniz.",
+          "en": "Your e-mail is used only to send announcements; you can leave the list at any time.",
+          "ar": "يُستخدم بريدك الإلكتروني لإرسال الإعلانات فقط، ويمكنك إلغاء الاشتراك في أي وقت."
+        },
+        "services": [
+          {
+            "name": {
+              "tr": "Olanaklar",
+              "en": "Facilities",
+              "ar": "المرافق"
+            },
+            "href": "hizmetler"
+          },
+          {
+            "name": {
+              "tr": "Hekimler",
+              "en": "Vets",
+              "ar": "الأطباء"
+            },
+            "href": "ekip"
+          },
+          {
+            "name": {
+              "tr": "Randevu",
+              "en": "Appointment",
+              "ar": "موعد"
+            },
+            "href": "teklif-al"
+          }
+        ],
+        "hours": [
+          {
+            "days": {
+              "tr": "İbrahimli",
+              "en": "Ibrahimli",
+              "ar": "إبراهيملي"
+            },
+            "time": {
+              "tr": "Pzt–Cmt 09:00 – 19:00 · Paz 10:00 – 14:00",
+              "en": "Mon–Sat 09:00 – 19:00 · Sun 10:00 – 14:00",
+              "ar": "الاثنين–السبت 09:00 – 19:00 · الأحد 10:00 – 14:00"
+            }
+          },
+          {
+            "days": {
+              "tr": "Karataş",
+              "en": "Karatas",
+              "ar": "كاراتاش"
+            },
+            "time": {
+              "tr": "Pzt–Cmt 09:00 – 18:00",
+              "en": "Mon–Sat 09:00 – 18:00",
+              "ar": "الاثنين–السبت 09:00 – 18:00"
+            }
+          },
+          {
+            "days": {
+              "tr": "Nizip",
+              "en": "Nizip",
+              "ar": "نيزيب"
+            },
+            "time": {
+              "tr": "Pzt–Cuma 10:00 – 18:00",
+              "en": "Mon–Fri 10:00 – 18:00",
+              "ar": "الاثنين–الجمعة 10:00 – 18:00"
+            }
+          }
+        ],
+        "title_services": {
+          "tr": "Hızlı bağlantılar",
+          "en": "Quick links",
+          "ar": "روابط سريعة"
+        },
+        "title_hours": {
+          "tr": "Şube saatleri",
+          "en": "Branch hours",
+          "ar": "ساعات الفروع"
+        }
+      },
+      "data": [],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "desing",
+        "alanlar": {
+          "hakkinda": "kısa tanıtım (dil sözlüğü; yoksa setting.description)",
+          "tel": "telefon (yoksa setting.phone)",
+          "eposta": "e-posta (yoksa setting.email)",
+          "adres": "adres (dil sözlüğü; yoksa setting.address)",
+          "services": "bağlantı listesi [{ name, href }] (footer-10)",
+          "hours": "çalışma saatleri [{ days, time }]",
+          "legal": "yasal bağlantılar [{ text, href }]",
+          "social": "sosyal hesaplar [{ ad, url }] (yoksa site ayarı)",
+          "rightsText": "telif satırı (yoksa @all-rights@)",
+          "nlTitle": "bülten başlığı (bülten formu yalnız başlık/metin + alıcı e-posta varken)"
+        }
+      },
+      "id": "og8f05",
+      "path": "alt-yukari-don",
+      "local": "footer",
+      "index": 21
+    },
+    {
+      "name": "Randevu Evcil Profili — tür/yaş seçimi → uygun hizmet → saat",
+      "description": "Solda marka renkli «evcil kimlik kartı»: büyük ikonlu tür karoları (desing.turler), evcil dostun adı ve yaş kaydırıcısı (canlı yaş yazısı). Sağda yalnız seçilen türe uygun hizmet satırları (data[].tur etiketi; etiketsiz hizmet her türde), uzman, tarih, saat, sahip bilgileri, KVKK ve gönder. Tür/yaş/ad talep mesajına satır olarak eklenir. Tür listesi yoksa kart yalnız ad/yaş alanını taşır. Mevcut randevu-* modülleri hizmetle başlar ve tüm hizmetleri herkese gösterir; bu modül önce hastayı (tür · ad · yaş) sorar, hizmet listesini türe göre canlı süzer (evcil parçası) ve profil kartı + randevu paneli iki bloklu iskelet kurar; yaş için range + output kullanan tek modül. Sunucusuz gönderim (formAction JSON POST › WhatsApp › .ics › mailto), kapalı gün denetimi, KVKK onayı. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Gönderim yolu yoksa blok basılmaz.",
+      "version": "1.0.0",
+      "icon": "pets",
+      "category": "randevu",
+      "subCategory": "pet-profile",
+      "tags": [
+        "randevu",
+        "pet",
+        "profile",
+        "filter",
+        "veterinary",
+        "rtl",
+        "fabrika"
+      ],
+      "desing": {
+        "max": "1200px",
+        "bosluk": "clamp(56px, 8vw, 104px)",
+        "yuvarlak": "18px",
+        "ust": {
+          "tr": "Randevu",
+          "en": "Appointment",
+          "ar": "موعد"
+        },
+        "baslik": {
+          "tr": "Önce evcil dostunuzu tanıyalım",
+          "en": "First, tell us about your pet",
+          "ar": "أولًا، عرّفنا بحيوانك الأليف"
+        },
+        "metin": {
+          "tr": "Türü, adı ve yaşı seçin; yalnız o türe uygun hizmetler listelenir. Talep WhatsApp’ta hazır açılır, şube arayarak onaylar. Sağlık geçmişi istenmez. Acil durumda en yakın 7/24 açık acil veteriner kliniğine başvurun; Patiyol şubeleri gece acil hizmeti vermez. Bu form demodur; veri saklanmaz.",
+          "en": "Choose species, name and age; only the services suited to that species are listed. The request opens ready in WhatsApp and the branch calls to confirm. No health history is asked. In an emergency go to the nearest 24/7 emergency vet; Patiyol branches do not provide night emergency care. This form is a demo; no data is stored.",
+          "ar": "اختر النوع والاسم والعمر؛ وتظهر الخدمات المناسبة لهذا النوع فقط. يُفتح الطلب جاهزًا في واتساب ويتصل الفرع للتأكيد. لا يُطلب التاريخ الصحي. في حالات الطوارئ توجّه إلى أقرب عيادة بيطرية طارئة تعمل على مدار الساعة؛ فروع باتي يول لا تقدّم خدمة طوارئ ليلية. هذا النموذج تجريبي؛ لا تُحفظ أي بيانات."
+        },
+        "bg": "var(--mx-site-surface, #f6f7f9)",
+        "text": "var(--mx-site-text, #111318)",
+        "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+        "kartBg": "var(--mx-site-bg, #ffffff)",
+        "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+        "accent": "var(--mx-site-primary, #2563eb)",
+        "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+        "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+        "vurguBg": "var(--mx-site-primary, #2563eb)",
+        "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+        "turler": [
+          {
+            "id": "kedi",
+            "ad": {
+              "tr": "Kedi",
+              "en": "Cat",
+              "ar": "قطة"
+            },
+            "ikon": "pets"
+          },
+          {
+            "id": "kopek",
+            "ad": {
+              "tr": "Köpek",
+              "en": "Dog",
+              "ar": "كلب"
+            },
+            "ikon": "sound_detection_dog_barking"
+          },
+          {
+            "id": "kus",
+            "ad": {
+              "tr": "Kuş",
+              "en": "Bird",
+              "ar": "طائر"
+            },
+            "ikon": "flutter_dash"
+          },
+          {
+            "id": "tavsan",
+            "ad": {
+              "tr": "Tavşan",
+              "en": "Rabbit",
+              "ar": "أرنب"
+            },
+            "ikon": "cruelty_free"
+          }
+        ],
+        "turAd": {
+          "tr": "Tür",
+          "en": "Species",
+          "ar": "النوع"
+        },
+        "evcilAd": {
+          "tr": "Evcil dostunuzun adı",
+          "en": "Your pet’s name",
+          "ar": "اسم حيوانك الأليف"
+        },
+        "yasAd": {
+          "tr": "Yaşı",
+          "en": "Age",
+          "ar": "العمر"
+        },
+        "yasBirim": {
+          "tr": "{n} yaş",
+          "en": "{n} yrs",
+          "ar": "{n} سنة"
+        },
+        "yasAzami": 20,
+        "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+        "color": "var(--mx-site-text, #111318)",
+        "phone": "+90 342 084 27 27",
+        "whatsapp": "903420842727",
+        "email": "randevu@patiyolvet.example",
+        "submit": "whatsapp",
+        "location": {
+          "tr": "Mehmet Akif Ersoy Bulvarı No: 27, İbrahimli, Şehitkamil, Gaziantep (kurgusal adres)",
+          "en": "27 Mehmet Akif Ersoy Boulevard, Ibrahimli, Sehitkamil, Gaziantep (fictional address)",
+          "ar": "جادة محمد عاكف أرصوي رقم 27، إبراهيملي، شهيد كامل، غازي عنتاب (عنوان افتراضي)"
+        },
+        "leadDays": 1,
+        "maxDays": 30,
+        "hours": {
+          "days": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "start": "09:00",
+          "end": "19:00",
+          "slot": 30,
+          "breaks": [
+            {
+              "start": "13:00",
+              "end": "14:00"
+            }
+          ]
+        },
+        "closed": [
+          "2026-12-31",
+          "2027-01-01"
+        ],
+        "staff": [
+          {
+            "id": "s1",
+            "name": {
+              "tr": "İbrahimli şubesi",
+              "en": "Ibrahimli branch",
+              "ar": "فرع إبراهيملي"
+            },
+            "role": {
+              "tr": "İbrahimli",
+              "en": "Ibrahimli",
+              "ar": "إبراهيملي"
+            }
+          },
+          {
+            "id": "s2",
+            "name": {
+              "tr": "Karataş şubesi",
+              "en": "Karatas branch",
+              "ar": "فرع كاراتاش"
+            },
+            "role": {
+              "tr": "Karataş",
+              "en": "Karatas",
+              "ar": "كاراتاش"
+            }
+          },
+          {
+            "id": "s3",
+            "name": {
+              "tr": "Nizip şubesi",
+              "en": "Nizip branch",
+              "ar": "فرع نيزيب"
+            },
+            "role": {
+              "tr": "Nizip",
+              "en": "Nizip",
+              "ar": "نيزيب"
+            }
+          }
+        ],
+        "uzmanAd": {
+          "tr": "Şube",
+          "en": "Branch",
+          "ar": "الفرع"
+        },
+        "farkAd": {
+          "tr": "Fark etmez",
+          "en": "Any branch",
+          "ar": "أي فرع"
+        },
+        "kvkk": {
+          "text": {
+            "tr": "Kişisel verilerimin yalnız bu randevu talebinin yanıtlanması için işlenmesine ilişkin aydınlatma metnini okudum.",
+            "en": "I have read the privacy notice on how my personal data is processed only to answer this appointment request.",
+            "ar": "لقد قرأت إشعار الخصوصية المتعلق بمعالجة بياناتي الشخصية للرد على طلب الموعد هذا فقط."
+          },
+          "href": "kisiselveriler"
+        },
+        "kvkkLink": {
+          "tr": "Aydınlatma metni",
+          "en": "Privacy notice",
+          "ar": "إشعار الخصوصية"
+        },
+        "successText": {
+          "tr": "Talebiniz hazırlandı. Randevu, şubenin onay aramasından sonra kesinleşir. (Demo)",
+          "en": "Your request is ready. The appointment is confirmed after the branch calls you. (Demo)",
+          "ar": "طلبك جاهز. يصبح الموعد مؤكدًا بعد اتصال الفرع. (تجريبي)"
+        },
+        "konu": {
+          "tr": "Randevu talebi",
+          "en": "Appointment request",
+          "ar": "طلب موعد"
+        }
+      },
+      "data": [
+        {
+          "ad": {
+            "tr": "Genel muayene",
+            "en": "General examination",
+            "ar": "فحص عام"
+          },
+          "sure": 30,
+          "ikon": "stethoscope"
+        },
+        {
+          "ad": {
+            "tr": "Karma aşı",
+            "en": "Combined vaccine",
+            "ar": "لقاح مركّب"
+          },
+          "sure": 20,
+          "ikon": "vaccines",
+          "tur": "kedi,kopek"
+        },
+        {
+          "ad": {
+            "tr": "Kuduz aşısı",
+            "en": "Rabies vaccine",
+            "ar": "لقاح داء الكلب"
+          },
+          "sure": 20,
+          "ikon": "vaccines",
+          "tur": "kedi,kopek"
+        },
+        {
+          "ad": {
+            "tr": "Kısırlaştırma ön görüşmesi",
+            "en": "Neutering consultation",
+            "ar": "استشارة التعقيم"
+          },
+          "sure": 30,
+          "ikon": "event_note",
+          "tur": "kedi,kopek,tavsan"
+        },
+        {
+          "ad": {
+            "tr": "Tırnak ve gaga bakımı",
+            "en": "Nail and beak trim",
+            "ar": "تقليم المخالب والمنقار"
+          },
+          "sure": 20,
+          "ikon": "content_cut",
+          "tur": "kus"
+        },
+        {
+          "ad": {
+            "tr": "Diş kontrolü",
+            "en": "Dental check",
+            "ar": "فحص الأسنان"
+          },
+          "sure": 20,
+          "ikon": "dentistry",
+          "tur": "kedi,kopek,tavsan"
+        },
+        {
+          "ad": {
+            "tr": "Mikroçip ve kayıt",
+            "en": "Microchip and registration",
+            "ar": "الشريحة والتسجيل"
+          },
+          "sure": 15,
+          "ikon": "memory",
+          "tur": "kedi,kopek"
+        }
+      ],
+      "veri": {
+        "statik": true,
+        "dinamik": false,
+        "kaynak": "desing",
+        "alanlar": {
+          "ad": "hizmet adı (dil sözlüğü, zorunlu) — eski `services[].name`",
+          "sure": "dakika — eski `duration`",
+          "fiyat": "sayı (sayfa diliyle biçimlenir) — eski `price`",
+          "ikon": "Material Symbols adı",
+          "metin": "kısa açıklama (dil sözlüğü)",
+          "img": "görsel (destekleyen yerleşimde)"
+        }
+      },
+      "id": "ubpvo5",
+      "path": "randevu-evcil-profil",
+      "local": "body",
+      "index": 22
+    }
+  ]
+}

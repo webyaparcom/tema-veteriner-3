@@ -1,0 +1,29 @@
+{
+  "name": "Patiyol Veteriner",
+  "short_name": "Patiyol Vete",
+  "description": "Patiyol Veteriner: Gaziantep’te üç şubede kedi, köpek ve küçük evcil hayvanlar için muayene, aşı, kısırlaştırma ve bakım. Size en yakın şubeyi bulun. Demo site; içerik kurgusaldır.",
+  "start_url": "/tr/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A3472A",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/img/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
