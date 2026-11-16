@@ -1,0 +1,165 @@
+{
+  "data": [
+    {
+      "id": "q5tesjbzir",
+      "name": {
+        "tr": "Hizmetler",
+        "en": "Services",
+        "ar": "الخدمات"
+      },
+      "description": {
+        "tr": "Şubelerdeki olanaklar ve özen listesi.",
+        "en": "Branch facilities and the care checklist.",
+        "ar": "مرافق الفروع وقائمة العناية."
+      },
+      "path": "hizmetler",
+      "icon": "work",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "7g34g0",
+          "gkz7uk",
+          "alhhq4"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Hakkımızda",
+        "en": "About",
+        "ar": "من نحن"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "info",
+      "desing": {
+        "header": [],
+        "body": [
+          "gkz7uk",
+          "xj63gw"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Özen listesi ve ilçe ilçe saha çalışmaları (kurgusal).",
+        "en": "The care checklist and field work by district (fictional).",
+        "ar": "قائمة العناية والعمل الميداني حسب الحي (افتراضي)."
+      }
+    },
+    {
+      "id": "iomiw5fzul",
+      "name": {
+        "tr": "Hekimler",
+        "en": "Vets",
+        "ar": "الأطباء"
+      },
+      "description": {
+        "tr": "Gün ve şubeye göre kurgusal kadro.",
+        "en": "Fictional staff by day and branch.",
+        "ar": "كادر افتراضي حسب اليوم والفرع."
+      },
+      "path": "ekip",
+      "icon": "groups",
+      "category": "hakkimizda",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "d2ppxq",
+          "alhhq4"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "id": "ynsgbe5pxo",
+      "name": {
+        "tr": "Sorular",
+        "en": "Questions",
+        "ar": "الأسئلة"
+      },
+      "description": {
+        "tr": "Merak edilenler ve kısa yanıtlar.",
+        "en": "Common questions and short answers.",
+        "ar": "أسئلة متكررة وإجابات موجزة."
+      },
+      "path": "sorular",
+      "icon": "help",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "uklktp",
+          "alhhq4"
+        ],
+        "footer": []
+      },
+      "index": 3
+    },
+    {
+      "id": "xrovdt7ppd",
+      "name": {
+        "tr": "Randevu",
+        "en": "Appointment",
+        "ar": "موعد"
+      },
+      "description": {
+        "tr": "Tür, ad ve yaşa göre randevu talebi (demo).",
+        "en": "Appointment request by species, name and age (demo).",
+        "ar": "طلب موعد حسب النوع والاسم والعمر (تجريبي)."
+      },
+      "path": "teklif-al",
+      "icon": "event",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "ubpvo5"
+        ],
+        "footer": []
+      },
+      "index": 4
+    },
+    {
+      "name": {
+        "tr": "Şubeler",
+        "en": "Branches",
+        "ar": "الفروع"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 5,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "af6ihe",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Üç şubenin adresi, saatleri ve iletişimi.",
+        "en": "Addresses, hours and contact for the three branches.",
+        "ar": "عناوين الفروع الثلاثة وساعاتها ووسائل التواصل."
+      }
+    }
+  ],
+  "desc": []
+}

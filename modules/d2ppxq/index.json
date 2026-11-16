@@ -1,0 +1,55 @@
+{
+  "name": "Ekip Çalışma Günü — gün çipleriyle «bugün kim var?»",
+  "description": "Üstte takvim yaprağı biçiminde gün çipleri (Tümü + kadrodan en az birinin çalıştığı günler, kişi sayısıyla; bugün noktayla işaretli), altta hekim kartları: portre, ad, unvan, bölüm, yedi harfli hafta şeridi ve mesai saati. Gün seçilince yalnız o gün çalışanlar kalır. Gün adları sayfa dilinde (Intl). Kişiler takvime göre süzülür: ekip-bolum-sekme bölüme, team-2 departmana göre süzerken burada ölçüt haftanın günü; her kartta yedi günlük mini hafta şeridi ve saat — randevu öncesi «kim ne zaman burada» sorusunu yanıtlar. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "calendar_view_week",
+  "category": "team",
+  "subCategory": "weekday-filter",
+  "tags": [
+    "team",
+    "weekday",
+    "schedule",
+    "filter",
+    "doctor",
+    "interactive",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "ad": "ad soyad (zorunlu; düz metin ya da dil sözlüğü)",
+      "unvan": "görev / unvan (dil sözlüğü)",
+      "metin": "kısa tanıtım (dil sözlüğü)",
+      "img": "portre görseli (yoksa baş harfler)",
+      "bolum": "bölüm (dil sözlüğü ya da desing.departments id'si)",
+      "eposta": "e-posta (mailto)",
+      "telefon": "telefon (tel:)",
+      "url": "profil sayfası bağlantısı",
+      "social": "[{ ad, url (http(s)/mailto/tel), ikon (Material Symbols) }]"
+    }
+  }
+}

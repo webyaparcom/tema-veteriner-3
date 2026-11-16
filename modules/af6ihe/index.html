@@ -1,0 +1,98 @@
+<section class="modulex-iletisim-interkom{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-iletisim-interkom-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* iletisim-interkom — iletisim-buyuk-dugmeler düz dev düğmeler dizer; bu modül bir NESNE arayüzü: interkom paneli (kamera/ızgara/LED süsleri gradient'le), plaka (bilgi) ve zil (eylem) ayrımı, :active'de içe basılan tuş gölgesi. */
+  .modulex-iletisim-interkom { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-iletisim-interkom *, .modulex-iletisim-interkom *::before, .modulex-iletisim-interkom *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-iletisim-interkom :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-iletisim-interkom :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-iletisim-interkom :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-iletisim-interkom :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-iletisim-interkom img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-iletisim-interkom) img { height: auto; }
+  .modulex-iletisim-interkom [hidden] { display: none !important; }
+  .modulex-iletisim-interkom :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-iletisim-interkom :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-iletisim-interkom-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-iletisim-interkom-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-iletisim-interkom--bassiz .modulex-iletisim-interkom-bas { display: none; }
+  .modulex-iletisim-interkom-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-iletisim-interkom-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-iletisim-interkom-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-iletisim-interkom-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-iletisim-interkom-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-iletisim-interkom-dugme:hover { transform: translateY(-2px); }
+  .modulex-iletisim-interkom-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-iletisim-interkom-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-iletisim-interkom-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-iletisim-interkom-duzen { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: clamp(28px, 6vw, 96px); align-items: center; }
+  .modulex-iletisim-interkom-yazi { display: grid; gap: 16px; min-width: 0; }
+  .modulex-iletisim-interkom-panel { display: grid; gap: 18px; padding: clamp(20px, 3vw, 30px); border-radius: 28px; background-color: color-mix(in srgb, --text-- 8%, --kartBg--); background-image: repeating-linear-gradient(90deg, color-mix(in srgb, --text-- 4%, transparent) 0 1px, transparent 1px 4px); box-shadow: inset 0 2px 0 color-mix(in srgb, --bg-- 70%, transparent), inset 0 -3px 0 color-mix(in srgb, --text-- 14%, transparent), 0 34px 60px -36px color-mix(in srgb, --text-- 60%, transparent); }
+  .modulex-iletisim-interkom-pust { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; padding-block-end: 16px; border-block-end: 1px solid --cizgi--; }
+  .modulex-iletisim-interkom-kamera { inline-size: 34px; block-size: 34px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, color-mix(in srgb, --accent-- 60%, --text--) 0 18%, --text-- 22% 100%); box-shadow: 0 0 0 4px color-mix(in srgb, --text-- 18%, transparent); }
+  .modulex-iletisim-interkom-izgara { block-size: 34px; border-radius: 10px; background-image: radial-gradient(circle, color-mix(in srgb, --text-- 45%, transparent) 0 2px, transparent 2.5px); background-size: 9px 9px; }
+  .modulex-iletisim-interkom-led { inline-size: 12px; block-size: 12px; border-radius: 50%; background: --accent--; animation: modulex-iletisim-interkom-led 1.6s ease-in-out infinite; }
+  @keyframes modulex-iletisim-interkom-led { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 color-mix(in srgb, --accent-- 60%, transparent); } 50% { opacity: 0.45; box-shadow: 0 0 0 6px transparent; } }
+  .modulex-iletisim-interkom-plakalar { display: grid; gap: 10px; }
+  .modulex-iletisim-interkom-plaka { display: grid; gap: 2px; padding: 12px 16px; border-radius: 8px; background: --bg--; box-shadow: inset 0 1px 3px color-mix(in srgb, --text-- 25%, transparent); }
+  .modulex-iletisim-interkom-plketk { color: --muted--; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+  .modulex-iletisim-interkom-pldeger { color: inherit; font-weight: 700; text-decoration: none; overflow-wrap: anywhere; transition: color 0.2s ease; }
+  a.modulex-iletisim-interkom-pldeger:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 3px; }
+  .modulex-iletisim-interkom-ziller { display: grid; gap: 10px; }
+  .modulex-iletisim-interkom-zil { display: flex; align-items: center; gap: 14px; padding: 8px; padding-inline-end: 16px; border-radius: 16px; background: --bg--; color: inherit; text-decoration: none; box-shadow: 0 2px 0 color-mix(in srgb, --text-- 16%, transparent); transition: transform 0.12s ease, box-shadow 0.12s ease; }
+  .modulex-iletisim-interkom-zil:hover { transform: translateY(-1px); box-shadow: 0 4px 0 color-mix(in srgb, --text-- 16%, transparent); }
+  .modulex-iletisim-interkom-zil:active { transform: translateY(2px); box-shadow: 0 0 0 transparent; }
+  .modulex-iletisim-interkom-tus { flex: none; display: inline-grid; place-items: center; inline-size: 52px; block-size: 52px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, color-mix(in srgb, --accent-- 70%, --bg--), --accent--); color: --accentText--; box-shadow: inset 0 -3px 0 color-mix(in srgb, --text-- 25%, transparent), 0 0 0 3px color-mix(in srgb, --text-- 12%, transparent); transition: box-shadow 0.12s ease; }
+  .modulex-iletisim-interkom-zil:active .modulex-iletisim-interkom-tus { box-shadow: inset 0 3px 6px color-mix(in srgb, --text-- 35%, transparent); }
+  .modulex-iletisim-interkom-zad { display: grid; gap: 1px; min-width: 0; }
+  .modulex-iletisim-interkom-zetk { color: --muted--; font-size: 0.75rem; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+  .modulex-iletisim-interkom-zdeger { font-weight: 700; overflow-wrap: anywhere; }
+  @media (max-width: 1024px) {
+    .modulex-iletisim-interkom-duzen { grid-template-columns: minmax(0, 1fr); }
+    .modulex-iletisim-interkom-panel { justify-self: center; inline-size: 100%; max-inline-size: 520px; }
+  }
+  .modulex-iletisim-interkom-kikon { flex: none; display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: color-mix(in srgb, --accent-- 14%, transparent); color: --accentInk--; font-size: 24px; }
+  .modulex-iletisim-interkom-ketiket { display: block; color: --muted--; font-size: 0.82rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-iletisim-interkom-deger { color: inherit; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; transition: color 0.2s ease; }
+  a.modulex-iletisim-interkom-deger:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-iletisim-interkom-eylem { display: inline-flex; align-items: center; gap: 6px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.2s ease; }
+  .modulex-iletisim-interkom-eylem:hover { gap: 10px; }
+  .modulex-iletisim-interkom-eylem .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-interkom-kopya { display: none; align-items: center; gap: 6px; min-height: 36px; padding: 6px 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: --text--; font: inherit; font-size: 0.85rem; font-weight: 650; transition: border-color 0.2s ease, background 0.2s ease; }
+  .modulex-iletisim-interkom--kjs .modulex-iletisim-interkom-kopya { display: inline-flex; }
+  .modulex-iletisim-interkom-kopya:hover { border-color: --accent--; }
+  .modulex-iletisim-interkom-kopya .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-interkom--kopyalandi { background: color-mix(in srgb, --accent-- 14%, transparent); }
+  .modulex-iletisim-interkom-sosyal { display: grid; gap: 10px; }
+  .modulex-iletisim-interkom-sbaslik { color: --muted--; font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-interkom-sliste { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-iletisim-interkom-cip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px; border: 1px solid --cizgi--; border-radius: 999px; color: inherit; font-weight: 650; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-iletisim-interkom-cip:hover { border-color: --accent--; transform: translateY(-2px); }
+  .modulex-iletisim-interkom-cikon { font-size: 18px; }
+  .modulex-iletisim-interkom-harita { position: relative; overflow: hidden; min-height: 280px; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-iletisim-interkom-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .modulex-iletisim-interkom-hdesen { position: absolute; inset: 0; display: grid; place-items: center; background-color: color-mix(in srgb, --accent-- 8%, --kartBg--); background-image: linear-gradient(color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), radial-gradient(circle at 30% 40%, color-mix(in srgb, --accent-- 18%, transparent) 0 18%, transparent 19%); background-size: 36px 36px, 36px 36px, 100% 100%; }
+  .modulex-iletisim-interkom-pin { color: --accentInk--; font-size: 56px; animation: modulex-iletisim-interkom-zipla 2.4s ease-in-out infinite; }
+  @keyframes modulex-iletisim-interkom-zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .modulex-iletisim-interkom-hyol { position: absolute; inset-block-end: 16px; inset-inline-start: 16px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border-radius: 999px; background: --bg--; color: --text--; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px color-mix(in srgb, --text-- 16%, transparent); transition: transform 0.2s ease; }
+  .modulex-iletisim-interkom-hyol:hover { transform: translateY(-2px); }
+  .modulex-iletisim-interkom-hyol .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-interkom :is(.modulex-iletisim-interkom-baslik, .modulex-iletisim-interkom-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-interkom-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-iletisim-interkom { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-iletisim-interkom *, .modulex-iletisim-interkom *::before, .modulex-iletisim-interkom *::after { animation: none !important; transition: none !important; }
+  }
+</style>

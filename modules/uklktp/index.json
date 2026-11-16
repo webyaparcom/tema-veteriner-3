@@ -1,0 +1,57 @@
+{
+  "name": "SSS Canlı Arama — yazdıkça süzülen soru listesi",
+  "description": "Koyu zeminde büyük hap arama kutusu, altında konu süzgeç çipleri (kategori) ve canlı sonuç sayısı; yazdıkça sorular süzülür (soru + cevap + konu içinde, aksan duyarsız), eşleşen kısım işaretlenir, hiçbir soru kalmazsa «sonuç yok» kutusu ve iletişim düğmesi çıkar. JS yokken tüm sorular açılır liste. sss-bolunmus aramayı yapışkan yan sütunda küçük bir girdiyle, sss-cip-filtre yalnız çip seçimiyle yapar; bu modülde arama sahnenin merkezi (dev hap kutu + canlı sayaç + eşleşme işareti + sonuç yok kartı), liste konu rozetli tek sütun. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Açılırlar yerel <details> (JS'siz). Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "manage_search",
+  "category": "faq",
+  "subCategory": "live-search",
+  "tags": [
+    "faq",
+    "search",
+    "live-filter",
+    "details",
+    "dark",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1000px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "tekAcik": "",
+    "ilkAcik": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "bg": "var(--mx-site-text, #111318)",
+    "text": "var(--mx-site-bg, #ffffff)",
+    "muted": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 78%, var(--mx-site-text, #111318))",
+    "kartBg": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 7%, transparent)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 18%, transparent)",
+    "accent": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 45%, var(--mx-site-bg, #ffffff))",
+    "accentText": "var(--mx-site-text, #111318)",
+    "vurguBg": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+    "vurguText": "var(--mx-site-text, #111318)",
+    "aramaYer": "",
+    "sonucYok": "",
+    "sonucEk": "",
+    "bgcolor": "var(--mx-site-text, #111318)",
+    "color": "var(--mx-site-bg, #ffffff)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "soru": "dil sözlüğü (zorunlu; eski `question`)",
+      "cevap": "dil sözlüğü (eski `answer`)",
+      "kategori": "grup adı, dil sözlüğü (gruplayan yerleşimde)",
+      "ikon": "Material Symbols adı (destekleyen yerleşimde)",
+      "url": "«Devamı» bağlantısı (iç slug ya da tam URL)"
+    }
+  }
+}

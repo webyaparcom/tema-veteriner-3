@@ -1,0 +1,201 @@
+<section class="modulex-acilis-sube-yakin{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-acilis-sube-yakin-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* acilis-sube-yakin — acilis-hizmet-secici bağlantı satırıdır, kargo-takip-hero numara sorgular; bu modül şube listesini açılışa taşır: harita desenli kart, öne çıkan şube + kompakt satırlar, konum izniyle mesafe ve yakınlık sıralaması. sube-harita-liste (ayrı bölüm, gömülü harita) ve sayac-sube-harita (sayaç) modüllerinden farkı h1'li açılış iskeleti ve tek öne çıkan şube kartı. */
+  .modulex-acilis-sube-yakin { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-acilis-sube-yakin *, .modulex-acilis-sube-yakin *::before, .modulex-acilis-sube-yakin *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-acilis-sube-yakin :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-acilis-sube-yakin :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-acilis-sube-yakin :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-acilis-sube-yakin :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-acilis-sube-yakin img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-acilis-sube-yakin) img { height: auto; }
+  .modulex-acilis-sube-yakin [hidden] { display: none !important; }
+  .modulex-acilis-sube-yakin :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-acilis-sube-yakin :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-acilis-sube-yakin-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-acilis-sube-yakin-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-acilis-sube-yakin--bassiz .modulex-acilis-sube-yakin-bas { display: none; }
+  .modulex-acilis-sube-yakin-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-acilis-sube-yakin-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-acilis-sube-yakin-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-acilis-sube-yakin-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-acilis-sube-yakin-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-acilis-sube-yakin-dugme:hover { transform: translateY(-2px); }
+  .modulex-acilis-sube-yakin-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-acilis-sube-yakin-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-acilis-sube-yakin-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-acilis-sube-yakin-duzen { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .modulex-acilis-sube-yakin-duzen--tek { grid-template-columns: minmax(0, 1fr); max-width: 820px; }
+  .modulex-acilis-sube-yakin-yazi { display: grid; gap: 20px; justify-items: start; min-width: 0; padding-block-start: clamp(0px, 3vw, 36px); }
+  .modulex-acilis-sube-yakin-yazi > .modulex-acilis-sube-yakin-ogeler { flex-direction: column; gap: 10px; }
+  .modulex-acilis-sube-yakin-vitrin { inline-size: 100%; aspect-ratio: 16 / 7; object-fit: cover; border-radius: --yuvarlak--; }
+  .modulex-acilis-sube-yakin-tekfoto { margin: 0; }
+  .modulex-acilis-sube-yakin-dikey { inline-size: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: --yuvarlak--; }
+  .modulex-acilis-sube-yakin-kart { position: relative; display: grid; min-width: 0; overflow: hidden; border: 1px solid --cizgi--; border-radius: calc(--yuvarlak-- * 1.3); background-color: --kartBg--; box-shadow: 0 40px 80px -56px color-mix(in srgb, --text-- 70%, transparent); animation: modulex-acilis-sube-yakin-gir 0.8s 0.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .modulex-acilis-sube-yakin-harita { position: relative; display: grid; place-items: center; block-size: clamp(130px, 15vw, 180px); background-color: color-mix(in srgb, --accent-- 9%, --kartBg--); background-image: linear-gradient(--cizgi-- 1px, transparent 1px), linear-gradient(90deg, --cizgi-- 1px, transparent 1px), radial-gradient(circle at 28% 62%, color-mix(in srgb, --accent-- 20%, transparent) 0 16%, transparent 17%), linear-gradient(118deg, transparent 47%, color-mix(in srgb, --accent-- 32%, transparent) 47% 50%, transparent 50%); background-size: 26px 26px, 26px 26px, 100% 100%, 100% 100%; }
+  .modulex-acilis-sube-yakin-hpin { position: relative; z-index: 1; color: --accentInk--; font-size: 50px; animation: modulex-acilis-sube-yakin-zipla 2.4s ease-in-out infinite; }
+  .modulex-acilis-sube-yakin-halka { position: absolute; inset-block-start: calc(50% + 14px); inline-size: 24px; block-size: 24px; border-radius: 50%; background-color: color-mix(in srgb, --accent-- 45%, transparent); animation: modulex-acilis-sube-yakin-halka 2.4s ease-out infinite; }
+  @keyframes modulex-acilis-sube-yakin-zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @keyframes modulex-acilis-sube-yakin-halka { from { transform: scale(0.6); opacity: 0.9; } to { transform: scale(3.2); opacity: 0; } }
+  .modulex-acilis-sube-yakin-kartbas { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 16px clamp(16px, 2.4vw, 24px) 0; }
+  .modulex-acilis-sube-yakin-yakin { display: inline-flex; align-items: center; gap: 6px; color: --accentInk--; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+  .modulex-acilis-sube-yakin-yakin .material-symbols-outlined { font-size: 18px; }
+  .modulex-acilis-sube-yakin-konum { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; margin-inline-start: auto; padding: 6px 16px; border: 1.5px solid --accent--; border-radius: 999px; background-color: transparent; color: --accentInk--; font: inherit; font-size: 0.9rem; font-weight: 700; transition: background-color 0.2s ease, color 0.2s ease; }
+  .modulex-acilis-sube-yakin-konum:hover, .modulex-acilis-sube-yakin-konum[aria-pressed="true"] { background-color: --accent--; color: --accentText--; }
+  .modulex-acilis-sube-yakin-konum:disabled { opacity: 0.6; cursor: progress; }
+  .modulex-acilis-sube-yakin-konum--hata { border-style: dashed; }
+  .modulex-acilis-sube-yakin-konum .material-symbols-outlined { font-size: 20px; }
+  .modulex-acilis-sube-yakin-subeler { display: grid; padding: 10px clamp(16px, 2.4vw, 24px) clamp(16px, 2.4vw, 24px); }
+  .modulex-acilis-sube-yakin-sube { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 14px; padding-block: 14px; border-block-start: 1px solid --cizgi--; }
+  .modulex-acilis-sube-yakin-sube:first-child { border-block-start: 0; }
+  .modulex-acilis-sube-yakin-sube--one { grid-template-columns: auto minmax(0, 1fr); align-items: start; margin-block-end: 6px; padding: 18px; border-block-start: 0; border-radius: --yuvarlak--; background-color: --bg--; box-shadow: inset 0 0 0 1.5px --accent--; }
+  .modulex-acilis-sube-yakin-sube--one + .modulex-acilis-sube-yakin-sube { border-block-start: 0; }
+  .modulex-acilis-sube-yakin--yeni { animation: modulex-acilis-sube-yakin-gir 0.45s ease both; }
+  .modulex-acilis-sube-yakin-sikon { display: inline-grid; place-items: center; inline-size: 40px; block-size: 40px; border-radius: 12px; background-color: color-mix(in srgb, --accent-- 12%, transparent); color: --accentInk--; font-size: 22px; transition: background-color 0.3s ease, color 0.3s ease; }
+  .modulex-acilis-sube-yakin-sube--one .modulex-acilis-sube-yakin-sikon { inline-size: 52px; block-size: 52px; background-color: --accent--; color: --accentText--; font-size: 28px; }
+  .modulex-acilis-sube-yakin-sbilgi { display: grid; gap: 4px; min-width: 0; }
+  .modulex-acilis-sube-yakin-sad { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-weight: 750; line-height: 1.3; }
+  .modulex-acilis-sube-yakin-sube--one .modulex-acilis-sube-yakin-sad { font-family: var(--mx-font-heading, inherit); font-size: 1.3rem; }
+  .modulex-acilis-sube-yakin-mesafe { display: inline-flex; padding: 2px 10px; border-radius: 999px; background-color: --accent--; color: --accentText--; font-family: inherit; font-size: 0.78rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .modulex-acilis-sube-yakin-sadres, .modulex-acilis-sube-yakin-ssaat { color: --muted--; font-size: 0.92rem; }
+  .modulex-acilis-sube-yakin-ssaat, .modulex-acilis-sube-yakin-stel { display: inline-flex; align-items: center; gap: 6px; }
+  .modulex-acilis-sube-yakin-ssaat .material-symbols-outlined, .modulex-acilis-sube-yakin-stel .material-symbols-outlined { font-size: 18px; }
+  .modulex-acilis-sube-yakin-stel { justify-self: start; color: --text--; font-weight: 650; text-decoration: none; }
+  .modulex-acilis-sube-yakin-stel:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .modulex-acilis-sube-yakin-seylem { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .modulex-acilis-sube-yakin-sube--one .modulex-acilis-sube-yakin-seylem { grid-column: 1 / -1; padding-block-start: 8px; }
+  .modulex-acilis-sube-yakin-yol { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 6px 14px; border-radius: 999px; background-color: color-mix(in srgb, --accent-- 12%, transparent); color: --accentInk--; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: background-color 0.2s ease, color 0.2s ease; }
+  .modulex-acilis-sube-yakin-yol:hover, .modulex-acilis-sube-yakin-sube--one .modulex-acilis-sube-yakin-yol { background-color: --accent--; color: --accentText--; }
+  .modulex-acilis-sube-yakin-yol .material-symbols-outlined { font-size: 18px; }
+  .modulex-acilis-sube-yakin-sec { display: inline-grid; place-items: center; inline-size: 40px; block-size: 40px; padding: 0; border: 1px solid --cizgi--; border-radius: 50%; background-color: transparent; color: --text--; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-acilis-sube-yakin-sec:hover { border-color: --accent--; transform: scale(1.08); }
+  .modulex-acilis-sube-yakin:not(.modulex-acilis-sube-yakin--hjs) .modulex-acilis-sube-yakin-sec { display: none; }
+  .modulex-acilis-sube-yakin--hjs .modulex-acilis-sube-yakin-sube:not(.modulex-acilis-sube-yakin-sube--one) :is(.modulex-acilis-sube-yakin-ssaat, .modulex-acilis-sube-yakin-stel) { display: none; }
+  @media (max-width: 1024px) {
+    .modulex-acilis-sube-yakin-duzen { grid-template-columns: minmax(0, 1fr); }
+    .modulex-acilis-sube-yakin-yazi { padding-block-start: 0; }
+    .modulex-acilis-sube-yakin-tekfoto { max-width: 480px; }
+  }
+  @media (max-width: 768px) {
+    .modulex-acilis-sube-yakin-sube { grid-template-columns: auto minmax(0, 1fr); }
+    .modulex-acilis-sube-yakin-seylem { grid-column: 2; }
+    .modulex-acilis-sube-yakin-sube--one .modulex-acilis-sube-yakin-seylem { grid-column: 1 / -1; }
+    .modulex-acilis-sube-yakin-sube--one { padding: 14px; }
+    .modulex-acilis-sube-yakin-konum { margin-inline-start: 0; }
+  }
+  .modulex-acilis-sube-yakin-h1 { font-family: var(--mx-font-heading, inherit); font-size: clamp(2.3rem, 5.2vw, 4.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+  .modulex-acilis-sube-yakin-metin { color: --muted--; font-size: clamp(1.02rem, 1.3vw, 1.18rem); line-height: 1.7; max-width: 62ch; }
+  .modulex-acilis-sube-yakin-ogeler { display: flex; flex-wrap: wrap; gap: 14px 30px; }
+  .modulex-acilis-sube-yakin-oge { display: flex; align-items: center; gap: 10px; }
+  .modulex-acilis-sube-yakin-oikon { color: --accentInk--; font-size: 22px; }
+  .modulex-acilis-sube-yakin-odeger { font-size: 1.45rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+  .modulex-acilis-sube-yakin-ometin { color: --muted--; font-size: 0.95rem; }
+  .modulex-acilis-sube-yakin-obag { color: inherit; text-underline-offset: 3px; }
+  .modulex-acilis-sube-yakin-gir { animation: modulex-acilis-sube-yakin-gir 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  @keyframes modulex-acilis-sube-yakin-gir { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-acilis-sube-yakin-h1 { letter-spacing: 0; line-height: 1.3; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-acilis-sube-yakin :is(.modulex-acilis-sube-yakin-baslik, .modulex-acilis-sube-yakin-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-acilis-sube-yakin-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-acilis-sube-yakin { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-acilis-sube-yakin *, .modulex-acilis-sube-yakin *::before, .modulex-acilis-sube-yakin *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-acilis-sube-yakin";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const subeYakin = (s, P) => {
+        const ol = s.querySelector("[data-subeler]");
+        if (!ol) return;
+        const li = Array.from(ol.children);
+        if (!li.length) return;
+        s.classList.add(P + "--hjs");
+        const etiket = s.querySelector("[data-yakin]");
+        const dugme = s.querySelector("[data-konum]");
+        let sirali = null;
+        let aktif = li.find((y) => y.classList.contains(P + "-sube--one")) || li[0];
+        const diz = () => {
+          ol.append(...[aktif].concat((sirali || li).filter((y) => y !== aktif)));
+          li.forEach((y) => {
+            const on = y === aktif;
+            y.classList.toggle(P + "-sube--one", on);
+            const b = y.querySelector("[data-sec]");
+            if (b) b.hidden = on;
+          });
+          if (etiket) etiket.hidden = !(sirali && aktif === sirali[0]);
+        };
+        li.forEach((y) => {
+          const b = y.querySelector("[data-sec]");
+          if (!b) return;
+          b.addEventListener("click", () => {
+            aktif = y;
+            diz();
+            y.classList.remove(P + "--yeni");
+            void y.offsetWidth;
+            y.classList.add(P + "--yeni");
+            const a = y.querySelector("a");
+            if (a) a.focus();
+          });
+        });
+        if (dugme && navigator.geolocation) {
+          let f;
+          try { f = new Intl.NumberFormat(document.documentElement.lang || undefined, { style: "unit", unit: "kilometer", maximumFractionDigits: 1 }); } catch (x) { f = { format: (n) => n.toFixed(1) + " km" }; }
+          const rad = (d) => (d * Math.PI) / 180;
+          const mesafe = (a1, b1, a2, b2) => {
+            const h = Math.sin(rad(a2 - a1) / 2) ** 2 + Math.cos(rad(a1)) * Math.cos(rad(a2)) * Math.sin(rad(b2 - b1) / 2) ** 2;
+            return 12742 * Math.asin(Math.min(1, Math.sqrt(h)));
+          };
+          const bitir = () => { dugme.disabled = false; dugme.removeAttribute("aria-busy"); };
+          dugme.hidden = false;
+          dugme.addEventListener("click", () => {
+            dugme.disabled = true;
+            dugme.setAttribute("aria-busy", "true");
+            navigator.geolocation.getCurrentPosition((p) => {
+              const e = p.coords.latitude;
+              const b = p.coords.longitude;
+              const km = new Map();
+              li.forEach((y) => {
+                const ye = parseFloat(y.dataset.enlem);
+                const yb = parseFloat(y.dataset.boylam);
+                const m = y.querySelector("[data-mesafe]");
+                if (!Number.isFinite(ye) || !Number.isFinite(yb)) { km.set(y, Infinity); return; }
+                const d = mesafe(e, b, ye, yb);
+                km.set(y, d);
+                if (m) { m.textContent = f.format(d); m.hidden = false; }
+              });
+              sirali = li.slice().sort((x, y) => km.get(x) - km.get(y));
+              aktif = sirali[0];
+              diz();
+              bitir();
+              dugme.setAttribute("aria-pressed", "true");
+            }, () => {
+              bitir();
+              dugme.classList.add(P + "-konum--hata");
+              const i = dugme.querySelector(".material-symbols-outlined");
+              if (i) i.textContent = "location_disabled";
+            }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
+          });
+        }
+        diz();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      subeYakin(s, P, az);
+    });
+  })();
+</script>

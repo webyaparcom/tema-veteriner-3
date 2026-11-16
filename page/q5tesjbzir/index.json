@@ -1,0 +1,41 @@
+{
+  "id": "q5tesjbzir",
+  "name": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "description": {
+    "tr": "Şubelerdeki olanaklar ve özen listesi.",
+    "en": "Branch facilities and the care checklist.",
+    "ar": "مرافق الفروع وقائمة العناية."
+  },
+  "keyword": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "path": "hizmetler",
+  "icon": "work",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "7g34g0",
+      "gkz7uk",
+      "alhhq4"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "date": "2026-11-16T16:03:30.726Z",
+  "update": "2026-11-16T16:21:06.388Z"
+}

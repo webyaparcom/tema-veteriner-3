@@ -1,0 +1,110 @@
+<section class="modulex-deger-ozen-kontrol{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-deger-ozen-kontrol-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* deger-ozen-kontrol — deger-onay-liste sabit, iki sütun tik listesidir; bu modülde işaretler kaydırmayla tek tek atılır ve ilerleme bir halka + sayaçla izlenir (ilerleme anlatısı). */
+  .modulex-deger-ozen-kontrol { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-deger-ozen-kontrol *, .modulex-deger-ozen-kontrol *::before, .modulex-deger-ozen-kontrol *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-deger-ozen-kontrol :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-deger-ozen-kontrol :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-deger-ozen-kontrol :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-deger-ozen-kontrol :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-deger-ozen-kontrol img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-deger-ozen-kontrol) img { height: auto; }
+  .modulex-deger-ozen-kontrol [hidden] { display: none !important; }
+  .modulex-deger-ozen-kontrol :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-deger-ozen-kontrol :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-deger-ozen-kontrol-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-deger-ozen-kontrol-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-deger-ozen-kontrol--bassiz .modulex-deger-ozen-kontrol-bas { display: none; }
+  .modulex-deger-ozen-kontrol-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-deger-ozen-kontrol-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-deger-ozen-kontrol-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-deger-ozen-kontrol-bas { max-width: 760px; }
+  .modulex-deger-ozen-kontrol-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-deger-ozen-kontrol-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-deger-ozen-kontrol-dugme:hover { transform: translateY(-2px); }
+  .modulex-deger-ozen-kontrol-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-deger-ozen-kontrol-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-deger-ozen-kontrol-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-deger-ozen-kontrol-duzen { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.8fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .modulex-deger-ozen-kontrol-liste { position: relative; display: grid; gap: 14px; }
+  .modulex-deger-ozen-kontrol-liste::before { content: ""; position: absolute; inset-block: 22px; inset-inline-start: 21px; width: 2px; background: --cizgi--; }
+  .modulex-deger-ozen-kontrol-madde { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; align-items: start; }
+  .modulex-deger-ozen-kontrol-kutu { position: relative; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; margin-block-start: 14px; border: 2px solid --accent--; border-radius: 14px; background: --accent--; color: --accentText--; transition: background 0.35s ease, color 0.35s ease, transform 0.35s cubic-bezier(0.3, 1.6, 0.5, 1); }
+  .modulex-deger-ozen-kontrol-kutu .material-symbols-outlined { font-size: 26px; font-weight: 700; transition: transform 0.35s ease; }
+  .modulex-deger-ozen-kontrol--js .modulex-deger-ozen-kontrol-madde:not(.modulex-deger-ozen-kontrol--tik) .modulex-deger-ozen-kontrol-kutu { background: --kartBg--; color: --accentInk--; transform: scale(0.9); }
+  .modulex-deger-ozen-kontrol--js .modulex-deger-ozen-kontrol-madde:not(.modulex-deger-ozen-kontrol--tik) .modulex-deger-ozen-kontrol-kutu .material-symbols-outlined { transform: scale(0); }
+  .modulex-deger-ozen-kontrol-yazi { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; padding: 18px 20px; border: 1px solid --cizgi--; border-radius: --yuvarlak--; background: --kartBg--; transition: border-color 0.35s ease, box-shadow 0.35s ease; }
+  .modulex-deger-ozen-kontrol--tik .modulex-deger-ozen-kontrol-yazi, .modulex-deger-ozen-kontrol:not(.modulex-deger-ozen-kontrol--js) .modulex-deger-ozen-kontrol-yazi { border-color: color-mix(in srgb, --accent-- 45%, transparent); }
+  .modulex-deger-ozen-kontrol-yazi:hover { box-shadow: 0 16px 30px -24px color-mix(in srgb, --text-- 60%, transparent); }
+  .modulex-deger-ozen-kontrol-ic2 { display: grid; gap: 4px; }
+  .modulex-deger-ozen-kontrol-ikon { color: --accentInk--; font-size: 30px; }
+  .modulex-deger-ozen-kontrol-etiket { color: --accentInk--; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-deger-ozen-kontrol-kbaslik { font-size: 1.12rem; font-weight: 750; }
+  .modulex-deger-ozen-kontrol-kmetin { color: --muted--; font-size: 0.95rem; }
+  .modulex-deger-ozen-kontrol-ozet { position: sticky; inset-block-start: 96px; display: grid; justify-items: center; gap: 18px; padding: 28px; border-radius: calc(--yuvarlak-- * 1.3); background: --vurguBg--; color: --vurguText--; }
+  .modulex-deger-ozen-kontrol-halka { display: grid; place-items: center; width: 168px; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(--vurguText-- calc(var(--oran, 1) * 360deg), color-mix(in srgb, --vurguText-- 22%, transparent) 0); transition: background 0.4s ease; }
+  .modulex-deger-ozen-kontrol-sayi { display: grid; grid-auto-flow: column; place-content: center; align-items: baseline; gap: 2px; width: 80%; aspect-ratio: 1; border-radius: 50%; background: --vurguBg--; font-variant-numeric: tabular-nums; line-height: 1; }
+  .modulex-deger-ozen-kontrol-sayi b { font-size: 3rem; font-weight: 800; }
+  .modulex-deger-ozen-kontrol-sayi small { font-size: 1.1rem; font-weight: 700; }
+  .modulex-deger-ozen-kontrol-izler { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .modulex-deger-ozen-kontrol-iz { font-size: 22px; transition: transform 0.3s ease; }
+  .modulex-deger-ozen-kontrol-ozet:hover .modulex-deger-ozen-kontrol-iz { transform: rotate(-14deg); }
+  @media (max-width: 768px) {
+    .modulex-deger-ozen-kontrol-duzen { grid-template-columns: minmax(0, 1fr); }
+    .modulex-deger-ozen-kontrol-ozet { position: relative; inset-block-start: 0; order: -1; grid-template-columns: auto minmax(0, 1fr); justify-items: start; align-items: center; padding: 18px; }
+    .modulex-deger-ozen-kontrol-halka { width: 96px; }
+    .modulex-deger-ozen-kontrol-sayi b { font-size: 1.8rem; }
+  }
+  .modulex-deger-ozen-kontrol-bag { color: inherit; text-decoration: none; }
+  .modulex-deger-ozen-kontrol-bag::after { content: ""; position: absolute; inset: 0; z-index: 3; }
+  .modulex-deger-ozen-kontrol-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-ozen-kontrol :is(.modulex-deger-ozen-kontrol-baslik, .modulex-deger-ozen-kontrol-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-ozen-kontrol-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-deger-ozen-kontrol { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-deger-ozen-kontrol *, .modulex-deger-ozen-kontrol *::before, .modulex-deger-ozen-kontrol *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-deger-ozen-kontrol";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const ozen = (s, P, az) => {
+        const m = [...s.querySelectorAll("[data-ozen-madde]")];
+        const say = s.querySelector("[data-ozen-say]");
+        if (!m.length) return;
+        let f = null;
+        try { f = new Intl.NumberFormat(document.documentElement.lang || undefined); } catch (x) { f = null; }
+        const yaz = () => {
+          const n = m.filter((x) => x.classList.contains(P + "--tik")).length;
+          s.style.setProperty("--oran", (n / m.length).toFixed(3));
+          if (say) say.textContent = f ? f.format(n) : String(n);
+        };
+        if (az || !("IntersectionObserver" in window)) { m.forEach((x) => x.classList.add(P + "--tik")); yaz(); return; }
+        s.classList.add(P + "--js");
+        yaz();
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { g.target.classList.add(P + "--tik"); io.unobserve(g.target); yaz(); } });
+        }, { rootMargin: "0px 0px -30% 0px", threshold: 0.6 });
+        m.forEach((x) => io.observe(x));
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      ozen(s, P, az);
+    });
+  })();
+</script>

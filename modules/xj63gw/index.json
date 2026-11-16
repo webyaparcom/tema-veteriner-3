@@ -1,0 +1,54 @@
+{
+  "name": "Referans İlçe Süzgeç — ilçe çipleriyle süzülen tamamlanan işler",
+  "description": "Üstte «Tümü» + ilçe çipleri (iş adedi rozetli, çoklu seçim) ve canlı sonuç satırı; altta iş fişi kartları: fiş no, konum rozeti, yıl, iş/müşteri adı, kısa açıklama ve iş türü. Seçilen ilçelerin işleri kalır, diğerleri gizlenir. JS yoksa ya da tek ilçe varsa çip şeridi yok, tüm işler görünür. referans-sekme-sektor sektöre göre tek seçimli sekme panelleri kopyalar; bu modül yerinde, çoklu seçimli konum süzgeci uygular (ilçe verisi, sonuç sayacı) ve logo yerine iş fişi iskeleti (no · konum · yıl · iş türü) kullanır. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "location_on",
+  "category": "referans",
+  "subCategory": "district-filter",
+  "tags": [
+    "referans",
+    "filter",
+    "district",
+    "projects",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "sayi": "",
+    "sayiEtiket": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "sonucEtiket": "",
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "ad": "marka / kurum adı (dil sözlüğü ya da düz metin; logo alt yazısı)",
+      "img": "logo görseli yolu (boşsa yazı logosu)",
+      "url": "iç/dış bağlantı (dış → yeni sekme)",
+      "sektor": "dil sözlüğü (sektör / iş alanı)",
+      "metin": "dil sözlüğü (kısa görüş / iş özeti)",
+      "kisi": "dil sözlüğü (görüş sahibi)",
+      "yil": "birlikte çalışma yılı (düz metin)"
+    }
+  }
+}

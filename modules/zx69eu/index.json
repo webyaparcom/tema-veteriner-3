@@ -1,0 +1,52 @@
+{
+  "name": "Üst Alt Çubuk — mobilde ekranın altında sabit sekme çubuğu",
+  "description": "Geniş ekranda logo, menü, dil ve düğme tek satır. Telefonda menü başparmak bölgesine iner: ekranın altında sabit, ikonlu ilk dört sayfa + «Menü» sekmesi; Menü alttan kayan bir sayfa (sheet) açar: iki sütun sayfa kutuları, telefon, e-posta, dil. JS yoksa üstte sarılan liste. Hamburger üstte değil, uygulamalardaki gibi altta sekme çubuğu: tek elle kullanım, sayfalar her an görünür; menü alttan açılan sayfa. Sayfalar site sayfalarından, dil seçici {{langbar}}, logo {{logo}}. Mobil menü erişilebilir (aria-expanded, Esc, odak). Renkler desing + var(--mx-site-*); mantıksal CSS → RTL.",
+  "version": "1.0.0",
+  "icon": "bottom_navigation",
+  "category": "menu",
+  "subCategory": "bottom-tab-bar",
+  "tags": [
+    "menu",
+    "bottom-nav",
+    "tab-bar",
+    "bottom-sheet",
+    "mobile-first",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "0px",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "tel": "",
+    "logoimg": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "logoH": "44px",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "name": "ek bağlantı adı (dil sözlüğü)",
+      "url": "iç yol ya da dış adres (dış adres yeni sekmede)"
+    }
+  }
+}

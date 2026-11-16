@@ -1,0 +1,63 @@
+{
+  "name": "Çağrı Alt Çubuk — tebeşir tahtası + ekran altına yapışan sipariş çubuğu",
+  "description": "Bölümde çerçeveli tebeşir tahtası: üst etiket, başlık, metin, çalışma saati ve düğmeler. JS ile ayrıca ekran altına yapışan kapsül çubuk: ikon, kısa yazı, telefon ve birincil düğme — ana tahta ekrandayken gizlenir, oturum boyu kapatılabilir (desing.kapatAd). Ailedeki tüm çağrılar yalnız kendi yerinde durur; bu modülün eylemi sayfa boyunca ziyaretçiyle gelir (sabit alt çubuk) — cagri-hap'ın tek satır kapsülü yerinde kalır, bu çubuk ekrana sabitlenir. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık da düğme de yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "local_cafe",
+  "category": "cta",
+  "subCategory": "sticky-bottom-bar",
+  "tags": [
+    "cta",
+    "sticky",
+    "bottom-bar",
+    "order",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "btn1Text": "",
+    "btn1Url": "",
+    "btn2Text": "",
+    "btn2Url": "",
+    "img": "",
+    "alt": "",
+    "ikon": "",
+    "not": "",
+    "number": "",
+    "numberText": "",
+    "waLabel": "",
+    "waTitle": "",
+    "waMessage": "",
+    "hours": "",
+    "hoursLabel": "",
+    "bg": "var(--mx-site-text, #111318)",
+    "yaziRenk": "var(--mx-site-bg, #ffffff)",
+    "muted": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 78%, var(--mx-site-text, #111318))",
+    "kartBg": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 7%, transparent)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-bg, #ffffff) 18%, transparent)",
+    "accent": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 45%, var(--mx-site-bg, #ffffff))",
+    "accentText": "var(--mx-site-text, #111318)",
+    "vurguBg": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 55%, var(--mx-site-bg, #ffffff))",
+    "vurguText": "var(--mx-site-text, #111318)",
+    "kapatAd": "",
+    "bgcolor": "var(--mx-site-text, #111318)",
+    "color": "var(--mx-site-bg, #ffffff)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing",
+    "alanlar": {
+      "ikon": "Material Symbols adı (madde)",
+      "baslik": "dil sözlüğü (madde yazısı, zorunlu)",
+      "aciklama": "dil sözlüğü (madde alt yazısı)"
+    }
+  }
+}

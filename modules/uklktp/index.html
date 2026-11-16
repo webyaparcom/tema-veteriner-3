@@ -1,0 +1,154 @@
+<section class="modulex-sss-canli-arama{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-sss-canli-arama-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* sss-canli-arama — sss-bolunmus aramayı yapışkan yan sütunda küçük bir girdiyle, sss-cip-filtre yalnız çip seçimiyle yapar; bu modülde arama sahnenin merkezi (dev hap kutu + canlı sayaç + eşleşme işareti + sonuç yok kartı), liste konu rozetli tek sütun. */
+  .modulex-sss-canli-arama { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-sss-canli-arama *, .modulex-sss-canli-arama *::before, .modulex-sss-canli-arama *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-sss-canli-arama :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-sss-canli-arama :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-sss-canli-arama :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-sss-canli-arama :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-sss-canli-arama img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-sss-canli-arama) img { height: auto; }
+  .modulex-sss-canli-arama [hidden] { display: none !important; }
+  .modulex-sss-canli-arama :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-sss-canli-arama :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-sss-canli-arama-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-sss-canli-arama-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-sss-canli-arama--bassiz .modulex-sss-canli-arama-bas { display: none; }
+  .modulex-sss-canli-arama-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-sss-canli-arama-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-sss-canli-arama-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-sss-canli-arama-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-sss-canli-arama-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-sss-canli-arama-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-sss-canli-arama-dugme:hover { transform: translateY(-2px); }
+  .modulex-sss-canli-arama-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-sss-canli-arama-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-sss-canli-arama-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-sss-canli-arama-konsol { display: grid; justify-items: center; gap: 16px; max-width: 760px; margin-inline: auto; margin-block-end: 34px; }
+  .modulex-sss-canli-arama:not(.modulex-sss-canli-arama--arjs) .modulex-sss-canli-arama-konsol { display: none; }
+  .modulex-sss-canli-arama-kutu { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 66px; padding-inline: 24px 10px; border: 2px solid --cizgi--; border-radius: 999px; background: --kartBg--; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-sss-canli-arama-kutu:focus-within { border-color: --accent--; box-shadow: 0 0 0 6px color-mix(in srgb, --accent-- 22%, transparent); }
+  .modulex-sss-canli-arama-bikon { color: --accentInk--; font-size: 28px; }
+  .modulex-sss-canli-arama-girdi { flex: 1 1 auto; min-width: 0; height: 58px; border: 0; background: transparent; color: --text--; font: inherit; font-size: 1.15rem; outline: none; }
+  .modulex-sss-canli-arama-girdi::placeholder { color: --muted--; }
+  .modulex-sss-canli-arama-girdi::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+  .modulex-sss-canli-arama-temizle { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: --text--; transition: background-color 0.2s ease; }
+  .modulex-sss-canli-arama-temizle:hover { background-color: --cizgi--; }
+  .modulex-sss-canli-arama-konular { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .modulex-sss-canli-arama-konu-cip { padding: 6px 14px; border: 1px dashed --cizgi--; border-radius: 6px; background: transparent; color: --text--; font: inherit; font-size: 0.9rem; font-weight: 600; transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+  .modulex-sss-canli-arama-konu-cip:hover { border-color: --accent--; }
+  .modulex-sss-canli-arama-konu-cip[aria-pressed="true"] { border-style: solid; border-color: --accent--; background: --accent--; color: --accentText--; }
+  .modulex-sss-canli-arama-sayac { display: flex; align-items: baseline; gap: 6px; color: --muted--; font-size: 0.92rem; }
+  .modulex-sss-canli-arama-sayac output { color: --accentInk--; font-size: 1.1rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .modulex-sss-canli-arama-sonuclar { display: grid; max-width: 860px; margin-inline: auto; border-block-start: 1px solid --cizgi--; }
+  .modulex-sss-canli-arama-oge { border-block-end: 1px solid --cizgi--; }
+  .modulex-sss-canli-arama--suzgec .modulex-sss-canli-arama-oge:not([hidden]) { animation: modulex-sss-canli-arama-suz 0.3s ease both; }
+  .modulex-sss-canli-arama-ozet { display: flex; align-items: center; gap: 14px; padding-block: 18px; list-style: none; font-size: 1.05rem; font-weight: 700; line-height: 1.4; transition: color 0.2s ease; }
+  .modulex-sss-canli-arama-ozet::-webkit-details-marker { display: none; }
+  .modulex-sss-canli-arama-ozet:hover { color: --accentInk--; }
+  .modulex-sss-canli-arama-soru { flex: 1 1 auto; min-width: 0; }
+  .modulex-sss-canli-arama-iz { padding-inline: 2px; border-radius: 3px; background: --accent--; color: --accentText--; }
+  .modulex-sss-canli-arama-konu { flex: none; padding: 2px 10px; border: 1px solid --cizgi--; border-radius: 999px; color: --muted--; font-size: 0.76rem; font-weight: 600; }
+  .modulex-sss-canli-arama-ac { flex: none; color: --accentInk--; font-size: 26px; transition: transform 0.3s ease; }
+  .modulex-sss-canli-arama-oge[open] .modulex-sss-canli-arama-ac { transform: rotate(180deg); }
+  .modulex-sss-canli-arama-yanit { padding-block-end: 20px; padding-inline-end: 48px; }
+  .modulex-sss-canli-arama-cevap { color: --muted--; line-height: 1.75; }
+  .modulex-sss-canli-arama-yok { display: grid; justify-items: center; gap: 12px; max-width: 540px; margin-inline: auto; margin-block-start: 8px; padding: 34px 22px; border: 1px dashed --cizgi--; border-radius: --yuvarlak--; text-align: center; }
+  .modulex-sss-canli-arama-yikon { color: --accentInk--; font-size: 46px; }
+  .modulex-sss-canli-arama-ymetin { font-size: 1.05rem; font-weight: 650; }
+  .modulex-sss-canli-arama-yok .modulex-sss-canli-arama-cta { justify-content: center; }
+  @keyframes modulex-sss-canli-arama-suz { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 768px) {
+    .modulex-sss-canli-arama-kutu { min-height: 56px; padding-inline: 16px 6px; }
+    .modulex-sss-canli-arama-girdi { height: 50px; font-size: 1rem; }
+    .modulex-sss-canli-arama-konular { flex-wrap: nowrap; justify-content: flex-start; width: 100%; overflow-x: auto; scrollbar-width: none; }
+    .modulex-sss-canli-arama-konu-cip { flex: none; }
+    .modulex-sss-canli-arama-konu { display: none; }
+    .modulex-sss-canli-arama-yanit { padding-inline-end: 0; }
+  }
+  .modulex-sss-canli-arama-bag { display: inline-flex; align-items: center; gap: 6px; margin-block-start: 10px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.25s ease; }
+  .modulex-sss-canli-arama-bag:hover { gap: 10px; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-sss-canli-arama-bag .material-symbols-outlined { font-size: 18px; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sss-canli-arama :is(.modulex-sss-canli-arama-baslik, .modulex-sss-canli-arama-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-sss-canli-arama-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-sss-canli-arama { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-sss-canli-arama *, .modulex-sss-canli-arama *::before, .modulex-sss-canli-arama *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-sss-canli-arama";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const canliAra = (s, P) => {
+        const g = s.querySelector("[data-ara-girdi]");
+        const oge = [...s.querySelectorAll("[data-ara-oge]")];
+        if (!g || !oge.length) return;
+        s.classList.add(P + "--arjs");
+        const dl = document.documentElement.lang || undefined;
+        const kucuk = (x) => { try { return String(x).toLocaleLowerCase(dl); } catch (e) { return String(x).toLowerCase(); } };
+        const sade = (x) => kucuk(x).normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ı/g, "i");
+        const yok = s.querySelector("[data-ara-yok]");
+        const sayi = s.querySelector("[data-ara-sayi]");
+        const temizle = s.querySelector("[data-ara-temizle]");
+        const cip = [...s.querySelectorAll("[data-ara-cip]")];
+        let nf = null;
+        try { nf = new Intl.NumberFormat(dl); } catch (e) { nf = null; }
+        const K = oge.map((o) => { const v = o.querySelector("[data-ara-vurgu]"); return { o, v, ham: v ? v.textContent : "", metin: sade(o.textContent) }; });
+        let grup = "";
+        const isaretle = (k, q) => {
+          if (!k.v) return;
+          const alt = kucuk(k.ham);
+          const i = q && alt.length === k.ham.length ? alt.indexOf(kucuk(q)) : -1;
+          if (i < 0) { k.v.textContent = k.ham; return; }
+          const m = document.createElement("mark");
+          m.className = P + "-iz";
+          m.textContent = k.ham.slice(i, i + q.length);
+          k.v.replaceChildren(document.createTextNode(k.ham.slice(0, i)), m, document.createTextNode(k.ham.slice(i + q.length)));
+        };
+        const suz = () => {
+          const q = g.value.trim();
+          const sq = sade(q);
+          let n = 0;
+          K.forEach((k) => {
+            const uy = (!sq || k.metin.includes(sq)) && (!grup || k.o.dataset.araGrup === grup);
+            k.o.hidden = !uy;
+            if (uy) n++;
+            isaretle(k, q);
+          });
+          if (sayi) sayi.textContent = nf ? nf.format(n) : String(n);
+          if (yok) yok.hidden = n > 0;
+          if (temizle) temizle.hidden = !q;
+          s.classList.toggle(P + "--suzgec", !!(q || grup));
+        };
+        g.addEventListener("input", suz);
+        g.addEventListener("keydown", (e) => { if (e.key === "Escape" && g.value) { g.value = ""; suz(); } });
+        if (temizle) temizle.addEventListener("click", () => { g.value = ""; suz(); g.focus(); });
+        cip.forEach((c) => c.addEventListener("click", () => {
+          grup = grup === c.dataset.araCip ? "" : c.dataset.araCip;
+          cip.forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.araCip === grup)));
+          suz();
+        }));
+        suz();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      canliAra(s, P, az);
+    });
+  })();
+</script>

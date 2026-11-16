@@ -1,0 +1,125 @@
+<section class="modulex-ekip-calisma-gunu{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-ekip-calisma-gunu-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* ekip-calisma-gunu — Kişiler takvime göre süzülür: ekip-bolum-sekme bölüme, team-2 departmana göre süzerken burada ölçüt haftanın günü; her kartta yedi günlük mini hafta şeridi ve saat — randevu öncesi «kim ne zaman burada» sorusunu yanıtlar. */
+  .modulex-ekip-calisma-gunu { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-ekip-calisma-gunu *, .modulex-ekip-calisma-gunu *::before, .modulex-ekip-calisma-gunu *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-ekip-calisma-gunu :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-ekip-calisma-gunu :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-ekip-calisma-gunu :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-ekip-calisma-gunu :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-ekip-calisma-gunu img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-ekip-calisma-gunu) img { height: auto; }
+  .modulex-ekip-calisma-gunu [hidden] { display: none !important; }
+  .modulex-ekip-calisma-gunu :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-ekip-calisma-gunu :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-ekip-calisma-gunu-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-ekip-calisma-gunu-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-ekip-calisma-gunu--bassiz .modulex-ekip-calisma-gunu-bas { display: none; }
+  .modulex-ekip-calisma-gunu-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-ekip-calisma-gunu-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-ekip-calisma-gunu-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-ekip-calisma-gunu-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-ekip-calisma-gunu-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-ekip-calisma-gunu-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-ekip-calisma-gunu-dugme:hover { transform: translateY(-2px); }
+  .modulex-ekip-calisma-gunu-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-ekip-calisma-gunu-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-ekip-calisma-gunu-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-ekip-calisma-gunu-takvim { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-block-end: clamp(24px, 3vw, 36px); }
+  .modulex-ekip-calisma-gunu:not(.modulex-ekip-calisma-gunu--js) .modulex-ekip-calisma-gunu-takvim { display: none; }
+  .modulex-ekip-calisma-gunu-cip { position: relative; display: grid; justify-items: center; min-width: 72px; padding: 0 0 8px; overflow: hidden; border: 1px solid --cizgi--; border-radius: 12px; background: --bg--; color: --text--; font: inherit; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-ekip-calisma-gunu-cip:hover { transform: translateY(-2px); border-color: --accent--; }
+  .modulex-ekip-calisma-gunu-cad { width: 100%; padding: 4px 10px; background: color-mix(in srgb, --accent-- 14%, --bg--); color: --accentInk--; font-size: 0.78rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-ekip-calisma-gunu-csay { padding-block-start: 4px; font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .modulex-ekip-calisma-gunu-cip[aria-pressed="true"] { border-color: --accent--; box-shadow: 0 10px 24px -16px color-mix(in srgb, --accent-- 90%, transparent); }
+  .modulex-ekip-calisma-gunu-cip[aria-pressed="true"] .modulex-ekip-calisma-gunu-cad { background: --accent--; color: --accentText--; }
+  .modulex-ekip-calisma-gunu-cip--bugun::after { content: ""; position: absolute; inset-block-end: 5px; inset-inline-end: 6px; width: 7px; height: 7px; border-radius: 50%; background: --accent--; }
+  .modulex-ekip-calisma-gunu-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+  .modulex-ekip-calisma-gunu-hekim { display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: start; gap: 14px 16px; padding: 18px; border-radius: --yuvarlak--; background: --bg--; transition: box-shadow 0.3s ease; }
+  .modulex-ekip-calisma-gunu-hekim:hover { box-shadow: 0 18px 34px -26px color-mix(in srgb, --text-- 60%, transparent); }
+  .modulex-ekip-calisma-gunu--gel { animation: modulex-ekip-calisma-gunu-gel 0.4s ease both; animation-delay: calc(var(--s, 0) * 45ms); }
+  @keyframes modulex-ekip-calisma-gunu-gel { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
+  .modulex-ekip-calisma-gunu-foto { width: 72px; height: 72px; border-radius: 18px; object-fit: cover; font-size: 1.3rem; }
+  .modulex-ekip-calisma-gunu-yazi { display: grid; align-content: center; gap: 2px; }
+  .modulex-ekip-calisma-gunu-hafta, .modulex-ekip-calisma-gunu-saat { grid-column: 1 / -1; }
+  .modulex-ekip-calisma-gunu-serit { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .modulex-ekip-calisma-gunu-g { display: grid; place-items: center; height: 30px; border-radius: 8px; background: color-mix(in srgb, --text-- 6%, transparent); color: --muted--; font-size: 0.78rem; font-weight: 700; transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease; }
+  .modulex-ekip-calisma-gunu-g--var { background: color-mix(in srgb, --accent-- 22%, --bg--); color: --accentInk--; }
+  .modulex-ekip-calisma-gunu-g--var.modulex-ekip-calisma-gunu-g--secili { background: --accent--; color: --accentText--; transform: translateY(-2px); }
+  .modulex-ekip-calisma-gunu-gizli { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .modulex-ekip-calisma-gunu-saat { display: inline-flex; align-items: center; gap: 6px; color: --muted--; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+  .modulex-ekip-calisma-gunu-saat .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+  @media (max-width: 768px) {
+    .modulex-ekip-calisma-gunu-takvim { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding-block-end: 4px; }
+    .modulex-ekip-calisma-gunu-cip { flex: none; min-width: 64px; }
+    .modulex-ekip-calisma-gunu-liste { grid-template-columns: minmax(0, 1fr); }
+  }
+  /* img width/height öznitelikleri CSS yüksekliği olur — aspect-ratio'nun çalışması için yükseklik auto (modül kuralı ezebilir) */
+  :where(.modulex-ekip-calisma-gunu) img { height: auto; }
+  .modulex-ekip-calisma-gunu-foto { min-width: 0; }
+  .modulex-ekip-calisma-gunu-bag { color: inherit; text-decoration: none; }
+  .modulex-ekip-calisma-gunu-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-ekip-calisma-gunu-harf { display: grid; place-items: center; background-color: --vurguBg--; color: --vurguText--; font-weight: 800; letter-spacing: 0.02em; }
+  .modulex-ekip-calisma-gunu-sosyal { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-ekip-calisma-gunu-slink { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 40px; min-height: 40px; padding: 0 10px; border: 1px solid --cizgi--; border-radius: 999px; color: inherit; font-size: 0.88rem; text-decoration: none; transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+  .modulex-ekip-calisma-gunu-slink:hover { background-color: --accent--; border-color: --accent--; color: --accentText--; }
+  .modulex-ekip-calisma-gunu-slink .material-symbols-outlined { font-size: 19px; }
+  .modulex-ekip-calisma-gunu-syazi { overflow-wrap: anywhere; }
+  .modulex-ekip-calisma-gunu-ad { font-size: 1.12rem; font-weight: 750; line-height: 1.3; }
+  .modulex-ekip-calisma-gunu-unvan { color: --accentInk--; font-size: 0.92rem; font-weight: 650; }
+  .modulex-ekip-calisma-gunu-bio { color: --muted--; font-size: 0.95rem; line-height: 1.65; }
+  .modulex-ekip-calisma-gunu-bolum { color: --muted--; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ekip-calisma-gunu :is(.modulex-ekip-calisma-gunu-baslik, .modulex-ekip-calisma-gunu-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ekip-calisma-gunu-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-ekip-calisma-gunu { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-ekip-calisma-gunu *, .modulex-ekip-calisma-gunu *::before, .modulex-ekip-calisma-gunu *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-ekip-calisma-gunu";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const gunSec = (s, P, az) => {
+        const c = [...s.querySelectorAll("[data-gun]")];
+        const k = [...s.querySelectorAll("[data-gunler]")];
+        if (c.length < 2) return;
+        s.classList.add(P + "--js");
+        const sec = (v, oynat) => {
+          c.forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.gun === v)));
+          let n = 0;
+          k.forEach((x) => {
+            const gor = !v || x.dataset.gunler.split(" ").includes(v);
+            x.hidden = !gor;
+            x.classList.remove(P + "--gel");
+            if (gor) { n++; x.style.setProperty("--s", String(n)); if (oynat && !az) { void x.offsetWidth; x.classList.add(P + "--gel"); } }
+          });
+          s.querySelectorAll("[data-g]").forEach((g) => g.classList.toggle(P + "-g--secili", g.dataset.g === v));
+        };
+        const bugun = String(((new Date().getDay() + 6) % 7) + 1);
+        c.forEach((x) => {
+          if (x.dataset.gun === bugun) x.classList.add(P + "-cip--bugun");
+          x.addEventListener("click", () => sec(x.dataset.gun, true));
+        });
+        sec("");
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      gunSec(s, P, az);
+    });
+  })();
+</script>

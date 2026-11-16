@@ -1,0 +1,104 @@
+<section class="modulex-ozellik-olanak-izgara{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-ozellik-olanak-izgara-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* ozellik-olanak-izgara — ozellik-ikon-serit tek satır yatay şerit, ozellik-cizgi-izgara büyük çizgili hücreler, ozellik-sekme-gorsel tek özelliği görselle gösterir; bu modül çok sayıda (8–24) küçük olanak karosunun kategoriyle süzüldüğü yoğun envanter ızgarası. */
+  .modulex-ozellik-olanak-izgara { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-ozellik-olanak-izgara *, .modulex-ozellik-olanak-izgara *::before, .modulex-ozellik-olanak-izgara *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-ozellik-olanak-izgara :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-ozellik-olanak-izgara :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-ozellik-olanak-izgara :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-ozellik-olanak-izgara :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-ozellik-olanak-izgara img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-ozellik-olanak-izgara) img { height: auto; }
+  .modulex-ozellik-olanak-izgara [hidden] { display: none !important; }
+  .modulex-ozellik-olanak-izgara :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-ozellik-olanak-izgara :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-ozellik-olanak-izgara-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-ozellik-olanak-izgara-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-ozellik-olanak-izgara--bassiz .modulex-ozellik-olanak-izgara-bas { display: none; }
+  .modulex-ozellik-olanak-izgara-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-ozellik-olanak-izgara-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-ozellik-olanak-izgara-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-ozellik-olanak-izgara-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-ozellik-olanak-izgara-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-ozellik-olanak-izgara-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-ozellik-olanak-izgara-dugme:hover { transform: translateY(-2px); }
+  .modulex-ozellik-olanak-izgara-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-ozellik-olanak-izgara-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-ozellik-olanak-izgara-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-ozellik-olanak-izgara-envanter { display: grid; justify-items: center; }
+  .modulex-ozellik-olanak-izgara-segment { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin-block-end: 28px; padding: 5px; border-radius: 14px; background: --kartBg--; box-shadow: inset 0 0 0 1px --cizgi--; }
+  .modulex-ozellik-olanak-izgara:not(.modulex-ozellik-olanak-izgara--ojs) .modulex-ozellik-olanak-izgara-segment { display: none; }
+  .modulex-ozellik-olanak-izgara-seg { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 16px; border: 0; border-radius: 10px; background: transparent; color: --text--; font: inherit; font-weight: 650; transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-ozellik-olanak-izgara-seg:hover { color: --accentInk--; }
+  .modulex-ozellik-olanak-izgara-seg[aria-pressed="true"] { background: --bg--; color: --accentInk--; box-shadow: 0 6px 16px -10px color-mix(in srgb, --text-- 55%, transparent); }
+  .modulex-ozellik-olanak-izgara-say { min-width: 22px; padding: 0 6px; border-radius: 999px; background: color-mix(in srgb, --accent-- 12%, transparent); font-size: 0.74rem; font-weight: 800; text-align: center; font-variant-numeric: tabular-nums; }
+  .modulex-ozellik-olanak-izgara-karolar { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 165px), 1fr)); gap: 12px; width: 100%; }
+  .modulex-ozellik-olanak-izgara-olanak { display: grid; justify-items: center; align-content: start; gap: 8px; padding: 22px 14px 18px; border: 1px solid --cizgi--; border-radius: --yuvarlak--; background: --bg--; text-align: center; transition: border-color 0.25s ease, transform 0.25s ease; }
+  .modulex-ozellik-olanak-izgara-olanak:hover { border-color: --accent--; transform: translateY(-3px); }
+  .modulex-ozellik-olanak-izgara-olanak.modulex-ozellik-olanak-izgara--gel { animation: modulex-ozellik-olanak-izgara-karo 0.35s ease both; animation-delay: calc(var(--i, 0) * 30ms); }
+  .modulex-ozellik-olanak-izgara-oikon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: color-mix(in srgb, --accent-- 10%, --bg--); color: --accentInk--; font-size: 30px; transition: background-color 0.25s ease, color 0.25s ease; }
+  .modulex-ozellik-olanak-izgara-olanak:hover .modulex-ozellik-olanak-izgara-oikon { background: --accent--; color: --accentText--; }
+  .modulex-ozellik-olanak-izgara-oad { font-size: 0.98rem; font-weight: 700; line-height: 1.3; }
+  .modulex-ozellik-olanak-izgara-onot { color: --muted--; font-size: 0.84rem; line-height: 1.45; }
+  .modulex-ozellik-olanak-izgara-oket { padding: 1px 8px; border-radius: 999px; background: --kartBg--; color: --muted--; font-size: 0.72rem; font-weight: 700; }
+  .modulex-ozellik-olanak-izgara--ojs .modulex-ozellik-olanak-izgara-oket { display: none; }
+  .modulex-ozellik-olanak-izgara-olanak .modulex-ozellik-olanak-izgara-git { font-size: 0.86rem; }
+  @keyframes modulex-ozellik-olanak-izgara-karo { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
+  @media (max-width: 768px) {
+    .modulex-ozellik-olanak-izgara-segment { flex-wrap: nowrap; justify-content: flex-start; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+    .modulex-ozellik-olanak-izgara-seg { flex: none; }
+    .modulex-ozellik-olanak-izgara-karolar { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .modulex-ozellik-olanak-izgara-olanak { padding: 18px 10px 14px; }
+  }
+  .modulex-ozellik-olanak-izgara-git { display: inline-flex; align-items: center; gap: 6px; width: fit-content; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.25s ease; }
+  .modulex-ozellik-olanak-izgara-git:hover { gap: 10px; }
+  .modulex-ozellik-olanak-izgara-git .material-symbols-outlined { font-size: 18px; }
+  .modulex-ozellik-olanak-izgara-ic > .modulex-ozellik-olanak-izgara-cta { grid-column: 1 / -1; margin-block-start: 32px; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ozellik-olanak-izgara :is(.modulex-ozellik-olanak-izgara-baslik, .modulex-ozellik-olanak-izgara-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ozellik-olanak-izgara-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-ozellik-olanak-izgara { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-ozellik-olanak-izgara *, .modulex-ozellik-olanak-izgara *::before, .modulex-ozellik-olanak-izgara *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-ozellik-olanak-izgara";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const olanakSuz = (s, P) => {
+        const b = [...s.querySelectorAll("[data-olanak-sec]")];
+        const o = [...s.querySelectorAll("." + P + "-olanak")];
+        if (b.length < 2 || !o.length) return;
+        s.classList.add(P + "--ojs");
+        const sec = (g) => {
+          b.forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.olanakSec === g)));
+          let n = 0;
+          o.forEach((x) => {
+            const gor = !g || x.dataset.olanak === g;
+            x.hidden = !gor;
+            x.classList.remove(P + "--gel");
+            if (gor) { x.style.setProperty("--i", String(n++)); void x.offsetWidth; x.classList.add(P + "--gel"); }
+          });
+        };
+        b.forEach((x) => x.addEventListener("click", () => sec(x.dataset.olanakSec)));
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      olanakSuz(s, P, az);
+    });
+  })();
+</script>

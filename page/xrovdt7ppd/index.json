@@ -1,0 +1,39 @@
+{
+  "id": "xrovdt7ppd",
+  "name": {
+    "tr": "Randevu",
+    "en": "Appointment",
+    "ar": "موعد"
+  },
+  "description": {
+    "tr": "Tür, ad ve yaşa göre randevu talebi (demo).",
+    "en": "Appointment request by species, name and age (demo).",
+    "ar": "طلب موعد حسب النوع والاسم والعمر (تجريبي)."
+  },
+  "keyword": {
+    "tr": "randevu",
+    "en": "appointment",
+    "ar": "موعد"
+  },
+  "path": "teklif-al",
+  "icon": "event",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "ubpvo5"
+    ],
+    "footer": []
+  },
+  "index": 4,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Randevu",
+    "en": "Appointment",
+    "ar": "موعد"
+  },
+  "date": "2026-11-16T16:03:30.749Z",
+  "update": "2026-11-16T16:21:06.401Z"
+}

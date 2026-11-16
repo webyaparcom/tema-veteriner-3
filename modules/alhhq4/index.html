@@ -1,0 +1,115 @@
+<section class="modulex-cagri-alt-cubuk{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-cagri-alt-cubuk-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* cagri-alt-cubuk — Ailedeki tüm çağrılar yalnız kendi yerinde durur; bu modülün eylemi sayfa boyunca ziyaretçiyle gelir (sabit alt çubuk) — cagri-hap'ın tek satır kapsülü yerinde kalır, bu çubuk ekrana sabitlenir. */
+  .modulex-cagri-alt-cubuk { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --yaziRenk--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-cagri-alt-cubuk *, .modulex-cagri-alt-cubuk *::before, .modulex-cagri-alt-cubuk *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-cagri-alt-cubuk :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-cagri-alt-cubuk :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-cagri-alt-cubuk :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-cagri-alt-cubuk :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-cagri-alt-cubuk img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-cagri-alt-cubuk) img { height: auto; }
+  .modulex-cagri-alt-cubuk [hidden] { display: none !important; }
+  .modulex-cagri-alt-cubuk :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-cagri-alt-cubuk :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-cagri-alt-cubuk-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-cagri-alt-cubuk-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-cagri-alt-cubuk--bassiz .modulex-cagri-alt-cubuk-bas { display: none; }
+  .modulex-cagri-alt-cubuk-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-cagri-alt-cubuk-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-cagri-alt-cubuk-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-cagri-alt-cubuk-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-cagri-alt-cubuk-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-cagri-alt-cubuk-dugme:hover { transform: translateY(-2px); }
+  .modulex-cagri-alt-cubuk-dugme--ikincil { background: transparent; color: --yaziRenk--; border-color: --cizgi--; }
+  .modulex-cagri-alt-cubuk-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-cagri-alt-cubuk-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-cagri-alt-cubuk-tahta { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: clamp(20px, 4vw, 48px); padding: clamp(28px, 5vw, 56px); border: 10px solid color-mix(in srgb, --accent-- 45%, --bg--); border-radius: --yuvarlak--; background: radial-gradient(ellipse at 20% 10%, color-mix(in srgb, --yaziRenk-- 7%, transparent), transparent 60%), radial-gradient(ellipse at 85% 90%, color-mix(in srgb, --yaziRenk-- 5%, transparent), transparent 55%), --bg--; box-shadow: inset 0 0 40px color-mix(in srgb, --bg-- 80%, transparent); }
+  .modulex-cagri-alt-cubuk-fincan { display: grid; place-items: center; width: clamp(72px, 9vw, 104px); aspect-ratio: 1; border: 2px dashed color-mix(in srgb, --yaziRenk-- 45%, transparent); border-radius: 50%; color: --accentInk--; }
+  .modulex-cagri-alt-cubuk-fincan .material-symbols-outlined { font-size: clamp(36px, 5vw, 52px); animation: modulex-cagri-alt-cubuk-buhar 3.6s ease-in-out infinite; }
+  .modulex-cagri-alt-cubuk-yazi { display: grid; gap: 10px; }
+  .modulex-cagri-alt-cubuk-baslik { letter-spacing: -0.01em; }
+  .modulex-cagri-alt-cubuk-tahta .modulex-cagri-alt-cubuk-cta { flex-direction: column; align-items: stretch; margin: 0; }
+  .modulex-cagri-alt-cubuk-tahta .modulex-cagri-alt-cubuk-dugme { justify-content: center; }
+  .modulex-cagri-alt-cubuk-cubuk { display: none; }
+  .modulex-cagri-alt-cubuk--acjs .modulex-cagri-alt-cubuk-cubuk { position: fixed; inset-inline: 12px; inset-block-end: max(12px, env(safe-area-inset-bottom)); z-index: 60; display: flex; align-items: center; gap: 10px; max-width: 640px; margin-inline: auto; padding: 8px; padding-inline-start: 10px; border: 1px solid --cizgi--; border-radius: 999px; background: --bg--; color: --yaziRenk--; box-shadow: 0 18px 40px -16px color-mix(in srgb, --bg-- 90%, transparent); visibility: hidden; transform: translateY(160%); transition: transform 0.4s ease, visibility 0s linear 0.4s; }
+  .modulex-cagri-alt-cubuk--acjs .modulex-cagri-alt-cubuk-cubuk--gor { visibility: visible; transform: none; transition: transform 0.4s ease, visibility 0s; }
+  .modulex-cagri-alt-cubuk-cikon { display: grid; place-items: center; flex: none; width: 40px; height: 40px; border-radius: 50%; background: --accent--; color: --accentText--; }
+  .modulex-cagri-alt-cubuk-cikon .material-symbols-outlined { font-size: 22px; }
+  .modulex-cagri-alt-cubuk-ckisa { flex: 1; min-width: 0; overflow: hidden; font-weight: 700; white-space: nowrap; text-overflow: ellipsis; }
+  .modulex-cagri-alt-cubuk-ctel, .modulex-cagri-alt-cubuk-ckapat { display: grid; place-items: center; flex: none; width: 40px; height: 40px; padding: 0; border: 1px solid --cizgi--; border-radius: 50%; background: transparent; color: --yaziRenk--; text-decoration: none; transition: border-color 0.25s ease; }
+  .modulex-cagri-alt-cubuk-ctel:hover, .modulex-cagri-alt-cubuk-ckapat:hover { border-color: --accent--; }
+  .modulex-cagri-alt-cubuk-cana { flex: none; padding: 10px 18px; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 750; text-decoration: none; transition: filter 0.25s ease; }
+  .modulex-cagri-alt-cubuk-cana:hover { filter: brightness(1.08); }
+  @keyframes modulex-cagri-alt-cubuk-buhar { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-5px) rotate(-6deg); } }
+  @media (max-width: 1024px) {
+    .modulex-cagri-alt-cubuk-tahta { grid-template-columns: auto minmax(0, 1fr); }
+    .modulex-cagri-alt-cubuk-tahta .modulex-cagri-alt-cubuk-cta { grid-column: 1 / -1; flex-direction: row; }
+  }
+  @media (max-width: 768px) {
+    .modulex-cagri-alt-cubuk-tahta { grid-template-columns: minmax(0, 1fr); border-width: 6px; padding: 24px 18px; }
+    .modulex-cagri-alt-cubuk-ckisa { font-size: 0.9rem; }
+  }
+  .modulex-cagri-alt-cubuk-wasvg { width: 1.25em; height: 1.25em; flex: none; }
+  .modulex-cagri-alt-cubuk-maddeler { display: grid; gap: 12px; }
+  .modulex-cagri-alt-cubuk-madde { display: flex; align-items: flex-start; gap: 12px; }
+  .modulex-cagri-alt-cubuk-mikon { flex: none; color: --accentInk--; font-size: 24px; }
+  .modulex-cagri-alt-cubuk-myazi { display: grid; gap: 2px; }
+  .modulex-cagri-alt-cubuk-myazi strong { font-weight: 700; }
+  .modulex-cagri-alt-cubuk-myazi small { color: --muted--; font-size: 0.92rem; }
+  .modulex-cagri-alt-cubuk-not { color: --muted--; font-size: 0.9rem; }
+  .modulex-cagri-alt-cubuk-saat { display: flex; align-items: center; gap: 8px; color: --muted--; font-size: 0.95rem; }
+  .modulex-cagri-alt-cubuk-saat .material-symbols-outlined { font-size: 20px; color: --accentInk--; }
+  .modulex-cagri-alt-cubuk-metin { max-width: 62ch; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-cagri-alt-cubuk :is(.modulex-cagri-alt-cubuk-baslik, .modulex-cagri-alt-cubuk-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-cagri-alt-cubuk-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-cagri-alt-cubuk { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-cagri-alt-cubuk *, .modulex-cagri-alt-cubuk *::before, .modulex-cagri-alt-cubuk *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-cagri-alt-cubuk";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const altCubuk = (s, P) => {
+        const c = s.querySelector("[data-alt-cubuk]");
+        const ana = s.querySelector("[data-alt-ana]");
+        if (!c || !ana) return;
+        const anahtar = "fb-alt-cubuk-" + P;
+        let kapali = false;
+        try { kapali = sessionStorage.getItem(anahtar) === "1"; } catch (x) { kapali = false; }
+        if (kapali) return;
+        s.classList.add(P + "--acjs");
+        let anaGor = !("IntersectionObserver" in window) ? false : true;
+        let bekle = false;
+        const durum = () => {
+          bekle = false;
+          c.classList.toggle(P + "-cubuk--gor", !kapali && !anaGor && (window.scrollY || 0) > (window.innerHeight || 700) * 0.5);
+        };
+        if ("IntersectionObserver" in window) new IntersectionObserver((gs) => { gs.forEach((x) => { anaGor = x.isIntersecting; }); durum(); }).observe(ana);
+        window.addEventListener("scroll", () => { if (!bekle) { bekle = true; requestAnimationFrame(durum); } }, { passive: true });
+        const k = c.querySelector("[data-alt-kapat]");
+        if (k) k.addEventListener("click", () => { kapali = true; try { sessionStorage.setItem(anahtar, "1"); } catch (x) { /* özel kip */ } durum(); });
+        durum();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      altCubuk(s, P, az);
+    });
+  })();
+</script>

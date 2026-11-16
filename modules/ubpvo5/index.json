@@ -1,0 +1,57 @@
+{
+  "name": "Randevu Evcil Profili — tür/yaş seçimi → uygun hizmet → saat",
+  "description": "Solda marka renkli «evcil kimlik kartı»: büyük ikonlu tür karoları (desing.turler), evcil dostun adı ve yaş kaydırıcısı (canlı yaş yazısı). Sağda yalnız seçilen türe uygun hizmet satırları (data[].tur etiketi; etiketsiz hizmet her türde), uzman, tarih, saat, sahip bilgileri, KVKK ve gönder. Tür/yaş/ad talep mesajına satır olarak eklenir. Tür listesi yoksa kart yalnız ad/yaş alanını taşır. Mevcut randevu-* modülleri hizmetle başlar ve tüm hizmetleri herkese gösterir; bu modül önce hastayı (tür · ad · yaş) sorar, hizmet listesini türe göre canlı süzer (evcil parçası) ve profil kartı + randevu paneli iki bloklu iskelet kurar; yaş için range + output kullanan tek modül. Sunucusuz gönderim (formAction JSON POST › WhatsApp › .ics › mailto), kapalı gün denetimi, KVKK onayı. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Gönderim yolu yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "pets",
+  "category": "randevu",
+  "subCategory": "pet-profile",
+  "tags": [
+    "randevu",
+    "pet",
+    "profile",
+    "filter",
+    "veterinary",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "turler": [],
+    "turAd": "",
+    "evcilAd": "",
+    "yasAd": "",
+    "yasBirim": "",
+    "yasAzami": 20,
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing",
+    "alanlar": {
+      "ad": "hizmet adı (dil sözlüğü, zorunlu) — eski `services[].name`",
+      "sure": "dakika — eski `duration`",
+      "fiyat": "sayı (sayfa diliyle biçimlenir) — eski `price`",
+      "ikon": "Material Symbols adı",
+      "metin": "kısa açıklama (dil sözlüğü)",
+      "img": "görsel (destekleyen yerleşimde)"
+    }
+  }
+}

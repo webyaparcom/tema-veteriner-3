@@ -1,0 +1,153 @@
+<header class="modulex-ust-alt-cubuk{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-ust-alt-cubuk-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</header>
+
+<style>
+  /* ust-alt-cubuk — Hamburger üstte değil, uygulamalardaki gibi altta sekme çubuğu: tek elle kullanım, sayfalar her an görünür; menü alttan açılan sayfa. */
+  .modulex-ust-alt-cubuk { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-ust-alt-cubuk *, .modulex-ust-alt-cubuk *::before, .modulex-ust-alt-cubuk *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-ust-alt-cubuk :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-ust-alt-cubuk :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-ust-alt-cubuk :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-ust-alt-cubuk :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-ust-alt-cubuk img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-ust-alt-cubuk) img { height: auto; }
+  .modulex-ust-alt-cubuk [hidden] { display: none !important; }
+  .modulex-ust-alt-cubuk :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-ust-alt-cubuk :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-ust-alt-cubuk-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-ust-alt-cubuk-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-ust-alt-cubuk--bassiz .modulex-ust-alt-cubuk-bas { display: none; }
+  .modulex-ust-alt-cubuk-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-ust-alt-cubuk-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-ust-alt-cubuk-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-ust-alt-cubuk-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-ust-alt-cubuk-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-ust-alt-cubuk-dugme:hover { transform: translateY(-2px); }
+  .modulex-ust-alt-cubuk-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-ust-alt-cubuk-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-ust-alt-cubuk-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-ust-alt-cubuk { position: relative; z-index: 900; }
+  .modulex-ust-alt-cubuk-logo { display: inline-flex; flex: 0 1 auto; min-width: 0; align-items: center; color: inherit; text-decoration: none; }
+  /* dar ekranda geniş logo/uzun ad çubuğu taşırmasın: logo daralır (img max-width 100%), ad sarar */
+  .modulex-ust-alt-cubuk-logo img { width: auto; max-height: --logoH--; }
+  .modulex-ust-alt-cubuk-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-ust-alt-cubuk-oge { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-weight: 600; text-decoration: none; transition: color 0.2s ease, background 0.2s ease; }
+  .modulex-ust-alt-cubuk-oge:hover, .modulex-ust-alt-cubuk-oge[aria-current="page"] { color: --accentInk--; }
+  .modulex-ust-alt-cubuk-cta { display: inline-flex; flex: none; align-items: center; gap: 6px; min-height: 44px; padding: 8px 18px; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; white-space: nowrap; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .modulex-ust-alt-cubuk-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -12px --accent--; }
+  .modulex-ust-alt-cubuk-cta .material-symbols-outlined, .modulex-ust-alt-cubuk-tel .material-symbols-outlined, .modulex-ust-alt-cubuk-posta .material-symbols-outlined { font-size: 18px; }
+  .modulex-ust-alt-cubuk-tel, .modulex-ust-alt-cubuk-posta { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; white-space: nowrap; }
+  .modulex-ust-alt-cubuk-tel:hover, .modulex-ust-alt-cubuk-posta:hover { color: --accentInk--; }
+  .modulex-ust-alt-cubuk-dil:empty { display: none; }
+  .modulex-ust-alt-cubuk-ac { display: none; align-items: center; gap: 10px; min-width: 46px; min-height: 46px; padding: 0 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 700; }
+  .modulex-ust-alt-cubuk-ac-ikon { display: grid; gap: 4px; width: 20px; }
+  .modulex-ust-alt-cubuk-ac-ikon span { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .modulex-ust-alt-cubuk--acik .modulex-ust-alt-cubuk-ac-ikon span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .modulex-ust-alt-cubuk--acik .modulex-ust-alt-cubuk-ac-ikon span:nth-child(2) { opacity: 0; }
+  .modulex-ust-alt-cubuk--acik .modulex-ust-alt-cubuk-ac-ikon span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .modulex-ust-alt-cubuk-kapat { display: inline-grid; place-items: center; width: 46px; height: 46px; border: 1px solid --cizgi--; border-radius: 50%; background: transparent; color: inherit; }
+  .modulex-ust-alt-cubuk-perde { position: fixed; inset: 0; z-index: 1; background: color-mix(in srgb, --text-- 45%, transparent); animation: modulex-ust-alt-cubuk-sol 0.3s ease both; }
+  @keyframes modulex-ust-alt-cubuk-sol { from { opacity: 0; } to { opacity: 1; } }
+
+  .modulex-ust-alt-cubuk-cubuk { display: flex; align-items: center; justify-content: space-between; gap: 12px 26px; padding-block: 14px; }
+  .modulex-ust-alt-cubuk-cubuk > .modulex-ust-alt-cubuk-nav .modulex-ust-alt-cubuk-liste { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+  .modulex-ust-alt-cubuk-uc { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px 12px; }
+  .modulex-ust-alt-cubuk-tabnav { display: none; }
+  .modulex-ust-alt-cubuk-panel { position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 2; display: grid; gap: 14px; max-height: 82vh; padding: 10px 20px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; border-start-start-radius: 26px; border-start-end-radius: 26px; background-color: --bg--; box-shadow: 0 -24px 60px -30px color-mix(in srgb, --text-- 60%, transparent); animation: modulex-ust-alt-cubuk-yuk 0.38s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  @keyframes modulex-ust-alt-cubuk-yuk { from { transform: translateY(100%); } to { transform: none; } }
+  .modulex-ust-alt-cubuk-tutamak { justify-self: center; width: 44px; height: 5px; border-radius: 5px; background-color: color-mix(in srgb, --text-- 22%, transparent); }
+  .modulex-ust-alt-cubuk-ptepe { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .modulex-ust-alt-cubuk-pbaslik { font-family: var(--mx-font-heading, inherit); font-size: 1.25rem; font-weight: 800; }
+  .modulex-ust-alt-cubuk-pliste { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .modulex-ust-alt-cubuk-pliste .modulex-ust-alt-cubuk-oge { justify-content: center; width: 100%; min-height: 58px; padding: 8px 10px; border: 1px solid --cizgi--; border-radius: 16px; text-align: center; }
+  .modulex-ust-alt-cubuk-pliste .modulex-ust-alt-cubuk-oge[aria-current="page"] { border-color: --accent--; box-shadow: inset 0 0 0 1px --accent--; }
+  .modulex-ust-alt-cubuk-palt { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block-start: 12px; border-block-start: 1px solid --cizgi--; }
+  @media (max-width: 768px) {
+    .modulex-ust-alt-cubuk--js .modulex-ust-alt-cubuk-cubuk > .modulex-ust-alt-cubuk-nav, .modulex-ust-alt-cubuk--js .modulex-ust-alt-cubuk-uc .modulex-ust-alt-cubuk-dil { display: none; }
+    .modulex-ust-alt-cubuk:not(.modulex-ust-alt-cubuk--js) .modulex-ust-alt-cubuk-cubuk { flex-wrap: wrap; }
+    .modulex-ust-alt-cubuk-uc .modulex-ust-alt-cubuk-cta { min-height: 40px; padding-inline: 14px; font-size: 0.9rem; }
+    .modulex-ust-alt-cubuk--js .modulex-ust-alt-cubuk-tabnav { position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 1; display: block; padding-block-end: env(safe-area-inset-bottom); border-block-start: 1px solid --cizgi--; background-color: color-mix(in srgb, --bg-- 95%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -10px 30px -24px color-mix(in srgb, --text-- 60%, transparent); }
+    .modulex-ust-alt-cubuk-tablar { display: grid; grid-auto-columns: minmax(0, 1fr); grid-auto-flow: column; }
+    .modulex-ust-alt-cubuk-tab { position: relative; display: grid; justify-items: center; align-content: center; gap: 2px; width: 100%; min-height: 62px; padding: 6px 4px; border: 0; background: transparent; color: --muted--; font: inherit; font-size: 0.72rem; font-weight: 700; line-height: 1.2; text-decoration: none; transition: color 0.2s ease; }
+    .modulex-ust-alt-cubuk-tab .material-symbols-outlined { font-size: 24px; transition: transform 0.25s ease; }
+    .modulex-ust-alt-cubuk-tab:active .material-symbols-outlined { transform: scale(0.86); }
+    .modulex-ust-alt-cubuk-tab-ad { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .modulex-ust-alt-cubuk-tab[aria-current="page"], .modulex-ust-alt-cubuk-tab:hover, .modulex-ust-alt-cubuk--acik .modulex-ust-alt-cubuk-tabnav .modulex-ust-alt-cubuk-ac { color: --accentInk--; }
+    .modulex-ust-alt-cubuk-tab[aria-current="page"]::before { content: ""; position: absolute; inset-block-start: 0; inset-inline: 28%; height: 3px; border-end-start-radius: 3px; border-end-end-radius: 3px; background-color: --accent--; }
+    .modulex-ust-alt-cubuk--js .modulex-ust-alt-cubuk-tabnav .modulex-ust-alt-cubuk-ac { display: grid; min-width: 0; min-height: 62px; border-radius: 0; }
+    body:has(.modulex-ust-alt-cubuk--js .modulex-ust-alt-cubuk-tabnav) { padding-block-end: calc(64px + env(safe-area-inset-bottom)); }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-alt-cubuk :is(.modulex-ust-alt-cubuk-baslik, .modulex-ust-alt-cubuk-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-alt-cubuk-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-ust-alt-cubuk { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-ust-alt-cubuk *, .modulex-ust-alt-cubuk *::before, .modulex-ust-alt-cubuk *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-ust-alt-cubuk";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const cekmece = (s, P) => {
+          const ac = s.querySelector("." + P + "-ac");
+          const panel = ac ? document.getElementById(ac.getAttribute("aria-controls")) : null;
+          if (!ac || !panel) return;
+          s.classList.add(P + "--js");
+          const perde = s.querySelector("." + P + "-perde");
+          const modal = panel.getAttribute("aria-modal") === "true";
+          const kok = document.documentElement;
+          const kapa = (odak) => {
+            if (panel.hidden) return;
+            panel.hidden = true;
+            if (perde) perde.hidden = true;
+            ac.setAttribute("aria-expanded", "false");
+            s.classList.remove(P + "--acik");
+            if (modal) kok.style.overflow = "";
+            if (odak) ac.focus();
+          };
+          const aci = () => {
+            panel.hidden = false;
+            if (perde) perde.hidden = false;
+            ac.setAttribute("aria-expanded", "true");
+            s.classList.add(P + "--acik");
+            if (modal) kok.style.overflow = "hidden";
+            const ilk = panel.querySelector("a[href], button");
+            if (ilk) ilk.focus();
+          };
+          ac.addEventListener("click", () => (panel.hidden ? aci() : kapa(true)));
+          panel.addEventListener("click", (e) => {
+            if (e.target.closest("." + P + "-kapat")) kapa(true);
+            else if (e.target.closest("a[href]")) kapa(false);
+          });
+          if (perde) perde.addEventListener("click", () => kapa(true));
+          document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) kapa(true); });
+          if (modal) {
+            panel.addEventListener("keydown", (e) => {
+              if (e.key !== "Tab") return;
+              const o = [...panel.querySelectorAll("a[href], button:not([disabled])")].filter((x) => x.offsetParent !== null);
+              if (!o.length) return;
+              if (e.shiftKey && document.activeElement === o[0]) { e.preventDefault(); o[o.length - 1].focus(); }
+              else if (!e.shiftKey && document.activeElement === o[o.length - 1]) { e.preventDefault(); o[0].focus(); }
+            });
+          }
+          const g = Number(ac.dataset.genis);
+          if (g && window.matchMedia) window.matchMedia(`(min-width: ${g}px)`).addEventListener("change", (m) => { if (m.matches) kapa(false); });
+        };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      cekmece(s, P, az);
+    });
+  })();
+</script>

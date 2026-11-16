@@ -1,0 +1,126 @@
+<footer class="modulex-alt-yukari-don{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-alt-yukari-don-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</footer>
+
+<style>
+  /* alt-yukari-don — Başa dön küçük bir köşe ikonu değil, footer'ın merkez nesnesi: halka sayfa kaydırma oranıyla dolar (uzun okumalı sitelerde ilerleme göstergesi), tıklayınca yumuşak dönüş. */
+  .modulex-alt-yukari-don { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-alt-yukari-don *, .modulex-alt-yukari-don *::before, .modulex-alt-yukari-don *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-alt-yukari-don :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-alt-yukari-don :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-alt-yukari-don :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-alt-yukari-don :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-alt-yukari-don img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-alt-yukari-don) img { height: auto; }
+  .modulex-alt-yukari-don [hidden] { display: none !important; }
+  .modulex-alt-yukari-don :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-alt-yukari-don :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-alt-yukari-don-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-alt-yukari-don-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-alt-yukari-don--bassiz .modulex-alt-yukari-don-bas { display: none; }
+  .modulex-alt-yukari-don-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-alt-yukari-don-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-alt-yukari-don-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-alt-yukari-don-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-alt-yukari-don-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-alt-yukari-don-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-yukari-don-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-alt-yukari-don-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-alt-yukari-don-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-alt-yukari-don-bag { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+  .modulex-alt-yukari-don-bag:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-alt-yukari-don-bag[aria-current="page"] { color: --accentInk--; font-weight: 700; }
+  .modulex-alt-yukari-don-logo { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+  .modulex-alt-yukari-don-logo img { width: auto; max-height: --logoH--; }
+  .modulex-alt-yukari-don-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-alt-yukari-don-bbaslik { margin-block-end: 14px; color: --accentInk--; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-alt-yukari-don-sayfalar, .modulex-alt-yukari-don-baglantilar, .modulex-alt-yukari-don-iletisim, .modulex-alt-yukari-don-yasal { display: grid; gap: 9px; }
+  .modulex-alt-yukari-don-il { display: flex; align-items: flex-start; gap: 10px; }
+  .modulex-alt-yukari-don-il-ic { display: grid; gap: 2px; }
+  .modulex-alt-yukari-don-il-etiket { color: --muted--; font-size: 0.8rem; }
+  .modulex-alt-yukari-don-il-ikon { flex: none; color: --accentInk--; font-size: 20px; }
+  .modulex-alt-yukari-don-saatler { display: grid; gap: 6px; }
+  .modulex-alt-yukari-don-saat { display: flex; justify-content: space-between; gap: 16px; }
+  .modulex-alt-yukari-don-saat dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .modulex-alt-yukari-don-sosyal { display: flex; flex-wrap: wrap; gap: 10px; }
+  .modulex-alt-yukari-don-sosyal-a { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid --cizgi--; border-radius: 50%; color: inherit; font-size: 18px; transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+  .modulex-alt-yukari-don-sosyal-a:hover { border-color: --accent--; background: --accent--; color: --accentText--; transform: translateY(-2px); }
+  .modulex-alt-yukari-don-hakkinda { max-width: 46ch; color: --muted--; }
+  .modulex-alt-yukari-don-telif { display: flex; flex-wrap: wrap; gap: 4px 14px; color: --muted--; font-size: 0.9rem; }
+  .modulex-alt-yukari-don-dil:empty { display: none; }
+  .modulex-alt-yukari-don-yukari { display: inline-grid; place-items: center; flex: none; width: 46px; height: 46px; border-radius: 50%; background: --accent--; color: --accentText--; text-decoration: none; transition: transform 0.25s ease; }
+  .modulex-alt-yukari-don-yukari:hover { transform: translateY(-3px); }
+  .modulex-alt-yukari-don-bulten { display: grid; gap: 8px; }
+  .modulex-alt-yukari-don-nl-etiket { font-size: 0.9rem; font-weight: 700; }
+  .modulex-alt-yukari-don-nl-satir { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-alt-yukari-don-nl-girdi { flex: 1 1 200px; min-width: 0; min-height: 48px; padding: 10px 18px; border: 1px solid --cizgi--; border-radius: 999px; background: --bg--; color: --text--; font: inherit; }
+  .modulex-alt-yukari-don-nl-dugme { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 10px 22px; border: 0; border-radius: 999px; background: --accent--; color: --accentText--; font: inherit; font-weight: 700; transition: transform 0.2s ease; }
+  .modulex-alt-yukari-don-nl-dugme:hover { transform: translateY(-2px); }
+  .modulex-alt-yukari-don-nl-dugme .material-symbols-outlined { font-size: 18px; }
+  .modulex-alt-yukari-don-nl-durum:empty { display: none; }
+  .modulex-alt-yukari-don-nl-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+  .modulex-alt-yukari-don-nl-metin { color: --muted--; }
+
+  .modulex-alt-yukari-don-yd-tepe { display: flex; align-items: center; gap: 18px; margin-block-end: clamp(32px, 5vw, 56px); }
+  .modulex-alt-yukari-don-yd-hat { flex: 1; height: 1px; background: --cizgi--; }
+  .modulex-alt-yukari-don-yd-halka { --oran: 1; position: relative; display: grid; place-items: center; flex: none; width: 88px; height: 88px; border-radius: 50%; background: conic-gradient(--accent-- calc(var(--oran) * 360deg), --cizgi-- 0deg); color: --text--; text-decoration: none; transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .modulex-alt-yukari-don-yd-halka:hover { transform: translateY(-6px); }
+  .modulex-alt-yukari-don-yd-gobek { display: grid; place-items: center; width: 74px; height: 74px; border-radius: 50%; background: --bg--; box-shadow: inset 0 0 0 1px --cizgi--; }
+  .modulex-alt-yukari-don-yd-gobek .material-symbols-outlined { font-size: 30px; transition: transform 0.35s ease; }
+  .modulex-alt-yukari-don-yd-halka:hover .material-symbols-outlined { transform: translateY(-4px); }
+  .modulex-alt-yukari-don-yd-uclu { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); }
+  .modulex-alt-yukari-don-yd-kimlik { display: grid; align-content: start; gap: 16px; }
+  .modulex-alt-yukari-don-yd-gez { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 24px; }
+  .modulex-alt-yukari-don-yd-dip { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 26px; margin-block-start: clamp(32px, 5vw, 52px); padding-block-start: 22px; border-block-start: 1px dotted --cizgi--; text-align: center; }
+  .modulex-alt-yukari-don-yd-yasal { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; font-size: 0.9rem; }
+  @media (max-width: 1024px) {
+    .modulex-alt-yukari-don-yd-uclu { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .modulex-alt-yukari-don-yd-kimlik { grid-column: 1 / -1; }
+  }
+  @media (max-width: 768px) {
+    .modulex-alt-yukari-don-yd-uclu { grid-template-columns: minmax(0, 1fr); }
+    .modulex-alt-yukari-don-yd-halka { width: 72px; height: 72px; }
+    .modulex-alt-yukari-don-yd-gobek { width: 60px; height: 60px; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-yukari-don :is(.modulex-alt-yukari-don-baslik, .modulex-alt-yukari-don-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-alt-yukari-don-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-alt-yukari-don { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-alt-yukari-don *, .modulex-alt-yukari-don *::before, .modulex-alt-yukari-don *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-alt-yukari-don";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const halka = (s, P, az) => {
+        const h = s.querySelector("[data-halka]");
+        if (!h) return;
+        let bekle = false;
+        const hesap = () => {
+          bekle = false;
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          h.style.setProperty("--oran", max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)).toFixed(3) : "1");
+        };
+        window.addEventListener("scroll", () => { if (!bekle) { bekle = true; requestAnimationFrame(hesap); } }, { passive: true });
+        window.addEventListener("resize", hesap, { passive: true });
+        h.addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: az ? "auto" : "smooth" }); });
+        hesap();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      halka(s, P, az);
+    });
+  })();
+</script>

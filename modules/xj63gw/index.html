@@ -1,0 +1,129 @@
+<section class="modulex-referans-ilce-suzgec{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-referans-ilce-suzgec-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* referans-ilce-suzgec — referans-sekme-sektor sektöre göre tek seçimli sekme panelleri kopyalar; bu modül yerinde, çoklu seçimli konum süzgeci uygular (ilçe verisi, sonuç sayacı) ve logo yerine iş fişi iskeleti (no · konum · yıl · iş türü) kullanır. */
+  .modulex-referans-ilce-suzgec { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-referans-ilce-suzgec *, .modulex-referans-ilce-suzgec *::before, .modulex-referans-ilce-suzgec *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-referans-ilce-suzgec :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-referans-ilce-suzgec :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-referans-ilce-suzgec :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-referans-ilce-suzgec :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-referans-ilce-suzgec img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-referans-ilce-suzgec) img { height: auto; }
+  .modulex-referans-ilce-suzgec [hidden] { display: none !important; }
+  .modulex-referans-ilce-suzgec :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-referans-ilce-suzgec :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-referans-ilce-suzgec-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-referans-ilce-suzgec-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-referans-ilce-suzgec--bassiz .modulex-referans-ilce-suzgec-bas { display: none; }
+  .modulex-referans-ilce-suzgec-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-referans-ilce-suzgec-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-referans-ilce-suzgec-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-referans-ilce-suzgec-bas { max-width: 760px; }
+  .modulex-referans-ilce-suzgec-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-referans-ilce-suzgec-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-referans-ilce-suzgec-dugme:hover { transform: translateY(-2px); }
+  .modulex-referans-ilce-suzgec-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-referans-ilce-suzgec-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-referans-ilce-suzgec-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-referans-ilce-suzgec-suzgec { display: flex; flex-wrap: wrap; gap: 8px; margin-block-end: 14px; }
+  .modulex-referans-ilce-suzgec:not(.modulex-referans-ilce-suzgec--ijs) .modulex-referans-ilce-suzgec-suzgec, .modulex-referans-ilce-suzgec:not(.modulex-referans-ilce-suzgec--ijs) .modulex-referans-ilce-suzgec-sonuc { display: none; }
+  .modulex-referans-ilce-suzgec-cip { display: inline-flex; align-items: center; gap: 6px; min-height: 42px; padding-block: 6px; padding-inline: 14px 8px; border: 1px solid --cizgi--; border-radius: 10px; background: --kartBg--; color: --text--; font: inherit; font-size: 0.92rem; font-weight: 650; transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+  .modulex-referans-ilce-suzgec-cip:hover { border-color: --accent--; }
+  .modulex-referans-ilce-suzgec-cip .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+  .modulex-referans-ilce-suzgec-cip[aria-pressed="true"] { border-color: --accent--; background: --accent--; color: --accentText--; }
+  .modulex-referans-ilce-suzgec-cip[aria-pressed="true"] .material-symbols-outlined { color: inherit; }
+  .modulex-referans-ilce-suzgec-cip[aria-pressed="true"] .modulex-referans-ilce-suzgec-cs { background: transparent; box-shadow: inset 0 0 0 1px currentColor; }
+  .modulex-referans-ilce-suzgec-cs { display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding-inline: 6px; border-radius: 7px; background: color-mix(in srgb, currentColor 14%, transparent); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+  .modulex-referans-ilce-suzgec-sonuc { margin-block-end: 22px; color: --muted--; font-size: 0.9rem; font-weight: 600; }
+  .modulex-referans-ilce-suzgec-isler { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .modulex-referans-ilce-suzgec-is--gel { animation: modulex-referans-ilce-suzgec-belir 0.4s ease both; }
+  .modulex-referans-ilce-suzgec-fis { position: relative; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; height: 100%; padding: 20px 22px 22px; border-inline-start: 5px solid --accent--; border-radius: --yuvarlak--; background: --kartBg--; box-shadow: 0 10px 24px -22px color-mix(in srgb, --text-- 60%, transparent); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .modulex-referans-ilce-suzgec-fis:hover { transform: translateY(-3px); box-shadow: 0 18px 34px -24px color-mix(in srgb, --text-- 60%, transparent); }
+  .modulex-referans-ilce-suzgec-fust { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .modulex-referans-ilce-suzgec-fno { color: --muted--; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; font-weight: 700; }
+  .modulex-referans-ilce-suzgec-konum { display: inline-flex; align-items: center; gap: 4px; padding-block: 3px; padding-inline: 6px 10px; border-radius: 999px; background: color-mix(in srgb, --accent-- 14%, transparent); color: --text--; font-size: 0.82rem; font-weight: 700; }
+  .modulex-referans-ilce-suzgec-konum .material-symbols-outlined { font-size: 16px; color: --accentInk--; }
+  .modulex-referans-ilce-suzgec-fyil { margin-inline-start: auto; color: --muted--; font-size: 0.82rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .modulex-referans-ilce-suzgec-fad { font-size: 1.15rem; font-weight: 750; line-height: 1.3; }
+  .modulex-referans-ilce-suzgec-fbag { color: inherit; text-decoration: none; }
+  .modulex-referans-ilce-suzgec-fbag::after { content: ""; position: absolute; inset: 0; }
+  .modulex-referans-ilce-suzgec-fbag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-referans-ilce-suzgec-falt { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block-start: 12px; border-block-start: 1px dashed --cizgi--; }
+  .modulex-referans-ilce-suzgec-tur { display: inline-flex; align-items: center; gap: 4px; color: --accentInk--; font-size: 0.82rem; font-weight: 700; }
+  .modulex-referans-ilce-suzgec-tur .material-symbols-outlined { font-size: 18px; }
+  .modulex-referans-ilce-suzgec-flogo { width: auto; height: 28px; object-fit: contain; filter: grayscale(1); transition: filter 0.3s ease; }
+  .modulex-referans-ilce-suzgec-fis:hover .modulex-referans-ilce-suzgec-flogo { filter: none; }
+  @keyframes modulex-referans-ilce-suzgec-belir { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
+  @media (max-width: 1024px) { .modulex-referans-ilce-suzgec-isler { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 768px) {
+    .modulex-referans-ilce-suzgec-isler { grid-template-columns: minmax(0, 1fr); }
+    .modulex-referans-ilce-suzgec-suzgec { flex-wrap: nowrap; overflow-x: auto; padding-block-end: 4px; scrollbar-width: none; }
+    .modulex-referans-ilce-suzgec-cip { flex: none; }
+  }
+  .modulex-referans-ilce-suzgec-logo { display: block; width: auto; max-width: 100%; height: clamp(32px, 4vw, 48px); object-fit: contain; filter: grayscale(1); transition: filter 0.3s ease, transform 0.3s ease; }
+  .modulex-referans-ilce-suzgec-kelime { display: inline-block; color: --text--; font-family: var(--mx-font-heading, inherit); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; transition: color 0.3s ease; }
+  .modulex-referans-ilce-suzgec-bag { color: inherit; text-decoration: none; }
+  .modulex-referans-ilce-suzgec-sektor { color: --accentInk--; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .modulex-referans-ilce-suzgec-kmetin { color: --muted--; font-size: 0.95rem; line-height: 1.65; }
+  .modulex-referans-ilce-suzgec-yil { color: --muted--; font-size: 0.85rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .modulex-referans-ilce-suzgec-harf img { width: 100%; height: 100%; object-fit: contain; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-referans-ilce-suzgec :is(.modulex-referans-ilce-suzgec-baslik, .modulex-referans-ilce-suzgec-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-referans-ilce-suzgec-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-referans-ilce-suzgec { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-referans-ilce-suzgec *, .modulex-referans-ilce-suzgec *::before, .modulex-referans-ilce-suzgec *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-referans-ilce-suzgec";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const ilceSuz = (s, P, az) => {
+        const cip = [...s.querySelectorAll("[data-ilce-sec]")];
+        const isler = [...s.querySelectorAll("[data-ilce]")];
+        if (!cip.length) return;
+        s.classList.add(P + "--ijs");
+        const sonuc = s.querySelector("[data-ilce-kalip]");
+        let nf = null;
+        try { nf = new Intl.NumberFormat(document.documentElement.lang || undefined); } catch (x) { nf = null; }
+        const secili = new Set();
+        const uygula = () => {
+          let n = 0;
+          isler.forEach((li) => {
+            const gor = !secili.size || secili.has(li.dataset.ilce);
+            li.hidden = !gor;
+            if (!gor) return;
+            n++;
+            if (!az) { li.classList.remove(P + "-is--gel"); void li.offsetWidth; li.classList.add(P + "-is--gel"); }
+          });
+          cip.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.ilceSec === "" ? !secili.size : secili.has(c.dataset.ilceSec))));
+          if (sonuc) sonuc.textContent = sonuc.dataset.ilceKalip.split("{n}").join(nf ? nf.format(n) : String(n));
+        };
+        cip.forEach((c) => c.addEventListener("click", () => {
+          const v = c.dataset.ilceSec;
+          if (!v) secili.clear();
+          else if (secili.has(v)) secili.delete(v);
+          else secili.add(v);
+          uygula();
+        }));
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      ilceSuz(s, P, az);
+    });
+  })();
+</script>

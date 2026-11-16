@@ -1,0 +1,40 @@
+{
+  "id": "iomiw5fzul",
+  "name": {
+    "tr": "Hekimler",
+    "en": "Vets",
+    "ar": "الأطباء"
+  },
+  "description": {
+    "tr": "Gün ve şubeye göre kurgusal kadro.",
+    "en": "Fictional staff by day and branch.",
+    "ar": "كادر افتراضي حسب اليوم والفرع."
+  },
+  "keyword": {
+    "tr": "ekip, kadro",
+    "en": "team, staff",
+    "ar": "فريق، طاقم"
+  },
+  "path": "ekip",
+  "icon": "groups",
+  "category": "hakkimizda",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "d2ppxq",
+      "alhhq4"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Hekimler",
+    "en": "Vets",
+    "ar": "الأطباء"
+  },
+  "date": "2026-11-16T16:03:30.738Z",
+  "update": "2026-11-16T16:21:06.395Z"
+}

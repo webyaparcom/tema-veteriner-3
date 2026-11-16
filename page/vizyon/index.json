@@ -1,0 +1,46 @@
+{
+  "id": "vizyon",
+  "name": {
+    "tr": "Vizyon",
+    "en": "Vision",
+    "ar": "الرؤية"
+  },
+  "description": {
+    "tr": "Vizyonumuz",
+    "en": "Our vision",
+    "ar": "رؤيتنا"
+  },
+  "keyword": {
+    "tr": "Vizyon",
+    "en": "vision, our vision, goals",
+    "ar": "الرؤية, رؤيتنا, الأهداف"
+  },
+  "path": "vizyon",
+  "icon": "visibility",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [],
+    "footer": []
+  },
+  "index": 1,
+  "url": "",
+  "text": {
+    "tr": "<h2>Vizyonumuz</h2>\n<p>Her mahalleye yarım saatlik mesafede bir şube olmak.</p>",
+    "en": "<h2>Our vision</h2>\n<p>To have a branch within half an hour of every neighbourhood.</p>",
+    "ar": "<h2>رؤيتنا</h2>\n<p>أن يكون لنا فرع على بعد نصف ساعة من كل حي.</p>"
+  },
+  "title": {
+    "tr": "Vizyon",
+    "en": "Vision",
+    "ar": "الرؤية"
+  },
+  "date": "2026-11-16T16:03:30.558Z",
+  "update": "2026-11-16T16:21:06.409Z",
+  "sablonIzi": "c3ebee5f049bdfb4",
+  "sablonIziDil": {
+    "en": "67bb554c6c4d5984",
+    "ar": "7e4e23377d70548a"
+  }
+}
