@@ -4,12 +4,16 @@
   "description": {
     "tr": "Patiyol Veteriner: Gaziantep’te üç şubede kedi, köpek ve küçük evcil hayvanlar için muayene, aşı, kısırlaştırma ve bakım. Size en yakın şubeyi bulun. Demo site; içerik kurgusaldır.",
     "en": "Patiyol Veterinary: examinations, vaccines, neutering and care for cats, dogs and small pets at three branches in Gaziantep. Find your nearest branch. Demo site; content is fictional.",
-    "ar": "باتي يول البيطرية: فحوص ولقاحات وتعقيم ورعاية للقطط والكلاب والحيوانات الأليفة الصغيرة في ثلاثة فروع في غازي عنتاب. اعثر على أقرب فرع إليك. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "باتي يول البيطرية: فحوص ولقاحات وتعقيم ورعاية للقطط والكلاب والحيوانات الأليفة الصغيرة في ثلاثة فروع في غازي عنتاب. اعثر على أقرب فرع إليك. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Patiyol Veterinär: Untersuchungen, Impfungen, Kastration und Pflege für Katzen, Hunde und kleine Heimtiere in drei Filialen in Gaziantep. Finden Sie die nächstgelegene Filiale. Demo-Seite; Inhalte sind fiktiv.",
+    "ru": "Patiyol Ветеринария: осмотры, вакцинация, стерилизация и уход за кошками, собаками и мелкими домашними животными в трёх филиалах в Газиантепе. Найдите ближайший филиал. Демо-сайт; контент вымышленный."
   },
   "keyword": {
     "tr": "veteriner, veteriner kliniği, kedi aşısı, köpek aşısı, kısırlaştırma, şube",
     "en": "vet, veterinary clinic, cat vaccine, dog vaccine, neutering, branch",
-    "ar": "طبيب بيطري، عيادة بيطرية، لقاح القطط، لقاح الكلاب، تعقيم، فرع"
+    "ar": "طبيب بيطري، عيادة بيطرية، لقاح القطط، لقاح الكلاب، تعقيم، فرع",
+    "de": "Tierarzt, Tierklinik, Katzenimpfung, Hundeimpfung, Kastration, Filiale",
+    "ru": "ветеринар, ветеринарная клиника, прививка кошкам, прививка собакам, стерилизация, филиал"
   },
   "category": "Kurumsal",
   "name": "Patiyol Veteriner",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

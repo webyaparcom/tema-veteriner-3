@@ -5,12 +5,16 @@
       "name": {
         "tr": "Hizmetler",
         "en": "Services",
-        "ar": "الخدمات"
+        "ar": "الخدمات",
+        "de": "Leistungen",
+        "ru": "Услуги"
       },
       "description": {
         "tr": "Şubelerdeki olanaklar ve özen listesi.",
         "en": "Branch facilities and the care checklist.",
-        "ar": "مرافق الفروع وقائمة العناية."
+        "ar": "مرافق الفروع وقائمة العناية.",
+        "de": "Ausstattung der Filialen und Checkliste für die Pflege.",
+        "ru": "Возможности филиалов и чек-лист по уходу."
       },
       "path": "hizmetler",
       "icon": "work",
@@ -31,7 +35,9 @@
       "name": {
         "tr": "Hakkımızda",
         "en": "About",
-        "ar": "من نحن"
+        "ar": "من نحن",
+        "de": "Über uns",
+        "ru": "О нас"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,7 +58,9 @@
       "description": {
         "tr": "Özen listesi ve ilçe ilçe saha çalışmaları (kurgusal).",
         "en": "The care checklist and field work by district (fictional).",
-        "ar": "قائمة العناية والعمل الميداني حسب الحي (افتراضي)."
+        "ar": "قائمة العناية والعمل الميداني حسب الحي (افتراضي).",
+        "de": "Die Sorgfaltsliste und Feldarbeit nach Bezirk (fiktiv).",
+        "ru": "Чек-лист заботы и полевые работы по районам (вымышленные)."
       }
     },
     {
@@ -60,12 +68,16 @@
       "name": {
         "tr": "Hekimler",
         "en": "Vets",
-        "ar": "الأطباء"
+        "ar": "الأطباء",
+        "de": "Ärzte",
+        "ru": "Врачи"
       },
       "description": {
         "tr": "Gün ve şubeye göre kurgusal kadro.",
         "en": "Fictional staff by day and branch.",
-        "ar": "كادر افتراضي حسب اليوم والفرع."
+        "ar": "كادر افتراضي حسب اليوم والفرع.",
+        "de": "Fiktives Personal nach Tag und Filiale.",
+        "ru": "Вымышленный персонал по дням и филиалам."
       },
       "path": "ekip",
       "icon": "groups",
@@ -86,12 +98,16 @@
       "name": {
         "tr": "Sorular",
         "en": "Questions",
-        "ar": "الأسئلة"
+        "ar": "الأسئلة",
+        "de": "FAQ",
+        "ru": "FAQ"
       },
       "description": {
         "tr": "Merak edilenler ve kısa yanıtlar.",
         "en": "Common questions and short answers.",
-        "ar": "أسئلة متكررة وإجابات موجزة."
+        "ar": "أسئلة متكررة وإجابات موجزة.",
+        "de": "Was Sie wissen möchten, in kurzen Antworten.",
+        "ru": "Что интересует читателей — в коротких ответах."
       },
       "path": "sorular",
       "icon": "help",
@@ -112,12 +128,16 @@
       "name": {
         "tr": "Randevu",
         "en": "Appointment",
-        "ar": "موعد"
+        "ar": "موعد",
+        "de": "Termin",
+        "ru": "Запись"
       },
       "description": {
         "tr": "Tür, ad ve yaşa göre randevu talebi (demo).",
         "en": "Appointment request by species, name and age (demo).",
-        "ar": "طلب موعد حسب النوع والاسم والعمر (تجريبي)."
+        "ar": "طلب موعد حسب النوع والاسم والعمر (تجريبي).",
+        "de": "Terminanfrage nach Art, Name und Alter (Demo).",
+        "ru": "Запись по виду, имени и возрасту (демо)."
       },
       "path": "teklif-al",
       "icon": "event",
@@ -136,7 +156,9 @@
       "name": {
         "tr": "Şubeler",
         "en": "Branches",
-        "ar": "الفروع"
+        "ar": "الفروع",
+        "de": "Filialen",
+        "ru": "Филиалы"
       },
       "status": "play",
       "id": "iletisim",
@@ -157,7 +179,9 @@
       "description": {
         "tr": "Üç şubenin adresi, saatleri ve iletişimi.",
         "en": "Addresses, hours and contact for the three branches.",
-        "ar": "عناوين الفروع الثلاثة وساعاتها ووسائل التواصل."
+        "ar": "عناوين الفروع الثلاثة وساعاتها ووسائل التواصل.",
+        "de": "Adressen, Öffnungszeiten und Kontakt der drei Filialen.",
+        "ru": "Адреса, часы работы и контакты трёх филиалов."
       }
     }
   ],

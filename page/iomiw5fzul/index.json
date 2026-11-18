@@ -3,17 +3,23 @@
   "name": {
     "tr": "Hekimler",
     "en": "Vets",
-    "ar": "الأطباء"
+    "ar": "الأطباء",
+    "de": "Ärzte",
+    "ru": "Врачи"
   },
   "description": {
     "tr": "Gün ve şubeye göre kurgusal kadro.",
     "en": "Fictional staff by day and branch.",
-    "ar": "كادر افتراضي حسب اليوم والفرع."
+    "ar": "كادر افتراضي حسب اليوم والفرع.",
+    "de": "Fiktives Personal nach Tag und Filiale.",
+    "ru": "Вымышленный персонал по дням и филиалам."
   },
   "keyword": {
     "tr": "ekip, kadro",
     "en": "team, staff",
-    "ar": "فريق، طاقم"
+    "ar": "فريق، طاقم",
+    "de": "Team, Personal",
+    "ru": "команда, персонал"
   },
   "path": "ekip",
   "icon": "groups",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Hekimler",
     "en": "Vets",
-    "ar": "الأطباء"
+    "ar": "الأطباء",
+    "de": "Ärzte",
+    "ru": "Врачи"
   },
   "date": "2026-11-16T16:03:30.738Z",
   "update": "2026-11-16T16:21:06.395Z"

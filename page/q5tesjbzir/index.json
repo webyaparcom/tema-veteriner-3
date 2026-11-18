@@ -3,17 +3,23 @@
   "name": {
     "tr": "Hizmetler",
     "en": "Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "Leistungen",
+    "ru": "Услуги"
   },
   "description": {
     "tr": "Şubelerdeki olanaklar ve özen listesi.",
     "en": "Branch facilities and the care checklist.",
-    "ar": "مرافق الفروع وقائمة العناية."
+    "ar": "مرافق الفروع وقائمة العناية.",
+    "de": "Ausstattung der Filialen und Checkliste für die Pflege.",
+    "ru": "Возможности филиалов и чек-лист по уходу."
   },
   "keyword": {
     "tr": "Hizmetler",
     "en": "Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "Leistungen",
+    "ru": "Услуги"
   },
   "path": "hizmetler",
   "icon": "work",
@@ -34,7 +40,9 @@
   "title": {
     "tr": "Hizmetler",
     "en": "Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "Leistungen",
+    "ru": "Услуги"
   },
   "date": "2026-11-16T16:03:30.726Z",
   "update": "2026-11-16T16:21:06.388Z"

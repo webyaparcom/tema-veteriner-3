@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Evcil dostlara her şubede aynı özen listesiyle, yakın ve randevulu veteriner hizmeti sunmak.</p>",
     "en": "<h2>Our mission</h2>\n<p>To offer pets nearby, appointment-based veterinary care with the same checklist at every branch.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>تقديم رعاية بيطرية قريبة بالمواعيد للحيوانات الأليفة بقائمة العناية نفسها في كل فرع.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>تقديم رعاية بيطرية قريبة بالمواعيد للحيوانات الأليفة بقائمة العناية نفسها في كل فرع.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Haustieren in jeder Filiale dieselbe Checkliste, naheliegende und terminbasierte tierärztliche Versorgung anbieten.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Предоставлять питомцам в каждой филиале одинаковый чек-лист, близкую и запись по предварительной записи ветеринарную помощь.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T16:03:30.558Z",
   "update": "2026-11-16T16:21:06.408Z",
