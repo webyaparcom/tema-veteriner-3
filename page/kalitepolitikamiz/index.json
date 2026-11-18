@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "description": {
     "tr": "Kalite politikamız",
     "en": "Our quality policy",
-    "ar": "سياسة الجودة لدينا"
+    "ar": "سياسة الجودة لدينا",
+    "de": "Unsere Qualitätspolitik",
+    "ru": "Наша политика качества"
   },
   "keyword": {
     "tr": "Kalite Politikamız",
     "en": "quality policy, quality, continuous improvement",
-    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "path": "kalitepolitikamiz",
   "icon": "verified",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kalite Politikamız</h2>\n<p>Ayrı bekleme alanları, yazılı bakım notu ve aşı hatırlatması.</p>",
     "en": "<h2>Our quality policy</h2>\n<p>Separate waiting areas, written care notes and vaccine reminders.</p>",
-    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>مناطق انتظار منفصلة وملاحظات رعاية مكتوبة وتذكير باللقاحات.</p>"
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>مناطق انتظار منفصلة وملاحظات رعاية مكتوبة وتذكير باللقاحات.</p>",
+    "de": "<h2>Unsere Qualitätspolitik</h2>\n<p>Getrennte Wartebereiche, schriftliche Pflegehinweise und Impferinnerung.</p>",
+    "ru": "<h2>Наша политика качества</h2>\n<p>Раздельные зоны ожидания, письменные рекомендации по уходу и напоминание о прививках.</p>"
   },
   "title": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "date": "2026-11-16T16:03:30.558Z",
   "update": "2026-11-16T16:21:06.410Z",

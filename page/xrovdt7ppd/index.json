@@ -3,17 +3,23 @@
   "name": {
     "tr": "Randevu",
     "en": "Appointment",
-    "ar": "موعد"
+    "ar": "موعد",
+    "de": "Termin",
+    "ru": "Запись"
   },
   "description": {
     "tr": "Tür, ad ve yaşa göre randevu talebi (demo).",
     "en": "Appointment request by species, name and age (demo).",
-    "ar": "طلب موعد حسب النوع والاسم والعمر (تجريبي)."
+    "ar": "طلب موعد حسب النوع والاسم والعمر (تجريبي).",
+    "de": "Terminanfrage nach Art, Name und Alter (Demo).",
+    "ru": "Запись по виду, имени и возрасту (демо)."
   },
   "keyword": {
     "tr": "randevu",
     "en": "appointment",
-    "ar": "موعد"
+    "ar": "موعد",
+    "de": "Termin",
+    "ru": "запись"
   },
   "path": "teklif-al",
   "icon": "event",
@@ -32,7 +38,9 @@
   "title": {
     "tr": "Randevu",
     "en": "Appointment",
-    "ar": "موعد"
+    "ar": "موعد",
+    "de": "Termin",
+    "ru": "Запись"
   },
   "date": "2026-11-16T16:03:30.749Z",
   "update": "2026-11-16T16:21:06.401Z"

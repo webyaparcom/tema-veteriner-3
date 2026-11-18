@@ -2,7 +2,9 @@
   "name": {
     "tr": "Şubeler",
     "en": "Branches",
-    "ar": "الفروع"
+    "ar": "الفروع",
+    "de": "Filialen",
+    "ru": "Филиалы"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Üç şubenin adresi, saatleri ve iletişimi.",
     "en": "Addresses, hours and contact for the three branches.",
-    "ar": "عناوين الفروع الثلاثة وساعاتها ووسائل التواصل."
+    "ar": "عناوين الفروع الثلاثة وساعاتها ووسائل التواصل.",
+    "de": "Adressen, Öffnungszeiten und Kontakt der drei Filialen.",
+    "ru": "Адреса, часы работы и контакты трёх филиалов."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Şubeler",
     "en": "Branches",
-    "ar": "الفروع"
+    "ar": "الفروع",
+    "de": "Filialen",
+    "ru": "Филиалы"
   },
   "keyword": {
     "tr": "iletişim",
     "en": "contact",
-    "ar": "اتصال"
+    "ar": "اتصال",
+    "de": "Kontakt",
+    "ru": "контакты"
   },
   "text": {},
   "update": "2026-11-16T16:21:06.404Z",

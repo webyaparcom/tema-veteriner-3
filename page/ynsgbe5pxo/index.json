@@ -3,17 +3,23 @@
   "name": {
     "tr": "Sorular",
     "en": "Questions",
-    "ar": "الأسئلة"
+    "ar": "الأسئلة",
+    "de": "FAQ",
+    "ru": "FAQ"
   },
   "description": {
     "tr": "Merak edilenler ve kısa yanıtlar.",
     "en": "Common questions and short answers.",
-    "ar": "أسئلة متكررة وإجابات موجزة."
+    "ar": "أسئلة متكررة وإجابات موجزة.",
+    "de": "Was Sie wissen möchten, in kurzen Antworten.",
+    "ru": "Что интересует читателей — в коротких ответах."
   },
   "keyword": {
     "tr": "sss, soru cevap",
     "en": "faq, questions",
-    "ar": "أسئلة وأجوبة"
+    "ar": "أسئلة وأجوبة",
+    "de": "FAQ, Fragen und Antworten",
+    "ru": "FAQ, вопросы и ответы"
   },
   "path": "sorular",
   "icon": "help",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Sorular",
     "en": "Questions",
-    "ar": "الأسئلة"
+    "ar": "الأسئلة",
+    "de": "FAQ",
+    "ru": "FAQ"
   },
   "date": "2026-11-16T16:03:30.744Z",
   "update": "2026-11-16T16:21:06.398Z"
